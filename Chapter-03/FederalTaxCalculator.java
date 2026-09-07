@@ -70,5 +70,11 @@ public class FederalTaxCalculator {
 
      // Round to nearest cent
      return Math.round(tax * 100.0) / 100. 0;
-   } 
+   }
+
+  /** Returns the effective (average) tax rate as a percentage. */
+  public static double calculateEffectiveRate(double taxableIncome, double taxOwed) {
+    if (taxableIncome == 0) return 0.0;
+    return Math.round((taxOwed / taxableIncome) * 10000.0) / 100.0;
+  }
 }
