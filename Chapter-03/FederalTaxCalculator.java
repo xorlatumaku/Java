@@ -33,4 +33,42 @@ public class FederalTaxCalculator {
     {0, 0.10}, {17000, 0.12}, {64850, 0.22}, {103350, 0.24},
     {197300, 0.32}, {250500, 0.35}, {626350, 0.37}
   };
+
+  public enum FilingStatus {
+    SINGLE, MARRIED_JOINTLY, MARRIED_SEPARATELY, HEAD_OF_HOUSEHOLD
+  }
+
+  /**
+   * Calculates federal tax owed using progressive marginal brackets.
+   *
+   * @param taxableIncome the taxable income (must be >= 0)
+   * @param status        the filing status
+   * @return total tax owed, rounded to the nearest cent
+   */ 
+  public static double calculateTax(double taxableIncome, FilingStatus status) {
+     if (taxableIncome < 0) {
+        throw new IllegalArgumentException("Taxable income cannot be negative.");
+     }
+
+     double[][] brackets = getBrackets(status);
+     double tax = 0.0;
+
+     for (int i = 0; i < brackets.length; i++) {
+       double lowerBound = brackets[i][0];
+       double rate = brackets[i][1];
+
+       // Upper bound is the next bracket's lower bound, or infinity for the last one 
+       double upperBound = (i + 1 < brackets.length) ? brackets[i + 1][0] : Double.POSITIVE_INFINITY;
+
+       if (taxableIncome > lowerBound) {
+         double incomeInBracket = Math.min(taxableIncome, upperBound) - lowerBound;
+         tax += incomeInBracket * rate;
+       } else {
+          break;
+       }
+     }
+
+     // Round to nearest cent
+     return Math.round(tax * 100.0) / 100. 0;
+   } 
 }
