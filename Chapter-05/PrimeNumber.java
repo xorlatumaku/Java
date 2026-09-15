@@ -19,6 +19,18 @@ public class PrimeNumber {
           break;
         }
       }
+
+      // Display the prime number and increase the count
+      if (isPrime) {
+        count++;
+
+        if (count % NUMBER_OF_PRIMES_PER_LINE == 0) {
+          // Display the number and advance to the new line
+          System.out.println(number);
+        }
+        else 
+          System.out.print(number + " ");
+      }
     }
   }
 }
