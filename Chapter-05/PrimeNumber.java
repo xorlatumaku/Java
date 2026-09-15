@@ -31,6 +31,9 @@ public class PrimeNumber {
         else 
           System.out.print(number + " ");
       }
+
+      // Check if the next number is prime
+      number++;
     }
   }
 }
