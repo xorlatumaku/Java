@@ -11,5 +11,8 @@ public class PrintCalendar {
     // Prompt the user to enter month
     System.out.print("Enter month as a number between 1 and 12: ");
     int month = input.nextInt();
+
+    // Print calendar for the month of the year
+    printMonth(year, month);
   }
 }
