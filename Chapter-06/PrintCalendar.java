@@ -76,5 +76,12 @@ public class PrintCalendar {
     System.out.println();
 
     }
+
+    /* Get the start day of month/1/year */
+    public static int getStartDay(int year, int month) {
+      final int START_DAY_FOR_JAN_1_1800 = 3;
+      // Get total number of days from 1/1/1800 to month/1/year
+      int totalNumberOfDays = getTotalNumberOfDays(year, month);
+    }
   }
 }
