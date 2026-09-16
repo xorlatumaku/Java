@@ -97,7 +97,12 @@ public class PrintCalendar {
           total = total + 366;
          else 
           total = total + 365;
+      
+      // Add days from Jan to the month prior to the calendar month
+      for (int i = 1; i < month; i++)
+        total = total + getNumberOfDaysInMonth(year, i);
 
+      return total;
       }
     }
   }
