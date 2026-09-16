@@ -82,6 +82,9 @@ public class PrintCalendar {
       final int START_DAY_FOR_JAN_1_1800 = 3;
       // Get total number of days from 1/1/1800 to month/1/year
       int totalNumberOfDays = getTotalNumberOfDays(year, month);
+
+      // Return the start day for month/1/year
+      return (totalNumberOfDays + START_DAY_FOR_JAN_1_1800) % 7;
     }
   }
 }
