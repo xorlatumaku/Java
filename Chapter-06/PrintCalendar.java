@@ -86,5 +86,19 @@ public class PrintCalendar {
       // Return the start day for month/1/year
       return (totalNumberOfDays + START_DAY_FOR_JAN_1_1800) % 7;
     }
+
+    // Get the total number of days since January 1, 1800
+    public static int getTotalNumberOfDays(int year, int month) {
+      int total = 0;
+
+      // Get the total days from 1800 to 1/1/year
+      for (int i = 1800; i < year; i++) {
+        if (isLeapYear(i)) 
+          total = total + 366;
+         else 
+          total = total + 365;
+
+      }
+    }
   }
 }
