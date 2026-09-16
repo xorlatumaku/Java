@@ -52,4 +52,10 @@ public class PrintCalendar {
 
     return monthName;
   }
+
+  /* Print month body */
+  public static void printMonthBody(int year, int month) {
+    // Get start day of the week for the first date in the month
+    int startDay = getStartDay(year, month);
+  }
 }
