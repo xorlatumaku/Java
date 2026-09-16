@@ -60,5 +60,21 @@ public class PrintCalendar {
 
     // Get number of days in the month
     int numberOfDaysInMonth = getNumberOfDaysInMonth(year, month);
+
+    // Pad space before the first day of the month
+    int i = 0;
+    for (i = 0; i < startDay; i++) {
+      System.out.print("    ");
+
+    for (i = 1; i <= numberOfDaysInMonth; i++) {
+      System.out.printf("%4d", i);
+
+      if ((i + startDay) % 7 == 0)
+        System.out.println();
+      }
+
+    System.out.println();
+
+    }
   }
 }
