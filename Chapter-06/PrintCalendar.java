@@ -15,4 +15,13 @@ public class PrintCalendar {
     // Print calendar for the month of the year
     printMonth(year, month);
   }
+
+  /* Print the calendar for a month in a year */ 
+  public static void printMonth(int year, int month) {
+    // Print the headings of the calendar
+    printMonthTitle(year, month);
+
+    // Print the body of the calendar
+    printMonthBody(year, month);
+  }
 }
