@@ -23,5 +23,11 @@ public class TestPassArray {
         num1 = num2;
         num2 = temp;
   }
-
+  
+  // Swap the first two elements in the array
+  public static void swapFirstTWoInArray(int[] array) {
+    int temp = array[0];
+        array[0] = array[1];
+        array[1] = temp;
+  }
 }
