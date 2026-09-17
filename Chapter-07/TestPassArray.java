@@ -16,4 +16,12 @@ public class TestPassArray {
     System.out.println("After invoking swapFirstTWoInArray");
     System.out.println("array is {" + a[0] + ", " + a[1] + "}");
   }
+
+  // Swap two variables
+  public static void swap(int num1, int num2) {
+    int temp = num1;
+        num1 = num2;
+        num2 = temp;
+  }
+
 }
