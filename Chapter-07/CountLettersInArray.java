@@ -24,5 +24,8 @@ public class CountLettersInArray {
     // Create lowercase letters randomly and assign them to the array
     for (int i = 0; i < chars.length; i++)
       chars[i] = RandomCharacter.getRandomLowerCaseLetter();
+
+    // Return the array
+    return chars;
   }
 }
