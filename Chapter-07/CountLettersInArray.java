@@ -10,5 +10,9 @@ public class CountLettersInArray {
     // Count the occurrences of each letter
     int[] counts = countLetters(chars);
 
+    // Display counts
+    System.out.println();
+    System.out.println("The occurrences of each letter are:");
+    displayCounts(counts);
   }
 }
