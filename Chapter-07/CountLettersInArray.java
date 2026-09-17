@@ -41,5 +41,16 @@ public class CountLettersInArray {
     }
   }
 
+  // Count the occurrences of each letter
+  public static int[] countLetters(char[] chars) {
+    // Declare and create an array of 26 int
+    int[] counts = new int[26];
 
+    // For each lowercase letter in the array, count it
+    for (int i = 0; i < chars.length; i++) {
+      counts[chars[i] - 'a']++;
+
+    return counts;
+    }
+  }
 }
