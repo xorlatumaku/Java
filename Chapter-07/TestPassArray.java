@@ -8,5 +8,12 @@ public class TestPassArray {
     swap(a[0], a[1]);
     System.out.println("After invoking swap");
     System.out.println("array is {" + a[0] + ", " + a[1] + "}");
+
+    // Swap elements using the swapFirstTWoInArray method
+    System.out.println("Before invoking swapFirstTWoInArray");
+    System.out.println("array is {" + a[0] + ", " + a[1] + "}");
+    swapFirstTWoInArray(a);
+    System.out.println("After invoking swapFirstTWoInArray");
+    System.out.println("array is {" + a[0] + ", " + a[1] + "}");
   }
 }
