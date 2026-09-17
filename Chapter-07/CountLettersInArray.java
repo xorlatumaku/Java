@@ -15,4 +15,10 @@ public class CountLettersInArray {
     System.out.println("The occurrences of each letter are:");
     displayCounts(counts);
   }
+
+  // Create an array of characters
+  public static char[] createArray() {
+    // Declare an array of characters and create it
+    char[] chars = new char[100]; 
+  }
 }
