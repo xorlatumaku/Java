@@ -33,11 +33,10 @@ public class CountLettersInArray {
   public static void displayArray(char[] chars) {
     // Display the characters in the array 20 on each line
     for (int i = 0; i < chars.length; i++) {
-      if ((i + 1) % 20 == 0) {
+      if ((i + 1) % 20 == 0) 
         System.out.println(chars[i]);
-      } else {
+       else 
         System.out.print(chars[i] + " ");
-      }
     }
   }
 
@@ -47,10 +46,19 @@ public class CountLettersInArray {
     int[] counts = new int[26];
 
     // For each lowercase letter in the array, count it
-    for (int i = 0; i < chars.length; i++) {
+    for (int i = 0; i < chars.length; i++) 
       counts[chars[i] - 'a']++;
 
     return counts;
+  }
+
+  // Display counts
+  public static void displayCounts(int[] counts) {
+    for (int i = 0; i < counts.length; i++) {
+      if ((i + 1) % 10 == 0) 
+        System.out.println(counts[i] + " " + (char)(i + 'a'));
+       else 
+        System.out.println(counts[i] + " " + (char)(i + 'a') + " ");
     }
   }
 }
