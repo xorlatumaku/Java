@@ -25,7 +25,11 @@ public class Weather {
         dailyHumidityTotal += data[i][j][1];
       }
 
-
+      // Display result
+      System.out.println("Day " + i + "'s average temperature is "
+          + dailyTemperatureTotal / NUMBER_OF_HOURS);
+      System.out.println("Day " + i + "'s average humidity is "
+          + dailyHumidityTotal / NUMBER_OF_HOURS);
     }
   }
 }
