@@ -16,5 +16,16 @@ public class Weather {
       data[day - 1][hour - 1][0] = temperature;
       data[day - 1][hour - 1][1] = humidity;
     }
+
+    // Find the average daily temperature and humidity
+    for (int i = 0; i < NUMBER_OF_DAYS; i++) {
+      double dailyTemperatureTotal = 0, dailyHumidityTotal = 0;
+      for (int j = 0; j < NUMBER_OF_HOURS; j++) {
+        dailyTemperatureTotal += data[i][j][0];
+        dailyHumidityTotal += data[i][j][1];
+      }
+
+
+    }
   }
 }
