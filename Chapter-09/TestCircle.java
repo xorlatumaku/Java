@@ -35,4 +35,9 @@ class Circle {
   Circle(double newRadius) {
     radius = newRadius;
   }
+
+  // Return the area of this circle
+  double getArea() {
+    return radius * radius * Math.PI;
+  }
 }
