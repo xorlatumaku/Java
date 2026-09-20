@@ -4,5 +4,7 @@ public class TestTV {
     tv1.turnOn();
     tv1.setChannel(30);
     tv1.setVolume(3);
+
+    TV tv2 = new TV();
   }
 }
