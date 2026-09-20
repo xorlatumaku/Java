@@ -3,5 +3,6 @@ public class TestTV {
     TV tv1 = new TV();
     tv1.turnOn();
     tv1.setChannel(30);
+    tv1.setVolume(3);
   }
 }
