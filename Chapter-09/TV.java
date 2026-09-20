@@ -33,4 +33,9 @@ public class TV {
     if (on && channel > 1)
       channel--;
   }
+
+  public void volumeUp()  {
+    if (on && volumeLevel < 7)
+      volumeLevel++;
+  }
 }
