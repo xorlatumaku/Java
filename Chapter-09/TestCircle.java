@@ -40,4 +40,9 @@ class Circle {
   double getArea() {
     return radius * radius * Math.PI;
   }
+
+  // Return the perimeter of this circle
+  double getPerimeter() {
+    return 2 * radius * Math.PI;
+  }
 }
