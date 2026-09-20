@@ -9,5 +9,10 @@ public class TestCircle {
     Circle circle2 = new Circle(25);
     System.out.println("The area of the circle of radius "
         + circle2.radius + "is" + circle2.getArea());
+
+    // Create a circle with radius 125
+    Circle circle3 = new Circle(125);
+    System.out.println("The area of the circle of radius "
+        + circle3.radius + " is " + circle3.getArea());
   }
 }
