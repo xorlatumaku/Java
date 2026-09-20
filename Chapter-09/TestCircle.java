@@ -21,3 +21,8 @@ public class TestCircle {
         + circle2.radius + " is " + circle2.getArea());
   }
 }
+
+// Define the circle class with two constructors
+class Circle {
+  double radius;
+}
