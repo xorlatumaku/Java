@@ -9,5 +9,6 @@ public class TestTV {
     tv2.turnOn();
     tv2.channelUp();
     tv2.channelUp();
+    tv2.volumeUp();
   }
 }
