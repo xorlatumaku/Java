@@ -25,4 +25,9 @@ public class TestCircle {
 // Define the circle class with two constructors
 class Circle {
   double radius;
+
+  // Construct a circle with radius 1
+  Circle() {
+    radius = 1;
+  }
 }
