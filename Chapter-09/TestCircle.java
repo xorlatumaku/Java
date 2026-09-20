@@ -30,4 +30,9 @@ class Circle {
   Circle() {
     radius = 1;
   }
+
+  // Construct a circle with a specified radius
+  Circle(double newRadius) {
+    radius = newRadius;
+  }
 }
