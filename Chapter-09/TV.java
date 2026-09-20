@@ -5,4 +5,8 @@ public class TV {
 
   public TV() {
   }
+
+  public void turnOn()  {
+    on = true;
+  }
 }
