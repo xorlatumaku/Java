@@ -15,4 +15,9 @@ public class Cirlce {
     radius = newRadius;
     numberOfObjects++;
   }
+
+  // Return numberOfObjects
+  static int getNumberOfObjects() {
+    return numberOfObjects;
+  }
 }
