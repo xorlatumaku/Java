@@ -9,4 +9,10 @@ public class Cirlce {
     radius = 1;
     numberOfObjects++;
   }
+
+  // Construct a circle with a specified radius
+  Cirlce(double newRadius) {
+    radius = newRadius;
+    numberOfObjects++;
+  }
 }
