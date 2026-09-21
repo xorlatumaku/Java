@@ -13,6 +13,8 @@ public class TestStaticCircle {
 
     // Create c2
     StaticCircle c2 = new StaticCircle(5);
-
+    
+    // Modify c1
+    c1.radius = 9;
   }
 }
