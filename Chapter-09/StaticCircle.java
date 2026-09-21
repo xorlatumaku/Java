@@ -20,4 +20,9 @@ public class Cirlce {
   static int getNumberOfObjects() {
     return numberOfObjects;
   }
+
+  // Return the area of this circle
+  double getArea() {
+    return radius * radius * Math.PI;
+  }
 }
