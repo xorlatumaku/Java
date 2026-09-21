@@ -10,5 +10,9 @@ public class TestStaticCircle {
     System.out.println("\nAfter creating c1");
     System.out.println("c1: radius (" + c1.radius + ") and number of Circle objects ("
         + c1.numberOfObjects + ")");
+
+    // Create c2
+    StaticCircle c2 = new StaticCircle(5);
+
   }
 }
