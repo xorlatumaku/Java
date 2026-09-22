@@ -20,4 +20,9 @@ public class PrivateCircle {
   public double getRadius() {
     return radius;
   }
+
+  // Set a new radius
+  public void setRadius(double newRadius) {
+    radius = (newRadius >= 0) ? newRadius : 0;
+  }
 }
