@@ -36,4 +36,9 @@ public class Loan {
   public void getNumberOfYears(int numberOfYears) {
     this.numberOfYears = numberOfYears;
   }
+
+  // Return loanAmount
+  public double getLoanAmount() {
+    return loanAmount;
+  }
 }
