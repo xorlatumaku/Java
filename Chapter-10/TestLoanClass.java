@@ -18,4 +18,7 @@ public class TestLoanClass {
   System.out.print("Enter loan amount: ");
   double loanAmount = input.nextDouble();
 
+  // Create a loan object
+  Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
+
 }
