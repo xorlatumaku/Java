@@ -30,4 +30,9 @@ public class PrivateCircle {
   public static int getNumberOfObjects() {
     return numberOfObjects;
   }
+
+  // Return the area of this circle
+  public double  getArea() {
+    return radius * radius * Math.PI;
+  }
 }
