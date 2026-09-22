@@ -46,4 +46,12 @@ public class Loan {
   public void setLoanAmount(double loanAmount) {
     this.loanAmount = loanAmount;
   }
+
+  // Find monthly payment
+  public double getMonthlyPayment() {
+    double monthlyInterestRate = annualInterestRate / 1200;
+    double monthlyPayment = loanAmount * monthlyInterestRate / 
+      (1 - (1 / Math.pow(1 + monthlyInterestRate, numberOfYears * 12)));
+    return monthlyPayment;
+  }
 }
