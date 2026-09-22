@@ -26,4 +26,9 @@ public class Loan {
   public void getAnnualInterestRate(double annualInterestRate) {
     this.annualInterestRate = annualInterestRate;
   }
+
+  // Return numberOfYears
+  public int getNumberOfYears() {
+    return numberOfYears;
+  }
 }
