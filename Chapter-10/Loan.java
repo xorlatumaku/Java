@@ -1,5 +1,5 @@
 public class Loan {
-  private double name;
+  private double annualInterestRate;
   private int  numberOfYears;
   private double loanAmount;
   private java.util.Date loanDate;
@@ -65,3 +65,4 @@ public class Loan {
   public java.util.Date getLoanDate() {
     return loanDate;
   }
+}
