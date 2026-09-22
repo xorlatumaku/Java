@@ -25,4 +25,9 @@ public class PrivateCircle {
   public void setRadius(double newRadius) {
     radius = (newRadius >= 0) ? newRadius : 0;
   }
+
+  // Return numberOfObjects
+  public static int getNumberOfObjects() {
+    return numberOfObjects;
+  }
 }
