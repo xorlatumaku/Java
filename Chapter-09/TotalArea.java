@@ -31,4 +31,16 @@ public class TotalArea {
     // Compute and display the result
     System.out.println("%-30s%-15f\n", "The total area of circles is ", sum(circleArray));
   }
+
+  // Add circle areas
+  public static double sum(Circle[] circleArray) {
+    // Initialize sum
+    double sum = 0;
+
+    // Add areas to sum
+    for (int i = 0; i < circleArray.length; i++) 
+      sum += circleArray[i].getArea();
+
+      return sum;
+  }
 }
