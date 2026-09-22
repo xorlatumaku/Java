@@ -60,4 +60,8 @@ public class Loan {
     double totalPayment = getMonthlyPayment() * numberOfYears * 12;
     return totalPayment;
   }
-}
+
+  // Return loan date 
+  public java.util.Date getLoanDate() {
+    return loanDate;
+  }
