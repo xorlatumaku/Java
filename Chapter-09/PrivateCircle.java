@@ -15,4 +15,9 @@ public class PrivateCircle {
     radius = newRadius;
     numberOfObjects++;
   }
+
+  // Return radius
+  public double getRadius() {
+    return radius;
+  }
 }
