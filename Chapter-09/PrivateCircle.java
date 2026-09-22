@@ -4,4 +4,9 @@ public class PrivateCircle {
 
   // The number of objects created
   private static int numberOfObjects = 0;
+
+  // Construct a circle with radius 1
+  public PrivateCircle() {
+    numberOfObjects++;
+  }
 }
