@@ -9,4 +9,10 @@ public class PrivateCircle {
   public PrivateCircle() {
     numberOfObjects++;
   }
+
+  // Construct a circle with a specified radius
+  public PrivateCircle(double newRadius) {
+    radius = newRadius;
+    numberOfObjects++;
+  }
 }
