@@ -1,18 +1,18 @@
 public class TotalArea {
   public static void main(String[] args) {
     // Declare circleArray
-    Circle[] circleArray = createCircleArray();
+    PrivateCircle[] circleArray = createCircleArray();
 
     // Print circleArray and total areas of the circles
     printCircleArray(circleArray);
   }
 
   // Create an array of Circle objects
-  public static Circle[] createCircleArray() {
-    Circle[] circleArray = new Circle[5];
+  public static PrivateCircle[] createCircleArray() {
+    PrivateCircle[] circleArray = new PrivateCircle[5];
 
     for (int i = 0; i < circleArray.length; i++) {
-      circleArray[i] = new Circle(Math.random() * 100);
+      circleArray[i] = new PrivateCircle(Math.random() * 100);
     }
 
     // Return Circle array
@@ -20,7 +20,7 @@ public class TotalArea {
   }
 
   // Print an array of circles and their total area
-  public static void printCircleArray(Circle[] circleArray) {
+  public static void printCircleArray(PrivateCircle[] circleArray) {
     System.out.printf("%-30s%-15s\n", "Radius", "Area");
     for (int i = 0; i < circleArray.length; i++) {
       System.out.printf("%-30f%-15f\n", circleArray[i].getRadius(), circleArray[i].getArea());
@@ -29,11 +29,11 @@ public class TotalArea {
     System.out.println("-------------------------------------------");
 
     // Compute and display the result
-    System.out.println("%-30s%-15f\n", "The total area of circles is ", sum(circleArray));
+    System.out.printf("%-30s%-15f\n", "The total area of circles is ", sum(circleArray));
   }
 
   // Add circle areas
-  public static double sum(Circle[] circleArray) {
+  public static double sum(PrivateCircle[] circleArray) {
     // Initialize sum
     double sum = 0;
 
