@@ -41,4 +41,9 @@ public class Loan {
   public double getLoanAmount() {
     return loanAmount;
   }
+
+  // Set a new loanAmount
+  public void setLoanAmount(double loanAmount) {
+    this.loanAmount = loanAmount;
+  }
 }
