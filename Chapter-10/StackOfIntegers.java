@@ -23,4 +23,9 @@ public class StackOfIntegers {
 
     elements[size++] = value;
   }
+
+  // Return and remove the top element from the stack
+  public int pop() {
+    return elements[--size];
+  }
 }
