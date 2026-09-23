@@ -9,5 +9,20 @@ public class TestCourse {
 
     course2.addStudent("Peter Jones");
     course2.addStudent("Steve Smith");
+
+    System.out.println("Number of students in Data Structures: " + course1.getNumberOfStudents());
+    String[] students = course1.getStudents();
+
+    for (int i = 0; i < course1.getNumberOfStudents(); i++) 
+      System.out.print(students[i] + ", ");
+
+    System.out.println();
+    System.out.println("Number of students in Database Systems: " + course2.getNumberOfStudents());
+    
+    String[] dbStudents = course2.getStudents();
+    for (int i = 0; i < course2.getNumberOfStudents(); i++)
+      System.out.print(dbStudents[i] + ", ");
+
+    System.out.println();
   }
 }
