@@ -15,4 +15,8 @@ public class Course {
   public String[] getStudents() {
     return students;
   }
+
+  public int getNumberOfStudents() {
+    return numberOfStudents;
+  }
 }
