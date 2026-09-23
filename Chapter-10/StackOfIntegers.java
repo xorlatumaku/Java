@@ -33,4 +33,9 @@ public class StackOfIntegers {
   public int peek() {
     return elements[size - 1];
   }
+
+  // Test whether the stack is empty
+  public boolean empty() {
+    return size == 0;
+  }
 }
