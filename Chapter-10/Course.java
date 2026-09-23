@@ -11,4 +11,8 @@ public class Course {
     students[numberOfStudents] = student;
     numberOfStudents++;
   }
+
+  public String[] getStudents() {
+    return students;
+  }
 }
