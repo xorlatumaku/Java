@@ -38,4 +38,9 @@ public class StackOfIntegers {
   public boolean empty() {
     return size == 0;
   }
+
+  // Return the number of elements in the stack
+  public int getSize() {
+    return size;
+  }
 }
