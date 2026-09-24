@@ -16,5 +16,8 @@ public class PalindromeIgnoreNonAlphanumeric {
   public static boolean isPalindrome(String s) {
     // Create a new string by eliminating nonalphanumeric chars
     String s1 = filter(s);
+
+    // Create a new string that is the reversal of s1
+    String s2 = reverse(s1);
   }
 }
