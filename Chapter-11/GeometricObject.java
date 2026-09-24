@@ -39,4 +39,9 @@ public class GeometricObject {
   public java.util.Date getDateCreated() {
     return dateCreated;
   }
+
+  // Return a string representation of this object
+  public String toString() {
+    return "created on " + dateCreated + "\ncolor: " + color + " and filled: " + filled;
+  }
 }
