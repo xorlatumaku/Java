@@ -7,4 +7,11 @@ public class GeometricObject {
   public GeometricObject() {
     dateCreated = new java.util.Date();
   }
+
+  // Construct a geometric object with the specified color and filled value
+  public GeometricObject(String color, boolean filled) {
+    dateCreated = new java.util.Date();
+    this.color = color;
+    this.filled = filled;
+  }
 }
