@@ -19,4 +19,9 @@ public class GeometricObject {
   public String getColor() {
     return color;
   }
+
+  // Set a new color
+  public void setColor(String color) {
+    this.color = color;
+  }
 }
