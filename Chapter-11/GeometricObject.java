@@ -24,4 +24,9 @@ public class GeometricObject {
   public void setColor(String color) {
     this.color = color;
   }
+
+  // Return filled. Since filled is boolean, its getter method is named isFilled
+  public boolean isFilled() {
+    return filled;
+  }
 }
