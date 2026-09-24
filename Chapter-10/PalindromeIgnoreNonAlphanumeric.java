@@ -11,4 +11,9 @@ public class PalindromeIgnoreNonAlphanumeric {
     // Display result
     System.out.println("Ignoring nonalphanumeric characters, \nis " + s + " a palindrome? " + isPalindrome(s));
   }
+
+  // Return true if a string is a palindrome
+  public static boolean isPalindrome(String s) {
+    
+  }
 }
