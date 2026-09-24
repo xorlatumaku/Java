@@ -39,4 +39,11 @@ public class PalindromeIgnoreNonAlphanumeric {
     // Return a new filtered string
     return stringBuilder.toString();
   }
+
+  // Create a new string by reversing a specified string
+  public static String reverse(String s) {
+    StringBuilder stringBuilder = new StringBuilder(s);
+    stringBuilder.reverse();  // Invoke reverse in StringBuilder
+    return stringBuilder.toString();
+  }
 }
