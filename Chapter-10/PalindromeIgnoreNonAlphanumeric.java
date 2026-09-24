@@ -28,5 +28,14 @@ public class PalindromeIgnoreNonAlphanumeric {
   public static String filter(String s) {
     // Create a string builder
     StringBuilder stringBuilder = new StringBuilder();
+
+    // Examine each char in the string to skip alphanumeric char
+    for (int i = 0; i < s.length(); i++) {
+      if (Character.isLetterOrDigit(s.charAt(i))) {
+        stringBuilder.append(s.charAt(i));
+      }
+    }
+
+
   }
 }
