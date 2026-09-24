@@ -9,5 +9,6 @@ public class TestCircleRectangle {
 
     Rectangle rectangle = new Rectangle(2, 4);
     System.out.println("\nA rectangle " + rectangle.toString());
+    System.out.println("The area is " + rectangle.getArea());
   }
 }
