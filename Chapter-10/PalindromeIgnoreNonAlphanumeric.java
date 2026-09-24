@@ -14,6 +14,7 @@ public class PalindromeIgnoreNonAlphanumeric {
 
   // Return true if a string is a palindrome
   public static boolean isPalindrome(String s) {
-    
+    // Create a new string by eliminating nonalphanumeric chars
+    String s1 = filter(s);
   }
 }
