@@ -23,4 +23,9 @@ public class PalindromeIgnoreNonAlphanumeric {
     // Check if the reversal is the same as the original string
     return s2.equals(s1);
   }
+
+  // Create a new string by eliminating nonalphanumeric chars
+  public static String filter(String s) {
+    
+  }
 }
