@@ -22,6 +22,10 @@ public class Rectangle extends GeometricObject {
     return width;
   }
 
-  
+  // Set a new width
+  public void setWidth(double width) {
+    this.width = width;
+  }
+
 
 }
