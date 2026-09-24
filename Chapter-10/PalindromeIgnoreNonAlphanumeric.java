@@ -26,6 +26,7 @@ public class PalindromeIgnoreNonAlphanumeric {
 
   // Create a new string by eliminating nonalphanumeric chars
   public static String filter(String s) {
-    
+    // Create a string builder
+    StringBuilder stringBuilder = new StringBuilder();
   }
 }
