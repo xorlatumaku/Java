@@ -34,4 +34,9 @@ public class GeometricObject {
   public void setFilled(boolean filled) {
     this.filled = filled;
   }
+
+  // Get dateCreated
+  public java.util.Date getDateCreated() {
+    return dateCreated;
+  }
 }
