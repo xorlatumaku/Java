@@ -16,4 +16,5 @@ public class Rectangle extends GeometricObject {
     setColor(color);
     setFilled(filled);
   }
-}
+
+  }
