@@ -19,5 +19,8 @@ public class PalindromeIgnoreNonAlphanumeric {
 
     // Create a new string that is the reversal of s1
     String s2 = reverse(s1);
+
+    // Check if the reversal is the same as the original string
+    return s2.equals(s1);
   }
 }
