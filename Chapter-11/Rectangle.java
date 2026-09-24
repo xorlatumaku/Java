@@ -32,4 +32,9 @@ public class Rectangle extends GeometricObject {
     return height;
   }
 
+  // Set a new height
+  public void setHeight(double height) {
+    this.height = height;
+  }
+
 }
