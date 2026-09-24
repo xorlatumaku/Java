@@ -36,6 +36,7 @@ public class PalindromeIgnoreNonAlphanumeric {
       }
     }
 
-
+    // Return a new filtered string
+    return stringBuilder.toString();
   }
 }
