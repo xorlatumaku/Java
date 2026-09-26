@@ -19,5 +19,6 @@ public class DistinctNumbers {
     System.out.print("The distinct integers are: ");
     for (int i = 0; i < list.size(); i++)
       System.out.print(list.get(i) + " ");
+    System.out.println(" ");
   }
 }
