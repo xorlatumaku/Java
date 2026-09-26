@@ -14,5 +14,10 @@ public class DistinctNumbers {
       if (!list.contains(value) && value != 0)
         list.add(value);  // Add the value if it is not in the list
     } while (value != 0);
+
+    // Display the distinct numbers
+    System.out.print("The distinct integers are: ");
+    for (int i = 0; i < list.size(); i++)
+      System.out.println(list.get(i) + " ");
   }
 }
