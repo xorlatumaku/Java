@@ -20,5 +20,6 @@ public class TestArrayList {
     // cityList now contains [London, Denver, Paris, Miami, Seoul, Tokyo]
     
     System.out.println("List size? " + cityList.size());
+    System.out.println("Is Miami in the list? " + cityList.contains("Miami"));
   }
 }
