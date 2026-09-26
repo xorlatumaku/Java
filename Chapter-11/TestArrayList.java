@@ -23,5 +23,9 @@ public class TestArrayList {
     System.out.println("Is Miami in the list? " + cityList.contains("Miami"));
     System.out.println("The location of Denver in the list? " + cityList.indexOf("Denver"));
     System.out.println("Is the list empty? " + cityList.isEmpty());
+
+    // Insert a new city at index 2
+    cityList.add(2, "Xian");
+    // Contains [London, Denver, Xian, Paris, Miami, Seoul, Tokyo]
   }
 }
