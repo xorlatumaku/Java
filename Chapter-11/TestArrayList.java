@@ -35,5 +35,8 @@ public class TestArrayList {
     // Remove a city at index 1
     cityList.remove(1);
     // Contains [London, Xian, Paris, Seoul, Tokyo]
+
+    // Display the contents in the list
+    System.out.println(cityList.toString());
   }
 }
