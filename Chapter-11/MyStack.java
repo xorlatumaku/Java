@@ -14,4 +14,10 @@ public class MyStack {
   public Object peek() {
     return list.get(getSize() - 1);
   }
+
+  public Object pop() {
+    Object o = list.get(getSize() - 1);
+    list.remove(getSize() - 1);
+    return o;
+  }
 }
