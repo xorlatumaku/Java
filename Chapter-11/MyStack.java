@@ -24,4 +24,9 @@ public class MyStack {
   public void push(Object o) {
     list.add(o);
   }
+
+  @Override
+  public String toString() {
+    return "stack: " + list.toString();
+  }
 }
