@@ -20,4 +20,8 @@ public class MyStack {
     list.remove(getSize() - 1);
     return o;
   }
+
+  public void push(Object o) {
+    list.add(o);
+  }
 }
