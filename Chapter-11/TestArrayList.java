@@ -21,5 +21,6 @@ public class TestArrayList {
     
     System.out.println("List size? " + cityList.size());
     System.out.println("Is Miami in the list? " + cityList.contains("Miami"));
+    System.out.println("The location of Denver in the list? " + cityList.indexOf("Denver"));
   }
 }
