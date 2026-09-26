@@ -11,6 +11,8 @@ public class DistinctNumbers {
 
     do {
       value = input.nextInt();  // Read a value from the input
+      if (!list.contains(value) && value != 0)
+        list.add(value);  // Add the value if it is not in the list
     } while (value != 0);
   }
 }
