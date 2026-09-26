@@ -29,7 +29,11 @@ public class TestArrayList {
     // Contains [London, Denver, Xian, Paris, Miami, Seoul, Tokyo]
 
     // Remove a city from the list
-    cityList.Remove("Miami");
+    cityList.remove("Miami");
     // Contains [London, Denver, Xian, Paris, Seoul, Tokyo]
+    
+    // Remove a city at index 1
+    cityList.remove(1);
+    // Contains [London, Xian, Paris, Seoul, Tokyo]
   }
 }
