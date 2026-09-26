@@ -10,4 +10,8 @@ public class MyStack {
   public int getSize() {
     return list.size();
   }
+
+  public Object peek() {
+    return list.get(getSize() - 1);
+  }
 }
