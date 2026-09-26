@@ -6,4 +6,8 @@ public class MyStack {
   public boolean isEmpty() {
     return list.isEmpty();
   }
+
+  public int getSize() {
+    return list.size();
+  }
 }
