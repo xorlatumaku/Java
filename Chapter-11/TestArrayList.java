@@ -46,5 +46,9 @@ public class TestArrayList {
 
     // Create a list to store two circles
     ArrayList<Circle> list = new ArrayList<>();
+
+    // Add two circles
+    list.add(new Circle(2));
+    list.add(new Circle(3));
   }
 }
