@@ -27,5 +27,9 @@ public class TestArrayList {
     // Insert a new city at index 2
     cityList.add(2, "Xian");
     // Contains [London, Denver, Xian, Paris, Miami, Seoul, Tokyo]
+
+    // Remove a city from the list
+    cityList.Remove("Miami");
+    // Contains [London, Denver, Xian, Paris, Seoul, Tokyo]
   }
 }
