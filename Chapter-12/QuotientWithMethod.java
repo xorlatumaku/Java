@@ -17,5 +17,8 @@ public class QuotientWithMethod {
     System.out.print("Enter two integers: ");
     int number1 = input.nextInt();
     int number2 = input.nextInt();
+
+    int result = quotient(number1, number2);
+    System.out.println(number1 + " / " + number2 + " is " + result);
   }
 }
