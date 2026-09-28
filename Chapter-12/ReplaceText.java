@@ -22,5 +22,17 @@ public class ReplaceText {
       System.out.println("Target file" + args[1] + " already exists");
       System.exit(3);
     }
+
+    try(
+        // Create input and output files
+        Scanner input = new Scanner(sourceFile);
+        PrintWrite output = new PrintWrite(targetFile);
+        ) {
+          while (input.hasNext()) {
+            String s1 = input.nextLine();
+            String s2 = s1.replaceAll(args[2], args[3]);
+            output.println(s2);
+      }
+    }
   }
 }
