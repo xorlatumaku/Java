@@ -14,5 +14,8 @@ public class WriteData {
     output.print(90);
     output.print("Eric K Jones ");
     output.println(85);
+
+    // Close the file
+    output.close();
   }
 }
