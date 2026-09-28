@@ -23,11 +23,11 @@ public class CircleWithException {
 
   // Set a new radius
   public void setRadius(double newRadius) {
-      throws IllegalArgumentException {
-    if (newRadius >= 0) 
-      radius = newRadius;
-    else
-      throw new IllegalArgumentException("radius cannot be negative");
+    throws IllegalArgumentException {
+      if (newRadius >= 0) 
+        radius = newRadius;
+      else
+        throw new IllegalArgumentException("radius cannot be negative");
     }
 
     // Return numberOfObjects
