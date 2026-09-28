@@ -29,5 +29,10 @@ public class CircleWithException {
     else
       throw new IllegalArgumentException("radius cannot be negative");
     }
+
+    // Return numberOfObjects
+    public static int getNumberOfObjects() {
+      return numberOfObjects;
+    }
   }
 }
