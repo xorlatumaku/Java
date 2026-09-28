@@ -16,4 +16,7 @@ public class TestCircleWithCustomException {
 class CircleWithCustomException {
   // The radius of the circle
   private double radius;
+
+  // The number of objects created
+  private static int numberOfObjects = 0;
 }
