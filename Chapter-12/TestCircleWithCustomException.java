@@ -31,4 +31,9 @@ class CircleWithCustomException {
     setRadius(newRadius);
     numberOfObjects++;
   }
+
+  // Return radius
+  public double getRadius() {
+    return radius;
+  }
 }
