@@ -24,4 +24,11 @@ class CircleWithCustomException {
   public CircleWithCustomException()  throws InvalidRadiusException {
     this(1.0);
   }
+
+  // Construct a circle with a specified radius
+  public CircleWithCustomException(double newRadius) 
+    throws InvalidRadiusException {
+    setRadius(newRadius);
+    numberOfObjects++;
+  }
 }
