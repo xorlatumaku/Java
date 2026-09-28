@@ -36,4 +36,13 @@ class CircleWithCustomException {
   public double getRadius() {
     return radius;
   }
+
+  // Set a new radius
+  public void setRadius(double newRadius)
+    throws InvalidRadiusException {
+      if (newRadius >= 0) 
+        radius = newRadius;
+      else
+        throw new InvalidRadiusException(newRadius);
+  }
 }
