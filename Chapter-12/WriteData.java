@@ -11,7 +11,7 @@ public class WriteData {
 
     // Write formatted output to the file
     output.print("John T Smith ");
-    output.print(90);
+    output.println(90);
     output.print("Eric K Jones ");
     output.println(85);
 
