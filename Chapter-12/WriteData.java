@@ -8,5 +8,11 @@ public class WriteData {
 
     // Create a file
     java.io.PrintWriter output = new java.io.PrintWriter(file);
+
+    // Write formatted output to the file
+    output.print("John T Smith ");
+    output.print(90);
+    output.print("Eric K Jones ");
+    output.println(85);
   }
 }
