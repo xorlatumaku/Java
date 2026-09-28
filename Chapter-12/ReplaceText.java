@@ -8,5 +8,12 @@ public class ReplaceText {
       System.out.println("Usage: java ReplaceText sourceFile targetFile oldStr newStr");
       System.exit(1);
     }
+
+    // Check if source file exists
+    File sourceFile = new File(args[0]);
+    if (!sourceFile.exists()) {
+      System.out.println("Source file " + args[0] + " does not exist");
+      System.exit(2);
+    }
   }
 }
