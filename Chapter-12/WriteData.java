@@ -5,5 +5,8 @@ public class WriteData {
       System.out.println("File already exists");
       System.exit(1);
     }
+
+    // Create a file
+    java.io.PrintWriter output = new java.io.PrintWriter(file);
   }
 }
