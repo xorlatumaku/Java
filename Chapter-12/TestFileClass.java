@@ -8,5 +8,6 @@ public class TestFileClass {
     System.out.println("Is it a directory? " + file.isDirectory());
     System.out.println("Is it a file? " + file.isFile());
     System.out.println("Is it absolute? " + file.isAbsolute());
+    System.out.println("Is it hidden? " + file.isHidden());
   }
 }
