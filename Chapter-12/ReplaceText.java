@@ -15,5 +15,12 @@ public class ReplaceText {
       System.out.println("Source file " + args[0] + " does not exist");
       System.exit(2);
     }
+
+    // Check if target file exists
+    File targetFile = new File(args[1]);
+    if (targetFile.exists()) {
+      System.out.println("Target file" + args[1] + " already exists");
+      System.exit(3);
+    }
   }
 }
