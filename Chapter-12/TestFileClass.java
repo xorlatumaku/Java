@@ -5,5 +5,6 @@ public class TestFileClass {
     System.out.println("The file has " + file.length() + " bytes");
     System.out.println("Can it be read? " + file.canRead());
     System.out.println("Can it be written? " + file.canWrite());
+    System.out.println("Is it a directory? " + file.isDirectory());
   }
 }
