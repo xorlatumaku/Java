@@ -6,6 +6,7 @@ public class TestException {
       //TODO: handle exception
       ex.printStackTrace();
       System.out.println("\n" + ex.getMessage());
+      System.out.println("\n" + ex.toString());
     }
   }
 }
