@@ -28,4 +28,22 @@ public class WebCrawler {
       }
     }
   }
+
+  public static ArrayList<String> getSubURLs(String urlString) {
+    ArrayList<String> list = new ArrayList<>();
+
+    try {
+      java.net.URL url = new java.net.URL(urlString);
+      Scanner input = new Scanner(url.openStream());
+      
+      int current = 0;
+      while (input.hasNext()) {
+        String line = input.nextLine();
+      }
+
+
+    } catch (Exception e) {
+      //TODO: handle exception
+    }
+  }
 }
