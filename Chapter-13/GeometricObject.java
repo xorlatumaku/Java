@@ -14,4 +14,14 @@ public abstract class GeometricObject {
     this.color = color;
     this.filled = filled;
   }
+
+  // Return color
+  public String getColor() {
+    return color;
+  }
+
+  // Set a new color
+  public void setColor(String color) {
+    this.color = color;
+  }
 }
