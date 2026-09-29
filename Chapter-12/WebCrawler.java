@@ -13,11 +13,18 @@ public class WebCrawler {
     ArrayList<String> listOfPendingURLs = new ArrayList<>();
     ArrayList<String> listOfTraversedURLs = new ArrayList<>();
     listOfPendingURLs.add(startingURL);
+    
     while (!listOfPendingURLs.isEmpty() && listOfTraversedURLs.size() <= 100) {
       String urlString = listOfPendingURLs.remove(0);
+      
       if (!listOfTraversedURLs.contains(urlString)) {
         listOfTraversedURLs.add(urlString);
         System.out.println("Crawl " + urlString);
+
+        for (String s : getSubURLs(urlString)) {
+          if (!listOfTraversedURLs.contains(s))
+            listOfPendingURLs.add(s);
+        }
       }
     }
   }
