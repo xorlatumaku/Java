@@ -18,4 +18,9 @@ public class Circle extends GeometricObject {
   public double getRadius() {
     return radius;
   }
+
+  // Set a new radius
+  public void setRadius(double radius) {
+    this.radius = radius;
+  }
 }
