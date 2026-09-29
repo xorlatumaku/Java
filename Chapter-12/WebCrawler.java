@@ -46,15 +46,16 @@ public class WebCrawler {
           
           if (endIndex > 0) { // Ensure that a correct URL is found
             list.add(line.substring(current, endIndex));
-            current = line.indexOf("http:", endIndex);
-            
+            current = line.indexOf("http:", endIndex); 
           }
+          else
+            current = -1;
         }
       }
-
-
-    } catch (Exception e) {
+    } catch (Exception ex) {
       //TODO: handle exception
+      System.out.println("Error: " + ex.getMessage());
     }
+    return list;
   }
 }
