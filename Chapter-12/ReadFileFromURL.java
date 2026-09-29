@@ -19,5 +19,8 @@ public class ReadFileFromURL {
       //TODO: handle exception
       System.out.println("Invalid URL");
     }
+      catch (java.io.IOException ex) {
+        System.out.println("I/O Errors: no such file");
+    }
   }
 }
