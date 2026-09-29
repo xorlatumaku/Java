@@ -36,4 +36,9 @@ public class Rectangle extends GeometricObject {
   public void setHeight(double height) {
     this.height = height;
   }
+
+  // Return area
+  public double getArea() {
+    return width * height;
+  }
 }
