@@ -45,4 +45,7 @@ public abstract class GeometricObject {
     return "created on " + dateCreated + "\ncolor: " + color + " and filled: " + filled;
   }
 
+  // Abstract method getArea
+  public abstract double getArea();
+
 }
