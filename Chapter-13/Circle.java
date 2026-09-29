@@ -13,4 +13,9 @@ public class Circle extends GeometricObject {
     setColor(color);
     setFilled(filled);
   }
+
+  // Return radius
+  public double getRadius() {
+    return radius;
+  }
 }
