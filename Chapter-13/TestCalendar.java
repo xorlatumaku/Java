@@ -26,5 +26,8 @@ public class TestCalendar {
     System.out.println("WEEK_OF_YEAR: " + calendar.get(Calendar.WEEK_OF_YEAR));
     System.out.println("AM_PM: " + calendar.get(Calendar.AM_PM));
 
+    // Construct a calendar for December 25, 1997
+    Calendar calendar1 = new GregorianCalendar(1997, 11, 25);
+
   }
 }
