@@ -4,7 +4,14 @@ public abstract class GeometricObject {
   private java.util.Date dateCreated;
 
   // Construct a default geometric object
-  private GeometricObject() {
+  protected GeometricObject() {
     dateCreated = new java.util.Date();
+  }
+
+  // Construct a geometric object with color and filled value
+  protected GeometricObject(String color, boolean filled) {
+    dateCreated = new java.util.Date();
+    this.color = color;
+    this.filled = filled;
   }
 }
