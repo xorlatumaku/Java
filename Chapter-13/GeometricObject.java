@@ -30,4 +30,9 @@ public abstract class GeometricObject {
     return filled;
   }
 
+  // Set a new filled
+  public void setFilled(boolean filled) {
+    this.filled = filled;
+  }
+
 }
