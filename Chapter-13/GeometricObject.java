@@ -24,4 +24,10 @@ public abstract class GeometricObject {
   public void setColor(String color) {
     this.color = color;
   }
+
+  // Return filled.
+  public boolean isFilled() {
+    return filled;
+  }
+
 }
