@@ -8,5 +8,8 @@ public class TestGeometricObject {
 
     // Display circle
     displayGeometricObject(geoObject1);
+
+    // Display Rectangle
+    displayGeometricObject(geoObject2);
   }
 }
