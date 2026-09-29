@@ -17,4 +17,11 @@ public class TestGeometricObject {
   public static boolean equalArea(GeometricObject object1, GeometricObject object2) {
     return object1.getArea() == object2.getArea();
   }
+
+  // A method for displaying a geometric object
+  public static void displayGeometricObject(GeometricObject object) {
+    System.out.println();
+    System.out.println("The area is " + object.getArea());
+    System.out.println("The perimeter is " + object.getPerimeter());
+  }
 }
