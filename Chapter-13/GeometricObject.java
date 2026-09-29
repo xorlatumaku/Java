@@ -35,4 +35,9 @@ public abstract class GeometricObject {
     this.filled = filled;
   }
 
+  // Get dateCreated
+  public java.util.Date getDateCreated() {
+    return dateCreated;
+  }
+
 }
