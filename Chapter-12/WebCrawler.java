@@ -8,4 +8,8 @@ public class WebCrawler {
     String url = input.nextLine();
     crawler(url);   // Traverse the Web from the a starting url
   }
+
+  public static void crawler(String startingURL) {
+    ArrayList<String> listOfPendingURLs = new ArrayList<>();
+  }
 }
