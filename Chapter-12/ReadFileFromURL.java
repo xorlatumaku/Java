@@ -9,6 +9,10 @@ public class ReadFileFromURL {
       java.net.URL url = new java.net.URL(URLString);
       int count = 0;
       Scanner input = new Scanner(url.openStream());
+      while (input.hasNext()) {
+        String line = input.nextLine();
+        count += line.length();
+      }
     } catch (Exception e) {
       //TODO: handle exception
     }
