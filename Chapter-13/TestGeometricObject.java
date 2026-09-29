@@ -12,4 +12,9 @@ public class TestGeometricObject {
     // Display Rectangle
     displayGeometricObject(geoObject2);
   }
+
+  // A method for comparing the areas of two geometric objects
+  public static boolean equalArea(GeometricObject object1, GeometricObject object2) {
+    return object1.getArea() == object2.getArea();
+  }
 }
