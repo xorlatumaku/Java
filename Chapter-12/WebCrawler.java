@@ -40,6 +40,15 @@ public class WebCrawler {
       while (input.hasNext()) {
         String line = input.nextLine();
         current = line.indexOf("http:", current);
+
+        while (current > 0) {
+          int endIndex = line.indexOf("\"", current);
+          
+          if (endIndex > 0) { // Ensure that a correct URL is found
+            list.add(line.substring(current, endIndex));
+            
+          }
+        }
       }
 
 
