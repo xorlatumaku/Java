@@ -7,5 +7,7 @@ public class LargestNumber {
     
     list.add(45); // Add an integer
     list.add(3445.53); // Add a double
+
+    list.add(new BigInteger("3432323234344343101"));  // Add a BigInteger
   }
 }
