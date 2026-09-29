@@ -11,5 +11,6 @@ public class WebCrawler {
 
   public static void crawler(String startingURL) {
     ArrayList<String> listOfPendingURLs = new ArrayList<>();
+    ArrayList<String> listOfTraversedURLs = new ArrayList<>();
   }
 }
