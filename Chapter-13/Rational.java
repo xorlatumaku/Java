@@ -76,4 +76,12 @@ public class Rational extends Number implements Comparable<Rational> {
     else 
       return numerator + "/" + denominator;
   }
+
+  @Override // Override the equals method in the Object class
+  public boolean equals(Object other) {
+    if ((this.subtract((Rational)(other))).getNumerator() == 0)
+      return true;
+    else
+      return false;
+  }
 }
