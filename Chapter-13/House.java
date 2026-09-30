@@ -12,4 +12,8 @@ public class House implements Cloneable, Comparable<House> {
   public int getId() {
     return id;
   }
+
+  public double getArea() {
+    return area;
+  }
 }
