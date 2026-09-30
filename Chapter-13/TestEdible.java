@@ -45,3 +45,7 @@ class Tiger extends Animal {
     return "Tiger: RROOAARR";
   }
 }
+
+abstract class Fruit implements Edible {
+
+}
