@@ -6,5 +6,11 @@ public class SortRectangles {
       new ComparableRectangle(7.4, 35.4),
       new ComparableRectangle(1.4, 25.4)};
     
+    java.util.Arrays.sort(rectangles);
+    
+    for (Rectangle rectangle : rectangles) {
+      System.out.print(rectangle + " ");
+      System.out.println();
+    }
   }
 }
