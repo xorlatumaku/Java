@@ -16,4 +16,8 @@ public class House implements Cloneable, Comparable<House> {
   public double getArea() {
     return area;
   }
+
+  public java.util.Date getWhenBuilt() {
+    return whenBuilt;
+  }
 }
