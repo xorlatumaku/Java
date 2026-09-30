@@ -4,7 +4,7 @@ public class SortComparableObjects {
   public static void main(String[] args) {
     String[] cities = {"Savannah", "Boston", "Atlanta", "Tampa"};
     java.util.Arrays.sort(cities);
-    for (String city : cities) {
+    for (String city : cities)
       System.out.print(city + " ");
     System.out.println();
 
@@ -13,7 +13,7 @@ public class SortComparableObjects {
     
     java.util.Arrays.sort(hugeNumbers);
     for (BigInteger number : hugeNumbers)
-      System.out.println(number + " ");
-    }
+      System.out.print(number + " ");
+    System.out.println();
   }
 }
