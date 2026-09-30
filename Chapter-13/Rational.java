@@ -54,4 +54,11 @@ public class Rational extends Number implements Comparable<Rational> {
     long d = denominator * secondRational.getDenominator();
     return new Rational(n, d);
   }
+
+  // Multiply a rational number by this rational
+  public Rational multiply(Rational secondRational) {
+    long n = numerator * secondRational.getNumerator();
+    long d = denominator * secondRational.getDenominator();
+    return new Rational(n, d);
+  }
 }
