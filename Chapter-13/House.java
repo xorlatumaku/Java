@@ -33,4 +33,16 @@ public class House implements Cloneable, Comparable<House> {
       return null;
     }
   }
+
+  // Implement the compareTo method defined in Comparable
+  @Override
+  public int compareTo(House o) {
+    if (area > o.area)
+      return 1;
+    else if (area < o.area)
+      return -1;
+    else 
+      return 0;
+  }
+
 }
