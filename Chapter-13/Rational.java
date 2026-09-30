@@ -33,4 +33,9 @@ public class Rational extends Number implements Comparable<Rational> {
   public long getNumerator() {
     return numerator;
   }
+
+  // Return denominator
+  public long getDenominator() {
+    return denominator;
+  }
 }
