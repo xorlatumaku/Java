@@ -26,7 +26,7 @@ public class House implements Cloneable, Comparable<House> {
    */ 
   @Override
   public Object clone() {
-    try () {
+    try {
       return super.clone();
     } catch (CloneNotSupportedException ex) {
       //TODO: handle exception
