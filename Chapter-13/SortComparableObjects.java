@@ -10,6 +10,10 @@ public class SortComparableObjects {
 
     BigInteger[] hugeNumbers = {new BigInteger("2323231092923992"),
       new BigInteger("432232323239292"), new BigInteger("54623239292")};
+    
+    java.util.Arrays.sort(hugeNumbers);
+    for (BigInteger number : hugeNumbers)
+      System.out.println(number + " ");
     }
   }
 }
