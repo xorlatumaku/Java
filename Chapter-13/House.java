@@ -20,4 +20,17 @@ public class House implements Cloneable, Comparable<House> {
   public java.util.Date getWhenBuilt() {
     return whenBuilt;
   }
+
+  /* Override the protected clone method defined in the Object class,
+   * and strengthen its accessibility
+   */ 
+  @Override
+  public Object clone() {
+    try () {
+      return super.clone();
+    } catch (CloneNotSupportedException ex) {
+      //TODO: handle exception
+      return null;
+    }
+  }
 }
