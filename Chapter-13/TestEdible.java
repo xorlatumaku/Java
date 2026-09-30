@@ -26,3 +26,10 @@ abstract class Animal {
   // Return animal sound
   public abstract String sound();
 }
+
+class Chicken extends Animal implements Edible {
+  @Override
+  public String howToEat() {
+    return "Chicken: Fry it";
+  }
+}
