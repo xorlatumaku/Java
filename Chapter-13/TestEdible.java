@@ -22,4 +22,7 @@ abstract class Animal {
   public void setWeight(double weight) {
     this.weight = weight;
   }
+
+  // Return animal sound
+  public abstract String sound();
 }
