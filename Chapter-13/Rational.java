@@ -38,4 +38,12 @@ public class Rational extends Number implements Comparable<Rational> {
   public long getDenominator() {
     return denominator;
   }
+
+  // Add a rational number to this rational
+  public Rational add(Rational secondRational) {
+    long n = numerator * secondRational.getDenominator() +
+      denominator * secondRational.getNumerator();
+    long d = denominator * secondRational.getDenominator();
+    return new Rational(n, d);
+  }
 }
