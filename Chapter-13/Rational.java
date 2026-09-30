@@ -84,4 +84,9 @@ public class Rational extends Number implements Comparable<Rational> {
     else
       return false;
   }
+
+  @Override // Implement the abstract intValue method in Number
+  public int intValue() {
+    return (int)doubleValue();
+  }
 }
