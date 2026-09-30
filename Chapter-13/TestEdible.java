@@ -38,3 +38,10 @@ class Chicken extends Animal implements Edible {
     return "Chicken: cock-a-doodle-doo";
   }
 }
+
+class Tiger extends Animal {
+  @Override
+  public String sound() {
+    return "Tiger: RROOAARR";
+  }
+}
