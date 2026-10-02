@@ -10,5 +10,11 @@ public class TestFileStream {
           for (int i = 1; i <= 10; i++)
             output.write(i);
     }
+
+    try (
+        // Create an input stream for the file
+        FileInputStream input = new FileInputStream("temp.dat");
+        ) {
+    }
   }
 }
