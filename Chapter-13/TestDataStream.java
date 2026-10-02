@@ -12,7 +12,12 @@ public class TestDataStream {
       output.writeDouble(185.5);
       output.writeUTF("Kim");
       output.writeDouble(105.25);
-    }
+      }
+      
+      try (// Create an input stream for file temp.dat
+        DataInputStream input = new DataInputStream(new FileInputStream("temp.dat"));
+      ) {
+             }
     }
   }
 }
