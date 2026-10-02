@@ -15,6 +15,10 @@ public class TestFileStream {
         // Create an input stream for the file
         FileInputStream input = new FileInputStream("temp.dat");
         ) {
+        // Read values from the file
+        int value;
+        while ((value = input.read()) != -1)
+          System.out.print(value + " ");
     }
   }
 }
