@@ -9,5 +9,9 @@ public class RecursiveBinarySearch {
     if (low > high) // The list has been exhausted without a match
       return - low - 1;
       
+    int mid = (low + high) / 2;
+    if (key < list[mid])
+      return binarySearch(list, key, low, mid - 1);
+
   }
 }
