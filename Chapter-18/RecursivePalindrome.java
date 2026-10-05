@@ -8,6 +8,8 @@ public class RecursivePalindrome {
       return true;
     else if (s.charAt(low) != s.charAt(high))  // Base case
       return false;
+    else
+      return isPalindrome(s, low + 1, high - 1);  // Recursive call 
   }
 
   public static void main(String[] args) {
