@@ -7,4 +7,12 @@ public class RecursivePalindrome {
     else
       return isPalindrome(s.substring(1, s.length() - 1));  // Recursive call
   }
+
+  public static void main(String[] args) {
+    System.out.println("Is moon a palindrome? " + isPalindrome("moon"));
+    System.out.println("Is noon a palindrome? " + isPalindrome("noon"));
+    System.out.println("Is a a palindrome? " + isPalindrome("a"));
+    System.out.println("Is aba a palindrome? " + isPalindrome("aba"));
+    System.out.println("Is ab a palindrome? " + isPalindrome("ab"));
+  }
 }
