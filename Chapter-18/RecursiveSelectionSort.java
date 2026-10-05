@@ -1,6 +1,16 @@
 public class RecursiveSelectionSort {
  
   private static void sort(double[] list, int low, int high) {
-    
+    if (low < high) {
+      // Find the smallest number and its index in list[low .. high]
+      int indexOfMin = low;
+      double min = list[low];
+      for (int i = low; i <= high; i++) {
+        if (list[i] < min) {
+          min = list[i];
+          indexOfMin = i;
+        }
+      }
+    }
   }
 }
