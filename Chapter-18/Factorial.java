@@ -7,7 +7,8 @@ public class Factorial {
     System.out.print("Enter a nonnegative integer: ");
     int n = input.nextInt();
     
-    
+    // Display factorial
+    System.out.println(n + "! = " + factorial(n));
   }
   
     // Return the factorial for the specified number
