@@ -5,5 +5,7 @@ public class RecursiveBinarySearch {
     return binarySearch(list, key, low, high);
   }
 
-
+  private static int binarySearch(int[] list, int key, int low, int high) {
+    
+  }
 }
