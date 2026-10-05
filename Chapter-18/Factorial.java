@@ -12,7 +12,7 @@ public class Factorial {
   }
   
     // Return the factorial for the specified number
-    public static long factorial(n) {
+    public static long factorial(int n) {
       if (n == 0)
         return 1;
       else
