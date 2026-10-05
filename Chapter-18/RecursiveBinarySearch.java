@@ -6,6 +6,8 @@ public class RecursiveBinarySearch {
   }
 
   private static int binarySearch(int[] list, int key, int low, int high) {
-    
+    if (low > high) // The list has been exhausted without a match
+      return - low - 1;
+      
   }
 }
