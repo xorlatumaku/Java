@@ -7,7 +7,8 @@ public class Fibonacci {
     System.out.print("Enter an index for a Fibonacci number: ");
     int index = input.nextInt();
 
-
+    // Find and display the Fibonacci number
+    System.out.println("The Fibonacci number at index " + index + " is " + fib(index));
   }
 
   // The method for finding the Fibonacci number
