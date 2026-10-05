@@ -1,5 +1,7 @@
 public class RecursiveSelectionSort {
- 
+  public static void sort(double[] list) {
+    sort(list, 0, list.length - 1); // Sort the entire list
+  }
   private static void sort(double[] list, int low, int high) {
     if (low < high) {
       // Find the smallest number and its index in list[low .. high]
