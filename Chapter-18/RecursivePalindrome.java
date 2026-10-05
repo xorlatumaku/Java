@@ -4,7 +4,8 @@ public class RecursivePalindrome {
   }
 
   private static boolean isPalindrome(String s, int low, int high) {
-    
+    if (high <= low)  // Base case
+      return true;
   }
 
   public static void main(String[] args) {
