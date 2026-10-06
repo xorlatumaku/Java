@@ -8,7 +8,7 @@ public class TowerOfHanoi {
     int n = input.nextInt();
    
     // Find the solution recursively
-    System.out.println("The moves are: ");
+    System.out.print("The moves are: ");
     moveDisks(n, 'A', 'B', 'C');
 
   }
