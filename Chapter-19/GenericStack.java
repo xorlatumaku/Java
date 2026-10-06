@@ -18,4 +18,8 @@ public class GenericStack<E> {
     list.remove(getSize() - 1);
     return o;
   }
-}
+
+  public boolean isEmpty() {
+    return list.isEmpty();
+  }
+} 
