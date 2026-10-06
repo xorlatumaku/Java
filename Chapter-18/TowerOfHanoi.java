@@ -6,7 +6,8 @@ public class TowerOfHanoi {
     System.out.println("Enter number of disk: ");
     Scanner input = new Scanner(System.in);
     int n = input.nextInt();
-
+    
+    moveDisks(n, 'A', 'B', 'C');
 
   }
 
