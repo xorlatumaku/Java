@@ -12,4 +12,10 @@ public class GenericStack<E> {
   public void push(E o) {
     list.add(o);
   }
+
+  public E pop() {
+    E o = list.get(getSize() - 1);
+    list.remove(getSize() - 1);
+    return o;
+  }
 }
