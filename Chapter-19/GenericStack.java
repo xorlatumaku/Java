@@ -4,4 +4,8 @@ public class GenericStack<E> {
   public int getSize() {
     return list.size();
   }
+
+  public E peek() {
+    return list.get(getSize() - 1);
+  }
 }
