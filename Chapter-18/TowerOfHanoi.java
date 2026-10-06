@@ -14,5 +14,9 @@ public class TowerOfHanoi {
   public static void moveDisks(int n, char toTower, char fromTower, char auxTower) {
     if (n == 1) // Base case 
       System.out.println("Move " + n + " from " + fromTower + " to " + toTower);
+    else {
+      moveDisks(n - 1, fromTower, auxTower, toTower);   // Recursive call 
+      moveDisks(n - 1, auxTower, toTower, fromTower);   // Recursive call
+    }
   }
 }
