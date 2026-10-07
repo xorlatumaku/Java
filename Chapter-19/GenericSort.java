@@ -25,8 +25,11 @@ public class GenericSort {
     System.out.print("Sorted Double objects: ");
     printList(doubleArray);
 
-    System.out.println("Sorted Character objects: ");
+    System.out.print("Sorted Character objects: ");
     printList(charArray);
+
+    System.out.print("Sorted String objects: ");
+    printList(stringArray);
   }
 
   /* Sort an array of comparable objects */
