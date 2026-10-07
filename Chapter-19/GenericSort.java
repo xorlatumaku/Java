@@ -22,6 +22,13 @@ public class GenericSort {
       // Find the mininum in the list[i+1..list.length-2]
       currentMin = list[i];
       currentMinIndex = i;
+
+      for (int j = i + 1; j < list.length; j++) {
+        if (currentMin.compareTo(list[j]) > 0) {
+          currentMin = list[j];
+          currentMinIndex = j;
+        }
+      }
     }
   }
 }
