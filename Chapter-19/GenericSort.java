@@ -11,6 +11,12 @@ public class GenericSort {
 
     // Create a String array
     String[] stringArray = {"Tom", "Susan", "Kim"};
+
+    // Sort the arrays
+    sort(intArray);
+    sort(doubleArray);
+    sort(charArray);
+    sort(stringArray);
   }
 
   /* Sort an array of comparable objects */
