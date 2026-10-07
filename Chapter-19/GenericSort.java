@@ -12,4 +12,10 @@ public class GenericSort {
     // Create a String array
     String[] stringArray = {"Tom", "Susan", "Kim"};
   }
+
+  /* Sort an array of comparable objects */
+  public static <E extends Comparable<E>> void sort(E[] list) {
+    E currentMin;
+    int currentMinIndex;
+  }
 }
