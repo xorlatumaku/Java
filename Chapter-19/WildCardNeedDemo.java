@@ -7,4 +7,17 @@ public class WildCardNeedDemo {
 
     System.out.print("The max number is " + max(intStack));
   }
+
+  /* Find the maximum in a stack of numbers */
+  public static double max(GenericStack<Number> stack) {
+    double max = stack.pop().doubleValue(); // Initialize max
+
+    while (!stack.isEmpty()) {
+      double value = stack.pop().doubleValue();
+      if (value > max)
+        max = value;
+    }
+
+    return max;
+  }
 }
