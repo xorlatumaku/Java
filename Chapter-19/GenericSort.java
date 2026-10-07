@@ -29,6 +29,12 @@ public class GenericSort {
           currentMinIndex = j;
         }
       }
+
+      // Swap list[i] with list[currentMinIndex] if necessary
+      if (currentMinIndex != i) {
+        list[currentMinIndex] = list[i];
+        list[i] = currentMin;
+      }
     }
   }
 }
