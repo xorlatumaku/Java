@@ -17,5 +17,11 @@ public class GenericSort {
   public static <E extends Comparable<E>> void sort(E[] list) {
     E currentMin;
     int currentMinIndex;
+
+    for (int i = 0; i < list.length - 1; i++) {
+      // Find the mininum in the list[i+1..list.length-2]
+      currentMin = list[i];
+      currentMinIndex = i;
+    }
   }
 }
