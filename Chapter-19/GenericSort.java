@@ -17,6 +17,10 @@ public class GenericSort {
     sort(doubleArray);
     sort(charArray);
     sort(stringArray);
+
+    // Display the sorted arrays
+    System.out.print("Sorted Integer objects: ");
+    printList(intArray);
   }
 
   /* Sort an array of comparable objects */
