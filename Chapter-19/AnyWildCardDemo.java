@@ -7,4 +7,11 @@ public class AnyWildCardDemo {
 
     print(intStack);
   }
+
+  /* Prints objects and empties the stack */
+  public static void print(GenericStack<?> stack) {
+    while (!stack.isEmpty()) {
+      System.out.print(stack.pop() + " ");
+    }
+  }
 }
