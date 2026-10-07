@@ -37,4 +37,11 @@ public class GenericSort {
       }
     }
   }
+
+  // Print an array of objects
+  public static void printList(Object[] list) {
+    for (int i = 0; i < list.length; i++)
+      System.out.print(list[i] + " ");
+    System.out.println();
+  }
 }
