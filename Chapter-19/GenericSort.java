@@ -21,6 +21,9 @@ public class GenericSort {
     // Display the sorted arrays
     System.out.print("Sorted Integer objects: ");
     printList(intArray);
+
+    System.out.print("Sorted Double objects: ");
+    printList(doubleArray);
   }
 
   /* Sort an array of comparable objects */
