@@ -9,5 +9,9 @@ public class TestIterator {
     collection.add("Madison");
 
     Iterator<String> iterator = collection.iterator();
+    while (iterator.hasNext()) {
+      System.out.print(iterator.next().toUpperCase() + " ");
+    }
+    System.out.println();
   }
 }
