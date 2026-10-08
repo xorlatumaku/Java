@@ -11,5 +11,7 @@ public class TestCollection {
 
     System.out.println("A list of cities in collection1:");
     System.out.println(collection1);
+
+    System.out.println("\nIs Dallas in collection1? " + collection1.contains("Dallas"));
   }
 }
