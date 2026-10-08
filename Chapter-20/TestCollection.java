@@ -6,5 +6,6 @@ public class TestCollection {
     
     collection1.add("New York");
     collection1.add("Atlanta");
+    collection1.add("Dallas");
   }
 }
