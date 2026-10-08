@@ -1,0 +1,7 @@
+import java.util.*;
+
+public class TestIterator {
+  public static void main(String[] args) {
+    Collection<String> collection = new ArrayList<>();
+  }
+}
