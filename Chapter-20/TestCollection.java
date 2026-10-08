@@ -39,5 +39,6 @@ public class TestCollection {
     System.out.println(c1);
 
     c1 = (ArrayList<String>)(collection1.clone());
+    c1.removeAll(collection2);
   }
 }
