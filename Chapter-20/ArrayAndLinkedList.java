@@ -13,5 +13,7 @@ public class ArrayAndLinkedList {
 
     System.out.println("A list of integers in the array list: ");
     System.out.println(arrayList);
+
+    LinkedList<Object> linkedList = new LinkedList<Object>(arrayList);
   }
 }
