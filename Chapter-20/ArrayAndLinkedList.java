@@ -10,5 +10,8 @@ public class ArrayAndLinkedList {
     arrayList.add(4);
     arrayList.add(0, 10);
     arrayList.add(3, 30);
+
+    System.out.println("A list of integers in the array list: ");
+    System.out.println(arrayList);
   }
 }
