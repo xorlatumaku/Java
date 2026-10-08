@@ -25,5 +25,7 @@ public class TestCollection {
 
     System.out.println("\nA list of cities in collection2:");
     System.out.println(collection2);
+
+    ArrayList<String> c1 = (ArrayList<String>)(collection1.clone());
   }
 }
