@@ -29,8 +29,10 @@ public class ArrayAndLinkedList {
     
     System.out.println("Display the linked list backward:");
     listIterator = linkedList.listIterator(linkedList.size());
+    
     while (listIterator.hasPrevious()) {
       System.out.print(listIterator.previous() + " ");
     }
+    System.out.println();
   }
 }
