@@ -7,5 +7,7 @@ public class TestIterator {
     collection.add("Atlanta");
     collection.add("Dallas");
     collection.add("Madison");
+
+    Iterator<String> iterator = collection.iterator();
   }
 }
