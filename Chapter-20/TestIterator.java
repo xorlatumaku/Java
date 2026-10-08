@@ -6,5 +6,6 @@ public class TestIterator {
     collection.add("New York");
     collection.add("Atlanta");
     collection.add("Dallas");
+    collection.add("Madison");
   }
 }
