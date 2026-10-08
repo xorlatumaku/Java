@@ -18,5 +18,8 @@ public class ArrayAndLinkedList {
     linkedList.add(1, "red");
     linkedList.removeLast();
     linkedList.addFirst("green");
+
+    System.out.println("Display the linked list forward: ");
+    ListIterator<Object> listIterator = linkedList.listIterator();
   }
 }
