@@ -15,5 +15,6 @@ public class ArrayAndLinkedList {
     System.out.println(arrayList);
 
     LinkedList<Object> linkedList = new LinkedList<Object>(arrayList);
+    linkedList.add(1, "red");
   }
 }
