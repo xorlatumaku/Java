@@ -8,5 +8,6 @@ public class ArrayAndLinkedList {
     arrayList.add(3);
     arrayList.add(1);
     arrayList.add(4);
+    arrayList.add(0, 10);
   }
 }
