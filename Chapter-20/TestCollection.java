@@ -37,5 +37,7 @@ public class TestCollection {
 
     System.out.print("\nCities in collection1 and collection2: ");
     System.out.println(c1);
+
+    c1 = (ArrayList<String>)(collection1.clone());
   }
 }
