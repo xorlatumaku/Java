@@ -21,5 +21,11 @@ public class ArrayAndLinkedList {
 
     System.out.println("Display the linked list forward: ");
     ListIterator<Object> listIterator = linkedList.listIterator();
+    
+    while (listIterator.hasNext()) {
+      System.out.print(listIterator.next() + " ");
+    }
+    System.out.println();
+
   }
 }
