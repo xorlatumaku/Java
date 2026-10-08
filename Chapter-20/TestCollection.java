@@ -19,5 +19,6 @@ public class TestCollection {
 
     Collection<String> collection2 = new ArrayList<>();
     collection2.add("Seattle");
+    collection2.add("Portland");
   }
 }
