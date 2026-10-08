@@ -5,5 +5,6 @@ public class TestCollection {
     ArrayList<String> collection1 = new ArrayList<>();
     
     collection1.add("New York");
+    collection1.add("Atlanta");
   }
 }
