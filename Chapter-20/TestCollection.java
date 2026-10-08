@@ -34,5 +34,8 @@ public class TestCollection {
 
     c1 = (ArrayList<String>)(collection1.clone());
     c1.retainAll(collection2);
+
+    System.out.print("\nCities in collection1 and collection2: ");
+    System.out.println(c1);
   }
 }
