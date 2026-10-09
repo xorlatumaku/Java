@@ -4,8 +4,8 @@ public class SortStringIgnoreCase {
       ("Atlanta", "Savannah", "New York", "Dallas");
     cities.sort((s1, s2) -> s1.compareToIgnoreCase(s2));
 
-    for (String s : cities) {
+    for (String s : cities)
       System.out.print(s + " ");
-    }
+    System.out.println();
   }
 }
