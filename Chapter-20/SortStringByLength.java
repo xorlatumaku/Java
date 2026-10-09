@@ -6,6 +6,7 @@ public class SortStringByLength {
     for (String s : cities) {
       System.out.print(s + " ");
     }
+    System.out.println();
   }
 
   public static class MyComparator implements java.util.Comparator<String> {
