@@ -5,7 +5,7 @@ public class TestComparator {
     GeometricObject g1 = new Rectangle(5, 5);
     GeometricObject g2 = new Circle(5);
 
-    GeometricObject g = max(g1, g2, (o1, o2) -> o1.getArea() > o2.getArea() ? 1 : o1.getArea() == o2.getArea() ? 0 : 1);
+    GeometricObject g = max(g1, g2, (o1, o2) -> o1.getArea() > o2.getArea() ? 1 : o1.getArea() == o2.getArea() ? 0 : -1);
     
     System.out.println("The area of the larger object is " + g.getArea());
   }
