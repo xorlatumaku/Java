@@ -59,6 +59,12 @@ public class EvaluateExpression {
       else if (token.trim().charAt(0) == '(') {
         operatorStack.push('(');  // Push '(' stack
       }
+      else if (token.trim().charAt(0) == ')') {
+        // Process all the operators in the stack until seeing '('
+        while (operatorStack.peek() != '(') {
+          processAnOperator(operandStack, operatorStack);
+        }
+      }
     }
   }
 }
