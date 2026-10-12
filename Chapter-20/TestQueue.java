@@ -3,5 +3,6 @@ public class TestQueue {
     java.util.Queue<String> queue = new java.util.LinkedList<>();
     queue.offer("Oklahoma");
     queue.offer("Indiana");
+    queue.offer("Georgia");
   }
 }
