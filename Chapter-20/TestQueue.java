@@ -4,5 +4,6 @@ public class TestQueue {
     queue.offer("Oklahoma");
     queue.offer("Indiana");
     queue.offer("Georgia");
+    queue.offer("Texas");
   }
 }
