@@ -64,6 +64,8 @@ public class EvaluateExpression {
         while (operatorStack.peek() != '(') {
           processAnOperator(operandStack, operatorStack);
         }
+
+        operatorStack.pop();  // Pop the '(' symbol from the stack
       }
     }
   }
