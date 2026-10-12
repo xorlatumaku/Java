@@ -26,5 +26,8 @@ public class EvaluateExpression {
 
     // Insert blanks around (, ), +, -, /, and *
     expression = insertBlanks(expression);
+
+    // Extract operands and operators 
+    String[] tokens = expression.split(" ");
   }
 }
