@@ -56,6 +56,9 @@ public class EvaluateExpression {
         // Push the * or / operator into the operator stack
         operatorStack.push(token.charAt(0));
       }
+      else if (token.trim().charAt(0) == '(') {
+        operatorStack.push('(');  // Push '(' stack
+      }
     }
   }
 }
