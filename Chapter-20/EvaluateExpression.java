@@ -47,6 +47,12 @@ public class EvaluateExpression {
         // Push the + or - operator into the operator stack
         operatorStack.push(token.charAt(0));
       }
+      else if (token.charAt(0) == '*' || token.charAt(0) == '/') {
+        // Process all *, / in the top of the operator stack
+        while (!operatorStack.isEmpty() && (operatorStack.peek() == '*' || operatorStack.peek() == '/')) {
+          processAnOperator(operatorStack, operatorStack);
+        }
+      }
     }
   }
 }
