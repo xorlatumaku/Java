@@ -15,4 +15,9 @@ public class EvaluateExpression {
       System.out.println("Wrong expression: " + args[0]);
     }
   }
+
+  // Evaluate an expreesion
+  public static int evaluateExpression(String expression) {
+    
+  }
 }
