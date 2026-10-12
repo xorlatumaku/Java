@@ -52,6 +52,9 @@ public class EvaluateExpression {
         while (!operatorStack.isEmpty() && (operatorStack.peek() == '*' || operatorStack.peek() == '/')) {
           processAnOperator(operatorStack, operatorStack);
         }
+
+        // Push the * or / operator into the operator stack
+        operatorStack.push(token.charAt(0));
       }
     }
   }
