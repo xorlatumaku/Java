@@ -5,5 +5,6 @@ public class PriorityQueueDemo {
     PriorityQueue<String> queue1 = new PriorityQueue<>();
     queue1.offer("Oklahoma");
     queue1.offer("Indiana");
+    queue1.offer("Georgia");
   }
 }
