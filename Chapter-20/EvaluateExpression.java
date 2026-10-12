@@ -77,5 +77,8 @@ public class EvaluateExpression {
     while (!operatorStack.isEmpty()) {
       processAnOperator(operandStack, operatorStack);
     }
+
+    // Return the result
+    return operandStack.pop();
   }
 }
