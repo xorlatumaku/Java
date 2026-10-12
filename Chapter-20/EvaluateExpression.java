@@ -43,6 +43,9 @@ public class EvaluateExpression {
            operatorStack.peek() == '/')) {
            processAnOperator(operandStack, operatorStack);
         }
+
+        // Push the + or - operator into the operator stack
+        operatorStack.push(token.charAt(0));
       }
     }
   }
