@@ -10,7 +10,7 @@ public class EvaluateExpression {
 
     try {
       System.out.println(evaluateExpression(args[0]));
-    } catch (Exception e) {
+    } catch (Exception ex) {
       //TODO: handle exception
       System.out.println("Wrong expression: " + args[0]);
     }
@@ -80,21 +80,36 @@ public class EvaluateExpression {
 
     // Return the result
     return operandStack.pop();
+  }
 
-    /* Process one operator: Take an operator from operatorStack and apply
-     it on the operands in the operandStack */
-    public static void processAnOperator(Stack<Integer> operandStack, Stack<Character> operatorStack) {
-      char op = operatorStack.pop();
-      int op1 = operandStack.pop();
-      int op2 = operandStack.pop();
-      if (op == '+')
-        operandStack.push(op2 + op1);
-      else if (op == '-')
-        operandStack.push(op2 - op1);
-      else if (op == '*')
-        operandStack.push(op2 * op1);
-      else if (op == '/')
-        operandStack.push(op2 / op1);
+  /* Process one operator: Take an operator from operatorStack and apply
+    it on the operands in the operandStack */
+  public static void processAnOperator(Stack<Integer> operandStack, Stack<Character> operatorStack) {
+    char op = operatorStack.pop();
+    int op1 = operandStack.pop();
+    int op2 = operandStack.pop();
+    if (op == '+')
+      operandStack.push(op2 + op1);
+    else if (op == '-')
+      operandStack.push(op2 - op1);
+    else if (op == '*')
+      operandStack.push(op2 * op1);
+    else if (op == '/')
+      operandStack.push(op2 / op1);
+  }
+
+  public static String insertBlanks(String s) {
+    String result = "";
+
+    for (int i = 0; i < s.length(); i++) {
+      if (s.charAt(i) == '(' || s.charAt(i) == ')' ||
+          s.charAt(i) == '+' || s.charAt(i) == '-' ||
+          s.charAt(i) == '*' || s.charAt(i) == '/')
+        result += " " + s.charAt(i) + " ";
+      else
+        result += s.charAt(i);
     }
+
+    return result;
   }
 }
