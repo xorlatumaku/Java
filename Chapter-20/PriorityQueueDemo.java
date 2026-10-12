@@ -18,5 +18,9 @@ public class PriorityQueueDemo {
     queue2.offer("Indiana");
     queue2.offer("Georgia");
     queue2.offer("Texas");
+
+    System.out.println("\nPriority queue using Comparator:");
+    while (queue2.size() > 0)
+      System.out.print(queue2.remove() + " ");
   }
 }
