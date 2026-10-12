@@ -7,5 +7,12 @@ public class EvaluateExpression {
       System.out.println("Usage: java EvaluateExpression \"expression\"");
       System.exit(1);
     }
+
+    try {
+      System.out.println(evaluateExpression(args[0]));
+    } catch (Exception e) {
+      //TODO: handle exception
+      System.out.println("Wrong expression: " + args[0]);
+    }
   }
 }
