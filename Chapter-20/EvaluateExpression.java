@@ -23,5 +23,8 @@ public class EvaluateExpression {
 
     // Create operatorStack to store operators
     Stack<Character> operatorStack = new Stack<>();
+
+    // Insert blanks around (, ), +, -, /, and *
+    expression = insertBlanks(expression);
   }
 }
