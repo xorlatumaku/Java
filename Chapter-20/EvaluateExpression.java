@@ -67,6 +67,10 @@ public class EvaluateExpression {
 
         operatorStack.pop();  // Pop the '(' symbol from the stack
       }
+      else {  // An operand scanned
+        // Push an operand to the stack
+        operatorStack.push(Integer.valueOf(token));
+      }
     }
   }
 }
