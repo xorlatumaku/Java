@@ -18,6 +18,7 @@ public class EvaluateExpression {
 
   // Evaluate an expreesion
   public static int evaluateExpression(String expression) {
-    
+    // Create operandStack to store operands
+    Stack<Integer> operandStack = new Stack<>();
   }
 }
