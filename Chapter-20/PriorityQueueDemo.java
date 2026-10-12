@@ -15,5 +15,6 @@ public class PriorityQueueDemo {
     PriorityQueue<String> queue2 = new PriorityQueue<>(4, Collections.reverseOrder());
 
     queue2.offer("Oklahoma");
+    queue2.offer("Indiana");
   }
 }
