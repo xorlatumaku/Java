@@ -29,5 +29,21 @@ public class EvaluateExpression {
 
     // Extract operands and operators 
     String[] tokens = expression.split(" ");
+
+    // Phase 1: Scan tokens
+    for (String token : tokens) {
+      if (token.length() == 0)  // Blank space
+        continue; // Back to the while loop to extract the next token
+      else if (token.charAt(0) == '+' || token.charAt(0) == '-') {
+        // Process all +, -, *, / in the top of the operator stack
+        while (!operatorStack.isEmpty() && 
+          (operatorStack.peek() == '+'  ||
+           operatorStack.peek() == '-'  ||
+           operatorStack.peek() == '*'  ||
+           operatorStack.peek() == '/')) {
+           processAnOperator(operandStack, operatorStack);
+        }
+      }
+    }
   }
 }
