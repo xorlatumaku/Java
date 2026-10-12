@@ -72,5 +72,10 @@ public class EvaluateExpression {
         operatorStack.push(Integer.valueOf(token));
       }
     }
+
+    // Phase 2: Process all the remaining operators in the stack
+    while (!operatorStack.isEmpty()) {
+      processAnOperator(operandStack, operatorStack);
+    }
   }
 }
