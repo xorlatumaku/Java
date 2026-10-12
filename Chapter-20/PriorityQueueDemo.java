@@ -13,5 +13,7 @@ public class PriorityQueueDemo {
       System.out.print(queue1.remove() + " ");
 
     PriorityQueue<String> queue2 = new PriorityQueue<>(4, Collections.reverseOrder());
+
+    queue2.offer("Oklahoma");
   }
 }
