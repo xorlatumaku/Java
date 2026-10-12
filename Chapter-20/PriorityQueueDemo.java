@@ -6,5 +6,6 @@ public class PriorityQueueDemo {
     queue1.offer("Oklahoma");
     queue1.offer("Indiana");
     queue1.offer("Georgia");
+    queue1.offer("Texas");
   }
 }
