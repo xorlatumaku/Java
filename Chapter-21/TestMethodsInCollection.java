@@ -29,5 +29,8 @@ public class TestMethodsInCollection {
     System.out.println(set2.size() + " elements in set2");
 
     System.out.println("\nIs Taipei in set2? " + set2.contains("Taipei"));
+
+    set1.addAll(set2);
+    System.out.println("\nAfter adding set2 to set1, set1 is ");
   }
 }
