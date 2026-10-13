@@ -7,5 +7,6 @@ public class TestTreeSetWithComparator {
     set.add(new Rectangle(4, 5));
     set.add(new Circle(40));
     set.add(new Circle(40));
+    set.add(new Rectangle(4, 1));
   }
 }
