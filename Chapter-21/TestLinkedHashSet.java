@@ -11,5 +11,7 @@ public class TestLinkedHashSet {
     set.add("San Francisco");
     set.add("Beijing");
     set.add("New York");
+
+    System.out.println(set);
   }
 }
