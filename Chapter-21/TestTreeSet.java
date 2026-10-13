@@ -19,5 +19,6 @@ public class TestTreeSet {
     // Use the methods in SortedSet interface
     System.out.println("first(): " + treeSet.first());
     System.out.println("last(): " + treeSet.last());
+    System.out.println("headSet(\"New York\"): " + treeSet.headSet("New York"));
   }
 }
