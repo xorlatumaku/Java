@@ -23,6 +23,7 @@ public class TestHashSet {
     // Process the elements using a forEach method
     System.out.println();
     set.forEach(e -> System.out.print(e.toLowerCase() + " "));
+    System.out.println();
 
   }
 }
