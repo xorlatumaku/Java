@@ -10,6 +10,7 @@ public class TestHashSet {
     set.add("Paris");
     set.add("New York");
     set.add("San Francisco");
+    set.add("Beijing");
 
   }
 }
