@@ -12,5 +12,7 @@ public class TestTreeSet {
     set.add("San Francisco");
     set.add("Beijing");
     set.add("New York");
+
+    TreeSet<String> treeSet = new TreeSet<>(set);
   }
 }
