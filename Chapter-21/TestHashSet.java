@@ -13,6 +13,8 @@ public class TestHashSet {
     set.add("Beijing");
     set.add("New York");
 
+    System.out.println(set);
+
     // Display the element in the hash set
     for (String s : set) {
       System.out.print(s.toUpperCase() + " ");
@@ -20,7 +22,7 @@ public class TestHashSet {
 
     // Process the elements using a forEach method
     System.out.println();
-    set.forEach(e -> System.out.print(e.toLowerCase() + ""));
+    set.forEach(e -> System.out.print(e.toLowerCase() + " "));
 
   }
 }
