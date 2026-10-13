@@ -18,5 +18,9 @@ public class TestHashSet {
       System.out.print(s.toUpperCase() + " ");
     }
 
+    // Process the elements using a forEach method
+    System.out.println();
+    set.forEach(e -> System.out.print(e.toLowerCase() + ""));
+
   }
 }
