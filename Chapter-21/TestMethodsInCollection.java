@@ -5,5 +5,6 @@ public class TestMethodsInCollection {
 
     // Add strings to set1
     set1.add("London");
+    set1.add("Paris");
   }
 }
