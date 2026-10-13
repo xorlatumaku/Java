@@ -7,6 +7,7 @@ public class TestHashSet {
     
     // Add string to the set
     set.add("London");
+    set.add("Paris");
 
   }
 }
