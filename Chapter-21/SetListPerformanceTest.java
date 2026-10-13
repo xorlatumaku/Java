@@ -9,5 +9,8 @@ public class SetListPerformanceTest {
     for (int i = 0; i < N; i++)
       list.add(i);
     Collections.shuffle(list);  // Shuffle the array list
+    
+    // Create a hash set, and test its performance
+    Collection<Integer> set1 = new HashSet<>(list);
   }
 }
