@@ -13,5 +13,9 @@ public class TestLinkedHashSet {
     set.add("New York");
 
     System.out.println(set);
+
+    // Display the elements in the hash set
+    for (String element : set)
+      System.out.println(element.toLowerCase() + " ");
   }
 }
