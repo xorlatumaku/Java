@@ -7,5 +7,6 @@ public class TestMethodsInCollection {
     set1.add("London");
     set1.add("Paris");
     set1.add("New York");
+    set1.add("San Francisco");
   }
 }
