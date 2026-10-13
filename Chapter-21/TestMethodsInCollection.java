@@ -31,6 +31,9 @@ public class TestMethodsInCollection {
     System.out.println("\nIs Taipei in set2? " + set2.contains("Taipei"));
 
     set1.addAll(set2);
-    System.out.println("\nAfter adding set2 to set1, set1 is ");
+    System.out.println("\nAfter adding set2 to set1, set1 is " + set1);
+
+    set1.removeAll(set2);
+    System.out.println("After removing set2 from set1, set1 is " + set1);
   }
 }
