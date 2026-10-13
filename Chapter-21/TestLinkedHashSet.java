@@ -7,5 +7,6 @@ public class TestLinkedHashSet {
     // Add strings to the set
     set.add("London");
     set.add("Paris");
+    set.add("New York");
   }
 }
