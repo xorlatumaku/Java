@@ -7,5 +7,6 @@ public class TestTreeSet {
 
     // Add strings to the set
     set.add("London");
+    set.add("Paris");
   }
 }
