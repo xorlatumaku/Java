@@ -28,5 +28,6 @@ public class TestTreeSet {
     System.out.println("floor(\"P\"): " + treeSet.floor("P"));
     System.out.println("ceiling(\"P\"): " + treeSet.ceiling("P"));
     System.out.println("pollFirst(): " + treeSet.pollFirst());
+    System.out.println("pollLast(): " + treeSet.pollLast());
   }
 }
