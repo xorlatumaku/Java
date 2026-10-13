@@ -13,5 +13,10 @@ public class TestHashSet {
     set.add("Beijing");
     set.add("New York");
 
+    // Display the element in the hash set
+    for (String s : set) {
+      System.out.print(s.toUpperCase() + " ");
+    }
+
   }
 }
