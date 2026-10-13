@@ -21,5 +21,8 @@ public class TestTreeSet {
     System.out.println("last(): " + treeSet.last());
     System.out.println("headSet(\"New York\"): " + treeSet.headSet("New York"));
     System.out.println("tailSet(\"New York\"): " + treeSet.tailSet("New York"));
+
+    // Use the methods in NavigableSet interface
+    System.out.println("lower(\"P\"): " + treeSet.lower("P"));
   }
 }
