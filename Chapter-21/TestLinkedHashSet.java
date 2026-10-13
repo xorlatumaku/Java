@@ -9,5 +9,6 @@ public class TestLinkedHashSet {
     set.add("Paris");
     set.add("New York");
     set.add("San Francisco");
+    set.add("Beijing");
   }
 }
