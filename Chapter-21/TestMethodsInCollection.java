@@ -23,5 +23,6 @@ public class TestMethodsInCollection {
 
     // Add strings to set2
     set2.add("London");
+    set2.add("Shanghai");
   }
 }
