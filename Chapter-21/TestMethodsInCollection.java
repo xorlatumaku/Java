@@ -20,5 +20,8 @@ public class TestMethodsInCollection {
 
     // Create set2
     java.util.Set<String> set2 = new java.util.HashSet<>();
+
+    // Add strings to set2
+    set2.add("London");
   }
 }
