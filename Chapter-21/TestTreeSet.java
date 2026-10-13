@@ -26,5 +26,6 @@ public class TestTreeSet {
     System.out.println("lower(\"P\"): " + treeSet.lower("P"));
     System.out.println("higher(\"P\"): " + treeSet.higher("P"));
     System.out.println("floor(\"P\"): " + treeSet.floor("P"));
+    System.out.println("ceiling(\"P\"): " + treeSet.ceiling("P"));
   }
 }
