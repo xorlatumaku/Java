@@ -9,5 +9,7 @@ public class TestMethodsInCollection {
     set1.add("New York");
     set1.add("San Francisco");
     set1.add("Beijing");
+
+    System.out.println("set1 is " + set1);
   }
 }
