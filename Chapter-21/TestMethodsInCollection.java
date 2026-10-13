@@ -11,5 +11,6 @@ public class TestMethodsInCollection {
     set1.add("Beijing");
 
     System.out.println("set1 is " + set1);
+    System.out.println(set1.size() + " elements in set1");
   }
 }
