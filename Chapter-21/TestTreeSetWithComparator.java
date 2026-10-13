@@ -5,5 +5,6 @@ public class TestTreeSetWithComparator {
     // Create a tree set for geometric objects using a comparator
     Set<GeometricObject> set = new TreeSet<>(new GeometricObjectComparator());
     set.add(new Rectangle(4, 5));
+    set.add(new Circle(40));
   }
 }
