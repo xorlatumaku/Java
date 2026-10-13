@@ -8,5 +8,10 @@ public class TestTreeSetWithComparator {
     set.add(new Circle(40));
     set.add(new Circle(40));
     set.add(new Rectangle(4, 1));
+
+    // Display geometric objects in the tree set
+    System.out.println("A sorted set of geometric objects");
+    for (GeometricObject element : set)
+      System.out.println("area = " + element.getArea());
   }
 }
