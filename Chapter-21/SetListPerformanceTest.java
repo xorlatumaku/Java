@@ -13,5 +13,6 @@ public class SetListPerformanceTest {
     // Create a hash set, and test its performance
     Collection<Integer> set1 = new HashSet<>(list);
     System.out.println("Member test time for hash set is " + getTestTime(set1) + " milliseconds");
+    System.out.println("Remove element time for hash set is " + getRemoveTime(set1) + " milliseconds");
   }
 }
