@@ -18,5 +18,8 @@ public class SetListPerformanceTest {
     // Create a linked hash set, and test its performance
     Collection<Integer> set2 = new LinkedHashSet<>(list);
     System.out.println("Member test time for linked hash set is " + getTestTime(set2) + " milliseconds");
+
+    // Create a tree set, and test its performance
+    Collection<Integer> set3 = new TreeSet<>(list);
   }
 }
