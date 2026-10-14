@@ -23,5 +23,8 @@ public class CountOccurrenceOfWords {
         }
       }
     }
+
+    // Display key and value for each entry
+    map.forEach((k, v) -> System.out.println(k + "\t" + v));
   }
 }
