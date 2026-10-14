@@ -7,5 +7,16 @@ public class CountOccurrenceOfWords {
 
     // Create a TreeMap to hold words as key and count as value
     Map<String, Integer> map = new TreeMap<>();
+
+    String[] words = text.split("[\\s+\\p{P}]");
+    for (int i = 0; i < words.length; i++) {
+      String key = words[i].toLowerCase();
+
+      if (key.length() > 0) {
+        if (!map.containsKey(key)) {
+          map.put(key, 1);
+        }
+      }
+    }
   }
 }
