@@ -21,5 +21,6 @@ public class SetListPerformanceTest {
 
     // Create a tree set, and test its performance
     Collection<Integer> set3 = new TreeSet<>(list);
+    System.out.println("Member test time for tree set is " + getTestTime(set3) + " milliseconds");
   }
 }
