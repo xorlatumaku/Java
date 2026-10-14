@@ -31,5 +31,6 @@ public class SetListPerformanceTest {
 
     // Create a linked list, and test its performance
     Collection<Integer> list2 = new LinkedList<>(list);
+    System.out.println("Member test time for linked list is " + getTestTime(list2) + " milliseconds");
   }
 }
