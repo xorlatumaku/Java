@@ -50,5 +50,7 @@ public class SetListPerformanceTest {
 
     for (int i = 0; i < N; i++)
       c.remove(i);
+
+    return System.currentTimeMillis() - startTime;
   }
 }
