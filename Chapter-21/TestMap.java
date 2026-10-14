@@ -6,5 +6,6 @@ public class TestMap {
     Map<String, Integer> hashMap = new HashMap<>();
     hashMap.put("Smith", 30);
     hashMap.put("Anderson", 31);
+    hashMap.put("Lewis", 29);
   }
 }
