@@ -33,5 +33,7 @@ public class TestMap {
     // Display each entry with name and age
     System.out.print("\nNames and ages are ");
     treeMap.forEach((name, age) -> System.out.print(name + ": " + age + " "));
+
+    System.out.println();
   }
 }
