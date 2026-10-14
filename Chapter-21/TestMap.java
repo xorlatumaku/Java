@@ -20,5 +20,6 @@ public class TestMap {
     // Create a LinkedHashMap
     Map<String, Integer> LinkedHashMap = new LinkedHashMap<>(16, 0.75f, true);
     linkedHashMap.put("Smith", 30);
+    linkedHashMap.put("Anderson", 31);
   }
 }
