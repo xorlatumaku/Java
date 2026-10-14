@@ -29,5 +29,9 @@ public class TestMap {
 
     System.out.println("Display entries in LinkedHashMap");
     System.out.println(linkedHashMap);
+
+    // Display each entry with name and age
+    System.out.print("\nNames and ages are ");
+    treeMap.forEach((name, age) -> System.out.print(name + ": " + age + " "));
   }
 }
