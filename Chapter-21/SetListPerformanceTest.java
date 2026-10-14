@@ -26,5 +26,6 @@ public class SetListPerformanceTest {
 
     // Create an array list, and test its performance
     Collection<Integer> list1 = new ArrayList<>(list);
+    System.out.println("Member test time for array list is " + getTestTime(list1) + " milliseconds");
   }
 }
