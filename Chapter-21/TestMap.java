@@ -26,5 +26,8 @@ public class TestMap {
 
     // Display the age for Lewis
     System.out.println("\nThe age for " + "Lewis is " + linkedHashMap.get("Lewis"));
+
+    System.out.println("Display entries in LinkedHashMap");
+    System.out.println(linkedHashMap);
   }
 }
