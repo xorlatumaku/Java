@@ -37,5 +37,9 @@ public class SetListPerformanceTest {
 
   public static long getTestTime(Collection<> c) {
     long startTime = System.currentTimeMillis();
+
+    // Test if a number is in the Collection
+    for (int i = 0; i < N; i++)
+      c.contains((int)(Math.random() * 2 * N));
   }
 }
