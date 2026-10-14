@@ -18,7 +18,7 @@ public class TestMap {
     System.out.println(treeMap);
 
     // Create a LinkedHashMap
-    Map<String, Integer> LinkedHashMap = new LinkedHashMap<>(16, 0.75f, true);
+    Map<String, Integer> linkedHashMap = new LinkedHashMap<>(16, 0.75f, true);
     linkedHashMap.put("Smith", 30);
     linkedHashMap.put("Anderson", 31);
     linkedHashMap.put("Lewis", 29);
