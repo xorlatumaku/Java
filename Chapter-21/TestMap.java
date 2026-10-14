@@ -11,5 +11,8 @@ public class TestMap {
 
     System.out.println("Display entries in HashMap");
     System.out.println(hashMap + "\n");
+
+    // Create a TreeMap from the preceding HashMap
+    Map<String, Integer> treeMap = new TreeMap<>(hashMap);
   }
 }
