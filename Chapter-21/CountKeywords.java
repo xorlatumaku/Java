@@ -30,5 +30,16 @@ public class CountKeywords {
         "while", "true", "false", "null"};
 
     Set<String> keywordSet = new HashSet<>(Arrays.asList(keywordString));
+    int count = 0;
+
+    Scanner input = new Scanner(file);
+
+    while (input.hasNext()) {
+      String word = input.next();
+      if (keywordSet.contains(word))
+        count++;
+    }
+
+    return count;
   }
 }
