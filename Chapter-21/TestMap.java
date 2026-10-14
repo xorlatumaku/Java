@@ -16,5 +16,9 @@ public class TestMap {
     Map<String, Integer> treeMap = new TreeMap<>(hashMap);
     System.out.println("Display entries in ascending order of key");
     System.out.println(treeMap);
+
+    // Create a LinkedHashMap
+    Map<String, Integer> LinkedHashMap = new LinkedHashMap<>(16, 0.75f, true);
+
   }
 }
