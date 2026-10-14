@@ -28,5 +28,7 @@ public class CountKeywords {
         "strictfp", "super", "switch", "synchronized", "this",
         "throw", "throws", "transient", "try", "void", "volatile",
         "while", "true", "false", "null"};
+
+    Set<String> keywordSet = new HashSet<>(Arrays.asList(keywordString));
   }
 }
