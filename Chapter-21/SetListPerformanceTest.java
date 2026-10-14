@@ -14,6 +14,7 @@ public class SetListPerformanceTest {
     Collection<Integer> set1 = new HashSet<>(list);
     System.out.println("Member test time for hash set is " + getTestTime(set1) + " milliseconds");
     System.out.println("Remove element time for hash set is " + getRemoveTime(set1) + " milliseconds");
+    System.out.println();
 
     // Create a linked hash set, and test its performance
     Collection<Integer> set2 = new LinkedHashSet<>(list);
@@ -36,7 +37,7 @@ public class SetListPerformanceTest {
     System.out.println("Remove element time for linked list is " + getRemoveTime(list2) + " milliseconds");
   }
 
-  public static long getTestTime(Collection<> c) {
+  public static long getTestTime(Collection<Integer> c) {
     long startTime = System.currentTimeMillis();
 
     // Test if a number is in the Collection
