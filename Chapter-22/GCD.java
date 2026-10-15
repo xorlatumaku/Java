@@ -28,6 +28,8 @@ public class GCD {
 
     System.out.print("Enter second integer: ");
     int n = input.nextInt();
+
+    System.out.println("The greatest common divisor of " + m + " and " + n + " is " + gcd(m,n));
   }
 }
 
