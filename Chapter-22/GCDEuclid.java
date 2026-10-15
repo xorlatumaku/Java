@@ -20,5 +20,7 @@ public class GCDEuclid {
 
     System.out.print("Enter second integer: ");
     int n = input.nextInt();
+
+    System.out.println("The gcd of " + m + " and " + n + " is " + gcd(m,n));
   }
 }
