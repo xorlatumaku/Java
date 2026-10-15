@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class ImprovedFibonacci {
   public static void main(String[] args) {
-    
+    // Create a Scanner
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter a index for the Fibonacci number: ");
+    int index = input.nextInt();
   }
   
   // The method for finding the Fibonacci number
