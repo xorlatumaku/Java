@@ -17,5 +17,8 @@ public class GCDEuclid {
     // Prompt the user to enter two integers
     System.out.print("Enter first integer: ");
     int m = input.nextInt();
+
+    System.out.println("Enter second integer: ");
+    int n = input.nextInt();
   }
 }
