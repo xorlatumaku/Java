@@ -1,17 +1,20 @@
 import java.util.Scanner;
 
-// Find the GCD for integers m and n 
-public static int gcd(int m, int n) {
-  int gcd = 1;
+public class GCD {
+  // Find the GCD for integers m and n 
+  public static int gcd(int m, int n) {
+    int gcd = 1;
 
-  if (m % n == 0) return n;
+    if (m % n == 0) return n;
 
-  for (int k = n / 2; k >= 1; k--) {
-    if (m % k == 0 && n % k == 0) {
-      gcd = k;
-      break;
+    for (int k = n / 2; k >= 1; k--) {
+      if (m % k == 0 && n % k == 0) {
+        gcd = k;
+        break;
+      }
     }
-  }
 
-  return gcd;
+    return gcd;
+  }
 }
+
