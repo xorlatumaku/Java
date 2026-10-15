@@ -7,5 +7,6 @@ public class ImprovedFibonacci {
   
   // The method for finding the Fibonacci number
   public static long fib(long n) {
-     }
+   long f0 = 0;
+  }
 }
