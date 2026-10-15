@@ -3,6 +3,7 @@ public class PerformanceTest {
     getTime(1000000);
     getTime(10000000);
     getTime(100000000);
+    getTime(1000000000);
   }
 
   public static void getTime(long n) {
