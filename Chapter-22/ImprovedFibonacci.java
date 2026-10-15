@@ -6,6 +6,9 @@ public class ImprovedFibonacci {
     Scanner input = new Scanner(System.in);
     System.out.print("Enter a index for the Fibonacci number: ");
     int index = input.nextInt();
+
+    // Find and display the Fibonacci number
+    System.out.println("Fibonacci number at index " + index + " is " + fib(index));
   }
   
   // The method for finding the Fibonacci number
