@@ -13,5 +13,9 @@ public class GCDEuclid {
   public static void main(String[] args) {
     // Create a Scanner
     Scanner input = new Scanner(System.in);
+
+    // Prompt the user to enter two integers
+    System.out.print("Enter first integer: ");
+    int m = input.nextInt();
   }
 }
