@@ -9,5 +9,7 @@ public class PerformanceTest {
     for (int i = 0; i <= n; i++) {
       k = k + 5;
     }
+    long endTime = System.currentTimeMillis();
+    System.out.println("Execution time for n = " + n + " is " + (endTime - startTime) + " milliseconds");
   }
 }
