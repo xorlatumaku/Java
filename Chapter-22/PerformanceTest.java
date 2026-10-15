@@ -2,6 +2,7 @@ public class PerformanceTest {
   public static void main(String[] args) {
     getTime(1000000);
     getTime(10000000);
+    getTime(100000000);
   }
 
   public static void getTime(long n) {
