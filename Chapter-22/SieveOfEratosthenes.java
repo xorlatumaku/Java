@@ -5,5 +5,7 @@ public class SieveOfEratosthenes {
     Scanner input = new Scanner(System.in);
     System.out.print("Find all prime numbers <= n, enter n: ");
     int n = input.nextInt();
+
+    boolean[] primes = new boolean[n + 1];  // Prime number sieve
   }
 }
