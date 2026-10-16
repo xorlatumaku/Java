@@ -35,6 +35,7 @@ public class EfficientPrimeNumbers {
       // Print the prime number and increase the count
       if (isPrime) {
         count++;  //Increase the count
+        list.add(number); // Add a new prime to the list
       }
     }
   }
