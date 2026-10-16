@@ -43,6 +43,11 @@ public class EfficientPrimeNumbers {
         else
           System.out.print(number + " ");
       }
+
+      // Check whether the next number is prime
+      number++;
     }
+
+    System.out.println("\n" + count + " prime(s) less than or equal to " + n);
   }
 }
