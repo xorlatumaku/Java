@@ -20,5 +20,7 @@ public class SieveOfEratosthenes {
         }
       }
     }
+
+    final int NUMBER_PER_LINE = 10;  // Display 10 per line
   }
 }
