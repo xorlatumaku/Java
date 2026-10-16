@@ -19,7 +19,10 @@ public class EfficientPrimeNumbers {
 
     // Repeatedly find prime numbers
     while (number <= n) {
-      
+      // Assume the number is prime
+      boolean isPrime = true; // Is the current number prime?
+
+      if (squareRoot * squareRoot < number) squareRoot++;
     }
   }
 }
