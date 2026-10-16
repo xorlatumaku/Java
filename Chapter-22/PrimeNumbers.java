@@ -11,5 +11,6 @@ public class EfficientPrimeNumbers {
     java.util.List<Integer> list = new java.util.ArrayList<>();
 
     final int NUMBER_PER_LINE = 10; // Display 10 per line
+    int count = 0;  // Count the number of prime numbers
   }
 }
