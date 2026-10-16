@@ -31,6 +31,11 @@ public class EfficientPrimeNumbers {
           break;  // Exit the for loop
         }
       }
+
+      // Print the prime number and increase the count
+      if (isPrime) {
+        count++;  //Increase the count
+      }
     }
   }
 }
