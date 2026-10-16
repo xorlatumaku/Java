@@ -16,5 +16,10 @@ public class EfficientPrimeNumbers {
     int squareRoot = 1; // Check whether number <= squareRoot
 
     System.out.println("The prime numbers are \n");
+
+    // Repeatedly find prime numbers
+    while (number <= n) {
+      
+    }
   }
 }
