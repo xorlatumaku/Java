@@ -14,5 +14,7 @@ public class EfficientPrimeNumbers {
     int count = 0;  // Count the number of prime numbers
     int number = 2; // A number to be tested for primeness
     int squareRoot = 1; // Check whether number <= squareRoot
+
+    System.out.println("The prime numbers are \n");
   }
 }
