@@ -7,5 +7,10 @@ public class SieveOfEratosthenes {
     int n = input.nextInt();
 
     boolean[] primes = new boolean[n + 1];  // Prime number sieve
+
+    // Initialize primes[i] to true
+    for (int i = 0; i < primes.length; i++) {
+      primes[i] = true;
+    }
   }
 }
