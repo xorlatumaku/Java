@@ -12,5 +12,13 @@ public class SieveOfEratosthenes {
     for (int i = 0; i < primes.length; i++) {
       primes[i] = true;
     }
+
+    for (int k = 2; k <= n / k; k++) {
+      if (primes[k]) {
+        for (int i = k; i <= n / k; i++) {
+          primes[k * i] = false;  // k * i is not prime
+        }
+      }
+    }
   }
 }
