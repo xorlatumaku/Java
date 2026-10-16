@@ -36,6 +36,12 @@ public class EfficientPrimeNumbers {
       if (isPrime) {
         count++;  //Increase the count
         list.add(number); // Add a new prime to the list
+        if (count % NUMBER_PER_LINE == 0) {
+          // Print the number and advance to the new line
+          System.out.println(number);
+        }
+        else
+          System.out.print(number + " ");
       }
     }
   }
