@@ -27,6 +27,8 @@ public class MergeSort {
     while (current1 < list1.length && current2 < list2.length) {
       if (list1[current1] < list2[current2]) 
         temp[current3++] = list1[current1++];
-         }
+       else
+        temp[current3++] = list2[current2++];
+   }
   }
 }
