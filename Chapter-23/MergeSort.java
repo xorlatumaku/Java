@@ -36,4 +36,12 @@ public class MergeSort {
    while (current2 < list2.length)
      temp[current3++] = list2[current2++];
   }
+
+  /* Test method */
+  public static void main(String[] args) {
+    int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
+    mergeSort(list);
+    for (int i = 0; i < list.length; i++)
+      System.out.print(list[i] + " ");
+  }
 }
