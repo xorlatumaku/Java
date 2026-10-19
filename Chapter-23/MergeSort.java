@@ -23,5 +23,10 @@ public class MergeSort {
     int current1 = 0;   // Current index in list1
     int current2 = 0;   // Current index in list2
     int current3 = 0;   // Current index in temp
+    
+    while (current1 < list1.length && current2 < list2.length) {
+      if (list1[current1] < list2[current2]) 
+        temp[current3++] = list1[current1++];
+         }
   }
 }
