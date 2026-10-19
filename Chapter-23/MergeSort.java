@@ -33,5 +33,7 @@ public class MergeSort {
 
    while (current1 < list1.length)
      temp[current3++] = list1[current1++];
+   while (current2 < list2.length)
+     temp[current3++] = list2[current2++];
   }
 }
