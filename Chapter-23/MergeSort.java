@@ -6,6 +6,12 @@ public class MergeSort {
       int[] firstHalf = new int[list.length / 2];
       System.arraycopy(list, 0, firstHalf, 0, list.length / 2);
       mergeSort(firstHalf);
+
+      // Merge sort the second half
+      int secondHalfLength = list.length - list.length / 2;
+      int[] secondHalf = new int[secondHalfLength];
+      System.arraycopy(list, list.length / 2, secondHalf, 0, secondHalfLength);
+      mergeSort(secondHalf);
     }
   }
 }
