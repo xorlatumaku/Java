@@ -17,4 +17,9 @@ public class MergeSort {
       merge(firstHalf, secondHalf, list);
     }
   }
+
+  /* Merge two sorted lists */
+  public static void merge(int[] list1, int[] list2, int[] temp) {
+    int current1 = 0;   // Current index in list1
+  }
 }
