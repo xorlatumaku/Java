@@ -21,5 +21,6 @@ public class MergeSort {
   /* Merge two sorted lists */
   public static void merge(int[] list1, int[] list2, int[] temp) {
     int current1 = 0;   // Current index in list1
+    int current2 = 0;   // Current index in list2
   }
 }
