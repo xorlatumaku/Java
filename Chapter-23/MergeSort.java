@@ -12,6 +12,9 @@ public class MergeSort {
       int[] secondHalf = new int[secondHalfLength];
       System.arraycopy(list, list.length / 2, secondHalf, 0, secondHalfLength);
       mergeSort(secondHalf);
+
+      // Merge firstHalf with secondHalf into list
+      merge(firstHalf, secondHalf, list);
     }
   }
 }
