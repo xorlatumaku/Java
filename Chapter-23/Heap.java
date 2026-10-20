@@ -8,7 +8,7 @@ public class Heap<E> {
   }
 
   /* Create a heap with a specified comparator */
-  public Heap(java.util.Comparable<E> c) {
+  public Heap(java.util.Comparator<E> c) {
     this.c = c;
   }
 
