@@ -141,6 +141,9 @@ public class SortLargeFile {
         }
       }
     }
-
+    
+    while (f1.available() > 0 && f1Count++ < segmentSize) {
+      f3.writeInt(f1.readInt());
+    }
   }
 }
