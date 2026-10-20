@@ -56,6 +56,7 @@ public class SortLargeFile {
       String f1, String f2, String f3, String targetfile) throws Exception {
     if (numberOfSegments > 1) {
       mergeOneStep(numberOfSegments, segmentSize, f1, f2, f3);
+      merge((numberOfSegments + 1) / 2, segmentSize * 2, f3, f1, f2, targetfile);
     }
   }
 }
