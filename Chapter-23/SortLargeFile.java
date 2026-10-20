@@ -45,5 +45,8 @@ public class SortLargeFile {
         output.writeInt(list[j]);
       }
     }
+
+    input.close();
+    output.close();
   }
 }
