@@ -11,4 +11,11 @@ public class Heap<E> {
   public Heap(java.util.Comparable<E> c) {
     this.c = c;
   }
+
+  /* Create a heap from an array of objects */
+  public Heap(E[] objects) {
+    this.c = (e1, e2) -> ((Comparable<E>)e1).compareTo(e2);
+    for (int i = 0; i < objects.length; i++)
+      add(objects[i]);
+  }
 }
