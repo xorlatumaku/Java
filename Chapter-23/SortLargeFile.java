@@ -51,4 +51,11 @@ public class SortLargeFile {
 
     return numberOfSegments;
   }
+
+  private static void merge(int numberOfSegments, int segmentSize,
+      String f1, String f2, String f3, String targetfile) throws Exception {
+    if (numberOfSegments > 1) {
+      mergeOneStep(numberOfSegments, segmentSize, f1, f2, f3);
+    }
+  }
 }
