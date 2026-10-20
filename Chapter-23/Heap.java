@@ -23,5 +23,15 @@ public class Heap<E> {
   public void add(E newObject) {
     list.add(newObject); // Append the heap
     int currentIndex = list.size() - 1; // The index of the last node
+
+    while (currentIndex > 0) {
+      int parentIndex = (currentIndex - 1) / 2;
+      // Swap if the current object is greater than its parent
+      if (c.compare(list.get(currentIndex), list.get(parentIndex)) > 0) {
+        E temp = list.get(currentIndex);
+        list.set(currentIndex, list.get(parentIndex));
+        list.set(parentIndex, temp);
+      }
+    }
   }
 }
