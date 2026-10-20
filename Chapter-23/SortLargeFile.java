@@ -58,5 +58,12 @@ public class SortLargeFile {
       mergeOneStep(numberOfSegments, segmentSize, f1, f2, f3);
       merge((numberOfSegments + 1) / 2, segmentSize * 2, f3, f1, f2, targetfile);
     }
+    else {  // Rename f1 as the final sorted file 
+      File sortedFile = new File(targetfile);
+      if (sortedFile.exists()) sortedFile.delete();
+      new File(f1).renameTo(sortedFile);
+    }
   }
+
+
 }
