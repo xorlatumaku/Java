@@ -8,5 +8,11 @@ public class CreateLargeFile {
       output.writeInt((int)(Math.random() * 1_000_000)));
 
     output.close();
+
+    // Display first 100 numbers
+    DataInputStream input = new DataInputStream(
+        new BufferInputStream(new FileInputStream("largedata.dat")));
+    for (int i = 0; i < 100; i++)
+      System.out.print(input.readInt() + " ");
   }
 }
