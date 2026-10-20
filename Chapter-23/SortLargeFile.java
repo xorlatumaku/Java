@@ -20,4 +20,11 @@ public class SortLargeFile {
     // Implement Phase 2: Merge segments recursively
     merge(numberOfSegments, MAX_ARRAY_SIZE, "f1.dat", "f2.dat", "f3.dat", targetfile);
   }
+
+  /* Sort original file into sorted segments */
+  private static int initializeSegments(int segmentSize, String originalFile, String f1) throws Exception {
+    int[] list = new int[segmentSize];
+    DataInputStream input = new DataInputStream(
+        new BufferedInputStream(new FileInputStream(originalFile)));
+  }
 }
