@@ -14,5 +14,6 @@ public class QuickSort {
   /* Partition the array list[first..last] */
   public static int partition(int[] list, int first, int last) {
     int pivot = list[first];  // Choose the first element as the pivot
+    int low = first + 1;      // Index for forward search
   }
 }
