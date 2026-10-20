@@ -26,5 +26,7 @@ public class SortLargeFile {
     int[] list = new int[segmentSize];
     DataInputStream input = new DataInputStream(
         new BufferedInputStream(new FileInputStream(originalFile)));
+    DataOutputStream output = new DataOutputStream(
+        new BufferedOutputStream(new FileOutputStream(f1)));
   }
 }
