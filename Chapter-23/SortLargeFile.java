@@ -130,7 +130,17 @@ public class SortLargeFile {
           intFromF1 = f1.readInt();
         }
       }
-
+      else {
+        f3.writeInt(intFromF2);
+        if (f2.available() == 0 || f2Count++ >= segmentSize) {
+          f3.writeInt(intFromF1);
+          break;
+        }
+        else {
+          intFromF2 = f2.readInt();
+        }
+      }
     }
+
   }
 }
