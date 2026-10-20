@@ -15,5 +15,9 @@ public class HeapSort {
     // Add elements to the heap
     for (int i = 0; i < list.length; i++)
       heap.add(list[i]);
+
+    // Remove elements from the heap
+    for (int i = list.length - 1; i >= 0; i--)
+      list[i] = heap.remove();
   }
 }
