@@ -10,4 +10,9 @@ public class QuickSort {
       quickSort(list, pivotIndex + 1, last);
     }
   }
+
+  /* Partition the array list[first..last] */
+  public static int partition(int[] list, int first, int last) {
+    int pivot = list[first];  // Choose the first element as the pivot
+  }
 }
