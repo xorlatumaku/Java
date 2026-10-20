@@ -32,6 +32,15 @@ public class Heap<E> {
         list.set(currentIndex, list.get(parentIndex));
         list.set(parentIndex, temp);
       }
+      else 
+        break;  // The tree is a heap now
+
+      currentIndex = parentIndex;
     }
+  }
+
+  /* Remove the root from the heap */
+  public E remove() {
+
   }
 }
