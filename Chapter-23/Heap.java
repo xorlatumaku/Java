@@ -45,5 +45,11 @@ public class Heap<E> {
     E removedObject = list.get(0);
     list.set(0, list.get(list.size() - 1));
     list.remove(list.size() - 1);
+
+    int currentIndex = 0;
+    while (currentIndex < list.size()) {
+      int leftChildIndex = 2 * currentIndex + 1;
+      int rightChildIndex = 2 * currentIndex + 2;
+    }
   }
 }
