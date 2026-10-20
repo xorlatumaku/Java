@@ -41,6 +41,7 @@ public class QuickSort {
     if (pivot > list[high]) {
       list[first] = list[high];
       list[high] = pivot;
+      return high;
     }
   }
 }
