@@ -43,5 +43,8 @@ public class QuickSort {
       list[high] = pivot;
       return high;
     }
+    else {
+      return first;
+    }
   }
 }
