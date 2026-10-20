@@ -16,5 +16,11 @@ public class QuickSort {
     int pivot = list[first];  // Choose the first element as the pivot
     int low = first + 1;      // Index for forward search
     int high = last;          // Index for backward search
+    
+    while (high > low) {
+      // Search forward from left
+      while (low <= high && list[low] <= pivot)
+        low++;
+    }
   }
 }
