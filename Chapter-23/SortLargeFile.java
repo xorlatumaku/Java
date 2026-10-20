@@ -145,5 +145,9 @@ public class SortLargeFile {
     while (f1.available() > 0 && f1Count++ < segmentSize) {
       f3.writeInt(f1.readInt());
     }
+
+    while (f2.available() > 0 && f2Count++ < segmentSize) {
+      f3.writeInt(f2.readInt());
+    }
   }
 }
