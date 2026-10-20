@@ -11,5 +11,9 @@ public class HeapSort {
   public static <E> void heapSort(E[] list, Comparator<E> c) {
     // Create a Heap of integers
     Heap<E> heap = new Heap<>(c);
+
+    // Add elements to the heap
+    for (int i = 0; i < list.length; i++)
+      heap.add(list[i]);
   }
 }
