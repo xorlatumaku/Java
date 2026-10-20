@@ -150,4 +150,17 @@ public class SortLargeFile {
       f3.writeInt(f2.readInt());
     }
   }
+
+  /* Display the first 100 numbers in the specified file */
+  public static void displayFile(String filename) {
+    try {
+      DataInputStream input = new DataInputStream(new FileInputStream(filename));
+      for (int i = 0; i < 100; i++)
+        System.out.print(input.readInt() + " ");
+      input.close();
+    }
+    catch (IOException ex) {
+      ex.printStackTrace();
+    }
+  }
 }
