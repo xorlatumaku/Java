@@ -12,7 +12,7 @@ public class CreateLargeFile {
 
     // Display first 100 numbers
     DataInputStream input = new DataInputStream(
-        new BufferInputStream(new FileInputStream("largedata.dat")));
+        new BufferedInputStream(new FileInputStream("largedata.dat")));
     for (int i = 0; i < 100; i++)
       System.out.print(input.readInt() + " ");
 
