@@ -6,4 +6,10 @@ public class HeapSort {
     // Create a Heap of integers
     heapSort(list, (e1, e2) -> ((Comparable<E>)e1).compareTo(e2));
   }
+
+  /* Heap sort method */
+  public static <E> void heapSort(E[] list, Comparator<E> c) {
+    // Create a Heap of integers
+    Heap<E> heap = new Heap<>(c);
+  }
 }
