@@ -16,5 +16,8 @@ public class SortLargeFile {
   public static void sort(String sourcefile, String targetfile) throws Exception {
     // Implement Phase 1: Create initial segments
     int numberOfSegments = initializeSegments(MAX_ARRAY_SIZE, sourcefile, "f1.dat");
+
+    // Implement Phase 2: Merge segments recursively
+    merge(numberOfSegments, MAX_ARRAY_SIZE, "f1.dat", "f2.dat", "f3.dat", targetfile);
   }
 }
