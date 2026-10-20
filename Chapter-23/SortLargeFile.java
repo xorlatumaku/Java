@@ -84,5 +84,9 @@ public class SortLargeFile {
         new BufferedOutputStream(new FileOutputStream(f3), BUFFER_SIZE));
 
     mergeSegments(numberOfSegments / 2, segmentSize, f1Input, f2Input, f3Output);
+
+    f1Input.close();
+    f2Input.close();
+    f3Output.close();
   }
 }
