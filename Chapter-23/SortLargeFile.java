@@ -65,5 +65,8 @@ public class SortLargeFile {
     }
   }
 
-
+  private static void mergeOneStep(int numberOfSegments, int segmentSize, String f1, String f2, String f3) throws Exception {
+    DataInputStream f1Input = new DataInputStream(
+        new BufferedInputStream(new FileInputStream(f1), BUFFER_SIZE));
+  }
 }
