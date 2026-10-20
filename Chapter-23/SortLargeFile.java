@@ -28,5 +28,17 @@ public class SortLargeFile {
         new BufferedInputStream(new FileInputStream(originalFile)));
     DataOutputStream output = new DataOutputStream(
         new BufferedOutputStream(new FileOutputStream(f1)));
+
+    int numberOfSegments = 0;
+    while (input.available() > 0) {
+      numberOfSegments++;
+      int i = 0;
+      for ( ; input.available() > 0 && i < segmentSize; i++) {
+        list[i] = input.readInt();
+      }
+
+      // Sort an array list[0..i-1]
+      java.util.Arrays.sort(list, 0, i);
+    }
   }
 }
