@@ -74,5 +74,6 @@ public class SortLargeFile {
 
     // Copy half number of segments from f1.dat to f2.dat
     copyHalfToF2(numberOfSegments, segmentSize, f1Input, f2Output);
+    f2Output.close();
   }
 }
