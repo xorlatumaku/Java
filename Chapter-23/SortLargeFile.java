@@ -75,5 +75,9 @@ public class SortLargeFile {
     // Copy half number of segments from f1.dat to f2.dat
     copyHalfToF2(numberOfSegments, segmentSize, f1Input, f2Output);
     f2Output.close();
+
+    // Merge remaining segments in f1 with segments in f2 into f3
+    DataInputStream f2Input = new DataInputStream(
+        new BufferedInputStream(new FileInputStream(f2), BUFFER_SIZE));
   }
 }
