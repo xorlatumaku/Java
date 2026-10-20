@@ -59,6 +59,18 @@ public class Heap<E> {
           maxIndex = rightChildIndex;
         }
       }
+
+      // Swap if the current node is less than the maximum
+      if (c.compare(list.get(currentIndex), list.get(maxIndex)) < 0) {
+        E temp = list.get(maxIndex);
+        list.set(maxIndex, list.get(currentIndex));
+        list.set(currentIndex,temp);
+        currentIndex = maxIndex;
+      }
+      else
+        break;  // The tree is a heap
     }
+
+    return removedObject;
   }
 }
