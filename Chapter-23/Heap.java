@@ -43,5 +43,6 @@ public class Heap<E> {
   public E remove() {
     if (list.size() == 0) return null;
     E removedObject = list.get(0);
+    list.set(0, list.get(list.size() - 1));
   }
 }
