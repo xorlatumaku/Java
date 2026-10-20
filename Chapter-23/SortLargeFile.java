@@ -11,4 +11,10 @@ public class SortLargeFile {
     // Display the first 100 numbers in the sorted file
     displayFile("sortedfile.dat");
   }
+
+  /* Sort data in source file and into target file */
+  public static void sort(String sourcefile, String targetfile) throws Exception {
+    // Implement Phase 1: Create initial segments
+    int numberOfSegments = initializeSegments(MAX_ARRAY_SIZE, sourcefile, "f1.dat");
+  }
 }
