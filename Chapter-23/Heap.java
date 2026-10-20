@@ -22,5 +22,6 @@ public class Heap<E> {
   /* Add a new object into the heap */
   public void add(E newObject) {
     list.add(newObject); // Append the heap
+    int currentIndex = list.size() - 1; // The index of the last node
   }
 }
