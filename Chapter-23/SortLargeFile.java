@@ -39,6 +39,11 @@ public class SortLargeFile {
 
       // Sort an array list[0..i-1]
       java.util.Arrays.sort(list, 0, i);
+
+      // Write the array to f1.dat
+      for (int j = 0; j < i; j++) {
+        output.writeInt(list[j]);
+      }
     }
   }
 }
