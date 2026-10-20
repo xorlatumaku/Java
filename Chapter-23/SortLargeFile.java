@@ -48,5 +48,7 @@ public class SortLargeFile {
 
     input.close();
     output.close();
+
+    return numberOfSegments;
   }
 }
