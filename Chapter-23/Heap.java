@@ -18,4 +18,9 @@ public class Heap<E> {
     for (int i = 0; i < objects.length; i++)
       add(objects[i]);
   }
+
+  /* Add a new object into the heap */
+  public void add(E newObject) {
+    
+  }
 }
