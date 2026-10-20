@@ -21,6 +21,6 @@ public class Heap<E> {
 
   /* Add a new object into the heap */
   public void add(E newObject) {
-    
+    list.add(newObject); // Append the heap
   }
 }
