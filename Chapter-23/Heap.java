@@ -73,4 +73,9 @@ public class Heap<E> {
 
     return removedObject;
   }
+
+  /* Get the number of nodes in the tree */
+  public int getSize() {
+    return list.size();
+  }
 }
