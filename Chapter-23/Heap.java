@@ -78,4 +78,9 @@ public class Heap<E> {
   public int getSize() {
     return list.size();
   }
+
+  /* Return true if heap is empty */
+  public boolean isEmpty() {
+    return list.size() == 0;
+  }
 }
