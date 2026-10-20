@@ -116,5 +116,21 @@ public class SortLargeFile {
       DataInputStream f1, DataInputStream f2, DataOutputStream f3) throws Exception {
     int intFromF1 = f1.readInt();
     int intFromF2 = f2.readInt();
+    int f1Count = 1;
+    int f2Count = 1;
+
+    while (true) {
+      if (intFromF1 < intFromF2) {
+        f3.writeInt(intFromF1);
+        if (f1.available() == 0 || f1Count++ >= segmentSize) {
+          f3.writeInt(intFromF2);
+          break;
+        }
+        else {
+          intFromF1 = f1.readInt();
+        }
+      }
+
+    }
   }
 }
