@@ -41,6 +41,6 @@ public class Heap<E> {
 
   /* Remove the root from the heap */
   public E remove() {
-
+    if (list.size() == 0) return null;
   }
 }
