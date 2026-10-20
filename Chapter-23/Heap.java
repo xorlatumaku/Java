@@ -50,6 +50,15 @@ public class Heap<E> {
     while (currentIndex < list.size()) {
       int leftChildIndex = 2 * currentIndex + 1;
       int rightChildIndex = 2 * currentIndex + 2;
+
+      // Find the maximum between two children
+      if (leftChildIndex >= list.size()) break; // The tree is a heap
+      int maxIndex = leftChildIndex;
+      if (rightChildIndex < list.size()) {
+        if(c.compare(list.get(maxIndex), list.get(rightChildIndex)) < 0) {
+          maxIndex = rightChildIndex;
+        }
+      }
     }
   }
 }
