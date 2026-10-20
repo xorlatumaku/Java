@@ -158,6 +158,7 @@ public class SortLargeFile {
       for (int i = 0; i < 100; i++)
         System.out.print(input.readInt() + " ");
       input.close();
+      System.out.println();
     }
     catch (IOException ex) {
       ex.printStackTrace();
