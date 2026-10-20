@@ -21,6 +21,10 @@ public class QuickSort {
       // Search forward from left
       while (low <= high && list[low] <= pivot)
         low++;
+
+      // Search backward from right
+      while (low <= high && list[high] > pivot)
+        high--;
     }
   }
 }
