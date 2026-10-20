@@ -79,5 +79,8 @@ public class SortLargeFile {
     // Merge remaining segments in f1 with segments in f2 into f3
     DataInputStream f2Input = new DataInputStream(
         new BufferedInputStream(new FileInputStream(f2), BUFFER_SIZE));
+
+    DataOutputStream f3Output = new DataOutputStream(
+        new BufferedOutputStream(new FileOutputStream(f3), BUFFER_SIZE));
   }
 }
