@@ -89,4 +89,12 @@ public class SortLargeFile {
     f2Input.close();
     f3Output.close();
   }
+
+  /* Copy first half number of segments from f1.dat to f2.dat */
+  private static void copyHalfToF2(int numberOfSegments,
+      int segmentSize, DataInputStream f1, DataOutputStream f2) throws Exception {
+    for (int i = 0; i < (numberOfSegments / 2) * segmentSize; i++) {
+      f2.writeInt(f1.readInt());
+    }
+  }
 }
