@@ -97,4 +97,13 @@ public class SortLargeFile {
       f2.writeInt(f1.readInt());
     }
   }
+
+  /* Merge all segments */
+  private static void mergeSegments(int numberOfSegments, 
+      int segmentSize, DataInputStream f1, DataInputStream f2, DataOutputStream f3) throws Exception {
+    for (int i = 0; i < numberOfSegments; i++) {
+      mergeTwoSegments(segmentSize, f1, f2, f3);
+    }
+
+  }
 }
