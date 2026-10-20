@@ -110,4 +110,10 @@ public class SortLargeFile {
       f3.writeInt(f1.readInt());
     }
   }
+
+  /* Merges two segments */
+  private static void mergeTwoSegments(int segmentSize, 
+      DataInputStream f1, DataInputStream f2, DataOutputStream f3) throws Exception {
+    int intFromF1 = f1.readInt();
+  }
 }
