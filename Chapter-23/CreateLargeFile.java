@@ -14,5 +14,7 @@ public class CreateLargeFile {
         new BufferInputStream(new FileInputStream("largedata.dat")));
     for (int i = 0; i < 100; i++)
       System.out.print(input.readInt() + " ");
+
+    input.close();
   }
 }
