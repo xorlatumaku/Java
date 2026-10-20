@@ -104,6 +104,10 @@ public class SortLargeFile {
     for (int i = 0; i < numberOfSegments; i++) {
       mergeTwoSegments(segmentSize, f1, f2, f3);
     }
-
+    
+    /* If f1 has one extra segment, copy it to f3 */
+    while (f1.available() > 0) {
+      f3.writeInt(f1.readInt());
+    }
   }
 }
