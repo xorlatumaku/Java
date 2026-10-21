@@ -104,4 +104,13 @@ public class MyArrayList<E> implements MyList<E> {
 
     return e;
   }
+
+  @Override /* Replace the element at the specified position 
+  * in this list with the specified element. */
+  public E set(int index, E e) {
+    checkIndex(index);
+    E old = data[index];
+    data[index] = e;
+    return old;
+  }
 }
