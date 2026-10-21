@@ -113,4 +113,25 @@ public class MyArrayList<E> implements MyList<E> {
     data[index] = e;
     return old;
   }
+
+  @Override
+  public String toString() {
+    StringBuilder result = new StringBuilder("[");
+
+    for (int i = 0; i < size; i++) {
+      result.append(data[i]);
+      if (i < size - 1) result.append(", ");
+    }
+
+    return result.toString() + "]";
+  }
+
+  /* Trims the capacity to current size */
+  public void trimToSize() {
+    if (size != data.length) {
+      E[] newData = (E[])(new Object[size]);
+      System.arraycopy(data, 0, newData, 0, size);
+      data = newData;
+    } // If size == capacity no need to trim 
+  }
 }
