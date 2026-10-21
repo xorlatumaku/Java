@@ -47,4 +47,12 @@ public class MyArrayList<E> implements MyList<E> {
     data = (E[])new Object[INITIAL_CAPACITY];
     size = 0;
   }
+
+  @Override /* Return true if this list contains the element */
+  public boolean contains(Object e) {
+    for (int i = 0; i < size; i++)
+      if (e.equals(data[i])) return true;
+
+    return false;
+  }
 }
