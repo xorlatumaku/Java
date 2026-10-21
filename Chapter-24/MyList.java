@@ -34,4 +34,16 @@ public interface MyList<E> extends Collection<E> {
   public default boolean isEmpty() {
     return size() == 0;
   }
+
+  @Override /* Remove the first occurrence of the element e 
+  * from this list. Shift any subsequent elements to the left.
+  * Return true if the element is removed. */
+  public default boolean remove(Object e) {
+    if (indexOf(e) >= 0) {
+      remove(indexOf(e));
+      return true;
+    }
+    else
+      return false;
+  }
 }
