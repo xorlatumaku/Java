@@ -14,4 +14,9 @@ public interface MyList<E> extends Collection<E> {
   /* Return the index of the last matching element in this list.
    * Return -1 if no match. */
   public int lastIndexOf(E e);
+
+  /* Remove the element at the specified position in this list
+   * Shift any subsequent elements to the left.
+   * Return the element that was removed from the list. */
+  public E remove(int index);
 }
