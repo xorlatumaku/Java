@@ -41,4 +41,10 @@ public class MyArrayList<E> implements MyList<E> {
       data = newData;
     }
   }
+
+  @Override /* Clear the list */
+  public void clear() {
+    data = (E[])new Object[INITIAL_CAPACITY];
+    size = 0;
+  }
 }
