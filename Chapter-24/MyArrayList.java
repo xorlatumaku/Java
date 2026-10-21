@@ -21,5 +21,9 @@ public class MyArrayList<E> implements MyList<E> {
         ("Index: " + index + ", Size: " + size);
 
     ensureCapacity();
+
+    /* Move the elements to the right after the specified index */
+    for (int i = size - 1; i >= index; i--)
+      data[i + 1] = data[i];
   }
 }
