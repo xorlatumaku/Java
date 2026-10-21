@@ -66,4 +66,13 @@ public class MyArrayList<E> implements MyList<E> {
     if (index < 0 || index >= size)
       throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
   }
+
+  @Override /* Return the index of the first matching element in this list.
+  * Return -1 if no match. */
+  public int indexOf(Object e) {
+    for (int i = 0; i < size; i++)
+      if(e.equals(data[i])) return i;
+
+    return -1;
+  }
 }
