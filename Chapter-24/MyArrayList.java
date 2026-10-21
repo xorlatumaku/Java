@@ -134,4 +134,9 @@ public class MyArrayList<E> implements MyList<E> {
       data = newData;
     } // If size == capacity no need to trim 
   }
+
+  @Override /* Override iterator() defined in Iterable */
+  public java.util.iterator<E> iterator() {
+    return new ArrayListIterator();
+  }
 }
