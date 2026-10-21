@@ -55,4 +55,10 @@ public class MyArrayList<E> implements MyList<E> {
 
     return false;
   }
+
+  @Override /* Return the element at the specified index */
+  public E get(int index) {
+    checkIndex(index);
+    return data[index];
+  }
 }
