@@ -6,4 +6,10 @@ public class MyArrayList<E> implements MyList<E> {
   /* Create an empty list */
   public MyArrayList() {
   }
+
+  /* Create a list from an array of objects */
+  public MyArrayList(E[] objects) {
+    for (int i = 0; i < objects.length; i++)
+      add(objects[i]);
+  }
 }
