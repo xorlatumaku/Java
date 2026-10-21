@@ -28,5 +28,8 @@ public class MyArrayList<E> implements MyList<E> {
 
     /* Insert new element to data[index] */
     data[index] = e;
+
+    /* Increase size by 1 */
+    size++;
   }
 }
