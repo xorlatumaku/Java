@@ -25,5 +25,8 @@ public class MyArrayList<E> implements MyList<E> {
     /* Move the elements to the right after the specified index */
     for (int i = size - 1; i >= index; i--)
       data[i + 1] = data[i];
+
+    /* Insert new element to data[index] */
+    data[index] = e;
   }
 }
