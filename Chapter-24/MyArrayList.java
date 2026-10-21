@@ -136,7 +136,29 @@ public class MyArrayList<E> implements MyList<E> {
   }
 
   @Override /* Override iterator() defined in Iterable */
-  public java.util.iterator<E> iterator() {
+  public java.util.Iterator<E> iterator() {
     return new ArrayListIterator();
   }
+
+  private class ArrayListIterator implements java.util.Iterator<E> {
+    private int current = 0;  // current index
+
+    @Override
+    public boolean hasNext() {
+      return current < size;
+    }
+
+    @Override
+    public E next() {
+      return data[current++];
+    }
+
+    @Override // Remove the element returned by the last next()
+    public void remove() {
+      if (current == 0) // next() has not been called yet
+        throw new IllegalStateException();
+      MyArrayList.this.remove(--current);
+    }
+  }
+
 }
