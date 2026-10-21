@@ -19,4 +19,8 @@ public interface MyList<E> extends Collection<E> {
    * Shift any subsequent elements to the left.
    * Return the element that was removed from the list. */
   public E remove(int index);
+
+  /* Replace the element at the specified position in this list
+   * with the specified element and returns the new set. */
+  public E set(int index, E e);
 }
