@@ -10,4 +10,8 @@ public interface MyList<E> extends Collection<E> {
   /* Return the index of the first matching element in this list.
    * Return -1 if no match. */
   public int indexOf(Object e);
+
+  /* Return the index of the last matching element in this list.
+   * Return -1 if no match. */
+  public int lastIndexOf(E e);
 }
