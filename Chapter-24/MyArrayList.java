@@ -75,4 +75,13 @@ public class MyArrayList<E> implements MyList<E> {
 
     return -1;
   }
+
+  @Override /* Return the index of the last matching element in this list.
+  * Return -1 if no match. */
+  public int lastIndexOf(E e) {
+    for (int i = size - 1; i >= 0; i--)
+      if (e.equals(data[i])) return i;
+
+    return -1;
+  }
 }
