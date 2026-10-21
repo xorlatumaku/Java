@@ -12,4 +12,14 @@ public class MyArrayList<E> implements MyList<E> {
     for (int i = 0; i < objects.length; i++)
       add(objects[i]);
   }
+
+  @Override /* Add a new element at the specified index */
+  public void add(int index, E e) {
+    // Ensure the index is in the right range
+    if (index < 0 || index > size)
+      throw new IndexOutOfBoundsException
+        ("Index: " + index + ", Size: " + size);
+
+    ensureCapacity();
+  }
 }
