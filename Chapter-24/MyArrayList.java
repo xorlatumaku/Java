@@ -84,4 +84,24 @@ public class MyArrayList<E> implements MyList<E> {
 
     return -1;
   }
+
+  @Override /* Remove the element at the specified position in this list.
+  * Shift any subsequent elements to the left.
+  * Return the element that was removed from the list. */
+  public E remove(int index) {
+    checkIndex(index);
+
+    E e = data[index];
+
+    // Shift data to the left
+    for (int j = index; j < size - 1; j++)
+      data[j] = data[j + 1];
+
+    data[size - 1] = null; // This element is now null
+
+    // Decrement size
+    size--;
+
+    return e;
+  }
 }
