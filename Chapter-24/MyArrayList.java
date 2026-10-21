@@ -161,4 +161,8 @@ public class MyArrayList<E> implements MyList<E> {
     }
   }
 
+  @Override /* Return the number of elements in this list */
+  public int size() {
+    return size;
+  }
 }
