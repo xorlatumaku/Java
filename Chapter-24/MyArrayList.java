@@ -61,4 +61,9 @@ public class MyArrayList<E> implements MyList<E> {
     checkIndex(index);
     return data[index];
   }
+
+  private void checkIndex(int index) {
+    if (index < 0 || index >= size)
+      throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+  }
 }
