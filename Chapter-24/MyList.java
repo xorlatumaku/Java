@@ -29,4 +29,9 @@ public interface MyList<E> extends Collection<E> {
     add(size(), e);
     return true;
   }
+
+  @Override /* Return true if this list contains no elements */
+  public default boolean isEmpty() {
+    return size() == 0;
+  }
 }
