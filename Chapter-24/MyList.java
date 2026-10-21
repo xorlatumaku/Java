@@ -6,4 +6,8 @@ public interface MyList<E> extends Collection<E> {
 
   /* Return the element from this list at the specified index */
   public E get(int index);
+
+  /* Return the index of the first matching element in this list.
+   * Return -1 if no match. */
+  public int indexOf(Object e);
 }
