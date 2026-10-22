@@ -37,5 +37,6 @@ public class MyLinkedList<E> implements MyList<E> {
     Node<E> newNode = new Node<>(e);  // Create a new node
     newNode.next = head;  // link the new node with the head
     head = newNode;   // head points to the new node
+    size++; // Increase list size
   }
 }
