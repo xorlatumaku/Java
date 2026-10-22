@@ -80,6 +80,7 @@ public class MyLinkedList<E> implements MyList<E> {
     else {
       Node<E> temp = head;  // Keep the first node temporarily
       head = head.next;     // Move head to point to next node
+      size--;               // Reduce size by 1
     }
   }
 }
