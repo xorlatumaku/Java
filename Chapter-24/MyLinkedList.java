@@ -42,4 +42,9 @@ public class MyLinkedList<E> implements MyList<E> {
     if (tail == null) // The new node is the only node in list
       tail = head;
   }
+
+  /* Add an element to the end of the list */
+  public void addLast(E e) {
+    Node<E> newNode = new Node<>(e);  // Create a new node for e
+  }
 }
