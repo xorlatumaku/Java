@@ -21,5 +21,11 @@ public class TestMyArrayList {
 
     list.add(5, "Norway");  // Add it to the list at index 5
     System.out.println("(6) " + list);
+
+    // Remove elements from the list
+    list.remove("Canada");  // Same as list.remove(0) in this case
+    System.out.println("(7) " + list);
+    
+
   }
 }
