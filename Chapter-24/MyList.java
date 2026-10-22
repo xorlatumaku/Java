@@ -86,4 +86,21 @@ public interface MyList<E> extends Collection<E> {
     System.arraycopy(data, 0, result, 0, size);
     return result;
   }
+
+  @Override /* Return an array containing all elements in this list with specified runtime type */
+  @SuppressWarnings("unchecked")
+  public <T> T[] toArray(T[] a) {
+    if (a.length < size) {
+      // Create a new array of a's runtime type, but with the list's size
+      return (T[]) java.util.Arrays.copyOf(data, size, a.getClass());
+    }
+
+    System.arraycopy(data, 0, a, 0, size);
+
+    if (a.length > size) {
+      a[size] = null; // Standard Java spec behavior if input array is larger
+    }
+
+    return a;
+  }
 }
