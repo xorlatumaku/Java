@@ -180,6 +180,22 @@ public class MyLinkedList<E> implements MyList<E> {
     return lastIndex;
   }
 
+  @Override /* Replace the element at the specified position in this list with the specified element. */
+  public E set(int index, E e) {
+    if (index < 0 || index >= size) {
+      throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+    }
+
+    Node<E> current = head;
+    for (int i = 0; i < index; i++) {
+      current = current.next;
+    }
+
+    E oldElement = current.element;
+    current.element = e;
+    return oldElement;
+  }
+
   @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
