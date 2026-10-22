@@ -116,6 +116,11 @@ public class MyLinkedList<E> implements MyList<E> {
       if (current != null) {
         result.append(", ");  // Separate two elements with a coma
       }
+      else {
+        result.append("]");   // Insert the closing ] in the string
+      }
     }
+
+    return result.toString();
   }
 }
