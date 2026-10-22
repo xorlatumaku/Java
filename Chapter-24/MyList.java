@@ -103,4 +103,16 @@ public interface MyList<E> extends Collection<E> {
 
     return a;
   }
+
+  @Override
+  public boolean retainAll(java.util.Collection<?> c) {
+    boolean changed = false;
+    for (int i = size - 1; i >= 0; i--) {
+      if (!c.contains(data[i])) {
+        remove(i);
+        changed = true;
+      }
+    }
+    return changed;
+  }
 }
