@@ -65,6 +65,10 @@ public class MyLinkedList<E> implements MyList<E> {
      else if (index >= size) addLast(e);  // Insert last
      else { // Insert in the middle
         Node<E> current = head;
-     }
- }
+     for (int i = 1; i < index; i++)
+       current = current.next;
+     Node<E> temp = current.next;
+     current.next = new Node<>(e);
+    }
+  }
 }
