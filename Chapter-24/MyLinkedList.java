@@ -91,5 +91,11 @@ public class MyLinkedList<E> implements MyList<E> {
     if (size == 0 || size == 1) {
       return removeFirst();
     }
+    else {
+      Node<E> current = head;
+      for (int i = 0; i < size - 2; i++) {
+        current = current.next;
+      }
+    }
   }
 }
