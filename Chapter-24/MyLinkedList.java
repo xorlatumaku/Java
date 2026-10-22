@@ -155,6 +155,18 @@ public class MyLinkedList<E> implements MyList<E> {
     return current.element;
   }
 
+  @Override /* Return the index of the first matching element in this list. Return -1 if no match. */
+  public int indexOf(Object e) {
+    Node<E> current = head;
+    for (int i = 0; i < size; i++) {
+      if ((e == null && current.element == null) || (e != null && e.equals(current.element))) {
+        return i;
+      }
+      current = current.next;
+    }
+    return -1;
+  }
+
   @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
