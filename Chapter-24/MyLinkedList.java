@@ -81,6 +81,7 @@ public class MyLinkedList<E> implements MyList<E> {
       Node<E> temp = head;  // Keep the first node temporarily
       head = head.next;     // Move head to point to next node
       size--;               // Reduce size by 1
+      if (head == null) tail = null;  // List becomes empty
     }
   }
 }
