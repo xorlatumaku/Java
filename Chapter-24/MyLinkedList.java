@@ -167,6 +167,19 @@ public class MyLinkedList<E> implements MyList<E> {
     return -1;
   }
 
+  @Override /* Return the index of the last matching element in this list. Return -1 if no match. */
+  public int lastIndexOf(E e) {
+    int lastIndex = -1;
+    Node<E> current = head;
+    for (int i = 0; i < size; i++) {
+      if ((e == null && current.element == null) || (e != null && e.equals(current.element))) {
+        lastIndex = i;
+      }
+      current = current.next;
+    }
+    return lastIndex;
+  }
+
   @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
