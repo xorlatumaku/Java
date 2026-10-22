@@ -134,4 +134,20 @@ public class MyLinkedList<E> implements MyList<E> {
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
   }
+
+  private class LinkedListIterator implements java.util.Iterator<E> {
+    private Node<E> current = head; // Current index
+
+    @Override
+    public boolean hasNext() {
+      return (current != null);
+    }
+
+    @Override
+    public E next() {
+      E e = current.element;
+      current = current.next;
+      return e;
+    }
+  }
 }
