@@ -21,4 +21,14 @@ public class MyLinkedList<E> implements MyList<E> {
       return head.element;
     }
   }
+
+  /* Return the last element in the list */
+  public E getLast() {
+    if (size == 0) {
+      return null;
+    }
+    else {
+      return tail.element;
+    }
+  }
 }
