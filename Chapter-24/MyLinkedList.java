@@ -101,6 +101,7 @@ public class MyLinkedList<E> implements MyList<E> {
       tail = current;
       tail.next = null;
       size--;
+      return temp;
     }
   }
 }
