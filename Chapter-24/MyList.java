@@ -66,4 +66,17 @@ public interface MyList<E> extends Collection<E> {
     }
     return true;
   }
+
+  @Override /* Remove all elements in the collection from this list */
+  public boolean removeAll(java.util.Collection<?> c) {
+    boolean changed = false;
+    // Iterate backwards so shifting doesn't skip elements
+    for (int i = size - 1; i >= 0; i--) {
+      if (c.contains(data[i])) {
+        remove(i);
+        changed = true;
+      }
+    }
+    return changed;
+  }
 }
