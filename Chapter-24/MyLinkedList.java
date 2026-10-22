@@ -34,6 +34,7 @@ public class MyLinkedList<E> implements MyList<E> {
 
   /* Add an element to the beginning of the list */
   public void addFirst(E e) {
-    Node<E> newNode = new Node<>(e);
+    Node<E> newNode = new Node<>(e);  // Create a new node
+    newNode.next = head;  // link the new node with the head
   }
 }
