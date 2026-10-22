@@ -54,6 +54,16 @@ public interface MyList<E> extends Collection<E> {
         return false;
       }
     }
+    return true;
   }
+  
+  @Override /* Add all elements in the collection to this list */
+  public boolean addAll(java.util.Collection<? extends E> c) {
+    if (c.isEmpty()) return false;
 
+    for (E e : c) {
+      add(size, e); // Appends to the end of the list
+    }
+    return true;
+  }
 }
