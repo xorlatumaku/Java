@@ -96,6 +96,9 @@ public class MyLinkedList<E> implements MyList<E> {
       for (int i = 0; i < size - 2; i++) {
         current = current.next;
       }
+
+      E temp = tail.element;
+      tail = current;
     }
   }
 }
