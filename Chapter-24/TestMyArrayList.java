@@ -26,6 +26,7 @@ public class TestMyArrayList {
     list.remove("Canada");  // Same as list.remove(0) in this case
     System.out.println("(7) " + list);
     
-
+    list.remove(2);  // Remove the element at index 2
+    System.out.println("(8) " + list);
   }
 }
