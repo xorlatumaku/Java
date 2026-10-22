@@ -11,4 +11,14 @@ public class MyLinkedList<E> implements MyList<E> {
     for (int i = 0; i < objects.length; i++)
       add(objects[i]);
   }
+
+  /* Return the head element in the list */
+  public E getFirst() {
+    if (size == 0) {
+      return null;
+    }
+    else {
+      return head.element;
+    }
+  }
 }
