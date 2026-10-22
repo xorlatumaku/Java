@@ -85,4 +85,11 @@ public class MyLinkedList<E> implements MyList<E> {
           return temp.element;        // Return the deleted element
     }
   }
+
+  /* Remove the last node and return the object that is contained in the removed node. */
+  public E removedLast() {
+    if (size == 0 || size == 1) {
+      return removeFirst();
+    }
+  }
 }
