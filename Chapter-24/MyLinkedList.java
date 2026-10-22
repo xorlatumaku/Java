@@ -129,4 +129,9 @@ public class MyLinkedList<E> implements MyList<E> {
     size = 0;
     head = tail = null;
   }
+
+  @Override /* Override iterator() defined in Iterable */
+  public java.util.Iterator<E> iterator() {
+    return new LinkedListIterator();
+  }
 }
