@@ -15,5 +15,8 @@ public class TestMyArrayList {
 
     list.add("France"); // Add it to the end of the list
     System.out.println("(4) " + list);
+
+    list.add(2, "Germany"); // Add it to the list at index 2
+    System.out.println("(5) " + list);
   }
 }
