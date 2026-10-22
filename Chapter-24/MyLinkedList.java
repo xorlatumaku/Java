@@ -130,6 +130,18 @@ public class MyLinkedList<E> implements MyList<E> {
     head = tail = null;
   }
 
+  @Override /* Return true if this list contains the element e */
+  public boolean contains(Obect e) {
+    Node<E> current = head;
+    while (current != null) {
+      if ((e == null && current.element == null) || (e != null && e.equals(current.element))) {
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
+
   @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
