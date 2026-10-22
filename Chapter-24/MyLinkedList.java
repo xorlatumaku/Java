@@ -50,5 +50,8 @@ public class MyLinkedList<E> implements MyList<E> {
     if (tail == null) {
       head = tail = newNode;  // The only node in list
     }
+    else {
+      tail.next = newNode;  // Link the new node with the last node
+    }
   }
 }
