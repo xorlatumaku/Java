@@ -99,6 +99,8 @@ public class MyLinkedList<E> implements MyList<E> {
 
       E temp = tail.element;
       tail = current;
+      tail.next = null;
+      size--;
     }
   }
 }
