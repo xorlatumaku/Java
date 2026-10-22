@@ -142,6 +142,19 @@ public class MyLinkedList<E> implements MyList<E> {
     return false;
   }
 
+  @Override /* Return the element at the specified index */
+  public E get(int index) {
+    if (index < 0 || index >= size) {
+      throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+    }
+
+    Node<E> current = head;
+    for (int i = 0; i < index; i++) {
+      current = current.next;
+    }
+    return current.element;
+  }
+
   @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
