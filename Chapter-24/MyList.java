@@ -79,4 +79,11 @@ public interface MyList<E> extends Collection<E> {
     }
     return changed;
   }
+
+  @Override /* Return an array containing all elements in this list */
+  public Object[] toArray() {
+    Object[] result = new Object[size];
+    System.arraycopy(data, 0, result, 0, size);
+    return result;
+  }
 }
