@@ -62,5 +62,6 @@ public class MyLinkedList<E> implements MyList<E> {
   * The index of the head element is 0 */
   public void add(int index, E e) {
      if (index == 0) addFirst(e);  // Insert first
+     else if (index >= size) addLast(e);  // Insert last
  }
 }
