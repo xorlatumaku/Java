@@ -18,5 +18,8 @@ public class TestMyArrayList {
 
     list.add(2, "Germany"); // Add it to the list at index 2
     System.out.println("(5) " + list);
+
+    list.add(5, "Norway");  // Add it to the list at index 5
+    System.out.println("(6) " + list);
   }
 }
