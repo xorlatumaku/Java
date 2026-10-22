@@ -9,5 +9,8 @@ public class TestMyArrayList {
 
     list.add(0, "Canada"); // Add it to the beginning of the list
     System.out.println("(2) " + list);
+
+    list.add("Russia"); // Add it to the end of the list
+    System.out.println("(3) " + list);
   }
 }
