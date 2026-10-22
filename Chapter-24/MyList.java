@@ -46,4 +46,14 @@ public interface MyList<E> extends Collection<E> {
     else
       return false;
   }
+
+  @Override /* Return true if this list contains all elements in the collection */
+  public boolean containsAll(java.util.Collection<?> c) {
+    for (Object e : c) {
+      if (!this.contains(e)) {
+        return false;
+      }
+    }
+  }
+
 }
