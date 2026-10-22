@@ -73,4 +73,9 @@ public class MyLinkedList<E> implements MyList<E> {
      size++;
     }
   }
+
+  /* Remove the head node and return the object that is contained in the removed node. */
+  public E removeFirst() {
+    if (size == 0) return null; // Nothing to delete
+  }
 }
