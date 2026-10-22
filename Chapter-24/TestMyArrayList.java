@@ -28,5 +28,11 @@ public class TestMyArrayList {
     
     list.remove(2);  // Remove the element at index 2
     System.out.println("(8) " + list);
+
+    list.remove(list.size() - 1); // Remove the last element
+    System.out.print("(9) " + list + "\n(10) ");
+
+    for(String s: list)
+      System.out.print(s.toUpperCase() + " ");
   }
 }
