@@ -82,6 +82,7 @@ public class MyLinkedList<E> implements MyList<E> {
       head = head.next;     // Move head to point to next node
       size--;               // Reduce size by 1
       if (head == null) tail = null;  // List becomes empty
+          return temp.element;        // Return the deleted element
     }
   }
 }
