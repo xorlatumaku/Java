@@ -34,5 +34,6 @@ public class TestMyArrayList {
 
     for(String s: list)
       System.out.print(s.toUpperCase() + " ");
+    System.out.println();
   }
 }
