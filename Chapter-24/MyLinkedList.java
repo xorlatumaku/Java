@@ -104,4 +104,18 @@ public class MyLinkedList<E> implements MyList<E> {
       return temp;
     }
   }
+
+  @Override /* Override toString() to return elements in the list */
+  public String toString() {
+    StringBuilder result = new StringBuilder("[");
+
+    Node<E> current = head;
+    for (int i = 0; i < size; i++) {
+      result.append(current.element);
+      current = current.next;
+      if (current != null) {
+        result.append(", ");  // Separate two elements with a coma
+      }
+    }
+  }
 }
