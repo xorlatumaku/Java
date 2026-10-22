@@ -54,5 +54,7 @@ public class MyLinkedList<E> implements MyList<E> {
       tail.next = newNode;  // Link the new node with the last node
       tail = newNode;       // tail now points to the last node
     }
+
+    size++;   // Increase size
   }
 }
