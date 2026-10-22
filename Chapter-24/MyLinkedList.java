@@ -123,4 +123,10 @@ public class MyLinkedList<E> implements MyList<E> {
 
     return result.toString();
   }
+
+  @Override /* Clear the list */
+  public void clear() {
+    size = 0;
+    head = tail = null;
+  }
 }
