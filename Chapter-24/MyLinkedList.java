@@ -57,4 +57,9 @@ public class MyLinkedList<E> implements MyList<E> {
 
     size++;   // Increase size
   }
+
+  @Override /* Add a new element at the specified index in this list.
+  * The index of the head element is 0 */
+  public void add(int index, E e) {
+      }
 }
