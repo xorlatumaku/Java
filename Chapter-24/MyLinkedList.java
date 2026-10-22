@@ -46,5 +46,9 @@ public class MyLinkedList<E> implements MyList<E> {
   /* Add an element to the end of the list */
   public void addLast(E e) {
     Node<E> newNode = new Node<>(e);  // Create a new node for e
+    
+    if (tail == null) {
+      head = tail = newNode;  // The only node in list
+    }
   }
 }
