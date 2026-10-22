@@ -12,5 +12,8 @@ public class TestMyArrayList {
 
     list.add("Russia"); // Add it to the end of the list
     System.out.println("(3) " + list);
+
+    list.add("France"); // Add it to the end of the list
+    System.out.println("(4) " + list);
   }
 }
