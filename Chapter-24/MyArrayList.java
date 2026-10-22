@@ -1,3 +1,4 @@
+@SuppressWarnings("unchecked")
 public class MyArrayList<E> implements MyList<E> {
   public static final int INITIAL_CAPACITY = 16;
   private E[] data = (E[]) new Object[INITIAL_CAPACITY];
@@ -164,5 +165,17 @@ public class MyArrayList<E> implements MyList<E> {
   @Override /* Return the number of elements in this list */
   public int size() {
     return size;
+  }
+
+  @Override
+  public boolean retainAll(java.util.Collection<?> c) {
+    boolean changed = false;
+    for (int i = size - 1; i >= 0; i--) {
+      if (!c.contains(data[i])) {
+        remove(i);
+        changed = true;
+      }
+    }
+    return changed;
   }
 }
