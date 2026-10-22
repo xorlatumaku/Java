@@ -159,4 +159,9 @@ public class MyLinkedList<E> implements MyList<E> {
       this.element = element;
     }
   }
+
+  @Override /* Return the number of elements in this list */
+  public int size() {
+    return size;
+  }
 }
