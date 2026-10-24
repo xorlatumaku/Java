@@ -254,8 +254,20 @@ public class MyLinkedList<E> implements MyList<E> {
     return changed;
   }
 
+  @Override
+  public boolean removeAll(java.util.Collection<?> c) {
+    boolean changed = false;
+    for (Object element : c) {
+      while (this.contains(element)) {
+        this.remove(element);
+        changed = true;
+      }
+    }
+    return changed;
+  }
 
-    @Override /* Override iterator() defined in Iterable */
+
+  @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
   }
