@@ -266,6 +266,16 @@ public class MyLinkedList<E> implements MyList<E> {
     return changed;
   }
 
+  @Override
+  public boolean containsAll(java.util.Collection<?> c) {
+    for (Object element : c) {
+      if (!this.contains(element)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
 
   @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
