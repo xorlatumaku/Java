@@ -195,6 +195,33 @@ public class MyLinkedList<E> implements MyList<E> {
     current.element = e;
     return oldElement;
   }
+  
+  @Override /* Remove the element at the specified position in this list
+   * Shift any subsequent elements to the left.
+   * Return the element that was removed from the list. */
+  public E remove(int index) {
+    if (index < 0 || index >= size) {
+      throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+    }
+    
+    if (index == 0) {
+      return removeFirst();
+    } 
+    else if (index == size - 1) {
+      return removeLast();
+    } 
+    else {
+      Node<E> previous = head;
+      for (int i = 1; i < index; i++) {
+        previous = previous.next;
+      }
+      
+      Node<E> current = previous.next;
+      previous.next = current.next;
+      size--;
+      return current.element;
+    }
+  }
 
     @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
