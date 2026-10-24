@@ -131,7 +131,7 @@ public class MyLinkedList<E> implements MyList<E> {
   }
 
   @Override /* Return true if this list contains the element e */
-  public boolean contains(Obect e) {
+  public boolean contains(Object e) {
     Node<E> current = head;
     while (current != null) {
       if ((e == null && current.element == null) || (e != null && e.equals(current.element))) {
@@ -214,6 +214,11 @@ public class MyLinkedList<E> implements MyList<E> {
       E e = current.element;
       current = current.next;
       return e;
+    }
+
+    @Override
+    public void remove() {
+      // 
     }
   }
 
