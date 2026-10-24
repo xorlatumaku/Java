@@ -196,7 +196,7 @@ public class MyLinkedList<E> implements MyList<E> {
     return oldElement;
   }
 
-  @Override /* Override iterator() defined in Iterable */
+    @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
   }
@@ -218,7 +218,22 @@ public class MyLinkedList<E> implements MyList<E> {
 
     @Override
     public void remove() {
-      // Left as an exercise  
+      if (current == head) {
+        throw new IllegalStateException("next() has not been called yet");
+      }
+      
+      // Since current points to the NEXT node, the item to remove is right before it
+      Node<E> targetNode = head;
+      while (targetNode != null && targetNode.next != current) {
+        targetNode = targetNode.next;
+      }
+      
+      if (targetNode == null) {
+        throw new IllegalStateException("Element already removed or invalid state");
+      }
+      
+      // Remove the targetNode by finding its position in the list
+      MyLinkedList.this.remove(targetNode.element);
     }
   }
 
