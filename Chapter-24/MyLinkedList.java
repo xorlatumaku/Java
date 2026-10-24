@@ -287,6 +287,24 @@ public class MyLinkedList<E> implements MyList<E> {
     return array;
   }
 
+  @Override
+  public <T> T[] toArray(T[] a) {
+    if (a.length < size) {
+      a = (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), size);
+    }
+    int i = 0;
+    Object[] result = a;
+    Node<E> current = head;
+    while (current != null) {
+      result[i++] = current.element;
+      current = current.next;
+    }
+    if (a.length > size) {
+      a[size] = null;
+    }
+    return a;
+  }
+
 
   @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
