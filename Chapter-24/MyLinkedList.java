@@ -276,6 +276,17 @@ public class MyLinkedList<E> implements MyList<E> {
     return true;
   }
 
+  @Override
+  public Object[] toArray() {
+    Object[] array = new Object[size];
+    Node<E> current = head;
+    for (int i = 0; i < size; i++) {
+      array[i] = current.element;
+      current = current.next;
+    }
+    return array;
+  }
+
 
   @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
