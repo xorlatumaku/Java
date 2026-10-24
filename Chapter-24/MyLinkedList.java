@@ -87,7 +87,7 @@ public class MyLinkedList<E> implements MyList<E> {
   }
 
   /* Remove the last node and return the object that is contained in the removed node. */
-  public E removedLast() {
+  public E removeLast() {
     if (size == 0 || size == 1) {
       return removeFirst();
     }
@@ -218,7 +218,7 @@ public class MyLinkedList<E> implements MyList<E> {
 
     @Override
     public void remove() {
-      // 
+      // Left as an exercise  
     }
   }
 
