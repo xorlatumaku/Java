@@ -223,7 +223,7 @@ public class MyLinkedList<E> implements MyList<E> {
     }
   }
 
-    @Override
+  @Override
   public boolean retainAll(java.util.Collection<?> c) {
     boolean changed = false;
     Node<E> current = head;
@@ -242,6 +242,18 @@ public class MyLinkedList<E> implements MyList<E> {
     }
     return changed;
   }
+
+  @Override
+  public boolean addAll(java.util.Collection<? extends E> c) {
+    boolean changed = false;
+    for (E element : c) {
+      if (this.add(element)) {
+        changed = true;
+      }
+    }
+    return changed;
+  }
+
 
     @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
