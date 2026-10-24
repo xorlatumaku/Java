@@ -288,6 +288,7 @@ public class MyLinkedList<E> implements MyList<E> {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
   public <T> T[] toArray(T[] a) {
     if (a.length < size) {
       a = (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), size);
@@ -304,6 +305,7 @@ public class MyLinkedList<E> implements MyList<E> {
     }
     return a;
   }
+
 
 
   @Override /* Override iterator() defined in Iterable */
