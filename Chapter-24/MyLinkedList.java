@@ -223,6 +223,26 @@ public class MyLinkedList<E> implements MyList<E> {
     }
   }
 
+    @Override
+  public boolean retainAll(java.util.Collection<?> c) {
+    boolean changed = false;
+    Node<E> current = head;
+    int index = 0;
+    
+    while (current != null) {
+      Node<E> nextNode = current.next; // Keep track of next node before potential removal
+      if (!c.contains(current.element)) {
+        this.remove(index);
+        changed = true;
+        // Do not increment index because the next node shifts into the current index position
+      } else {
+        index++;
+      }
+      current = nextNode;
+    }
+    return changed;
+  }
+
     @Override /* Override iterator() defined in Iterable */
   public java.util.Iterator<E> iterator() {
     return new LinkedListIterator();
