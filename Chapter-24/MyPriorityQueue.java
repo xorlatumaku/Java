@@ -4,4 +4,8 @@ public class MyPriorityQueue<E> {
   public void MyPriorityQueue<E> {
     heap.add(new Heap<E>());
   }
+
+  public MyPriorityQueue(java.util.Comparator<E> c) {
+    heap = new Heap<E>(c);
+  }
 }
