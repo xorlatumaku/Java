@@ -21,5 +21,8 @@ public class TestStackQueue {
 
     // Create a queue
     GenericQueue<String> queue = new GenericQueue<>();
+
+    // Add elements to the queue
+    queue.enqueue("Robert Pattinson");  // Add Robert Pattinson to the queue
   }
 }
