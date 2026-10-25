@@ -12,4 +12,8 @@ public class MyPriorityQueue<E> {
   public void enqueue(E newObject) {
     heap.add(newObject);
   }
+
+  public E dequeue() {
+    return heap.remove();
+  }
 }
