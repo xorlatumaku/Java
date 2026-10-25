@@ -31,6 +31,9 @@ public class TestMyLinkedList {
     System.out.println("(8) " + list);
 
     list.remove(2);   // Remove the element at index 2
-    System.out.println("9 " + list);
+    System.out.println("(9) " + list);
+
+    list.remove(list.size() - 1);   // Remove the last element
+    System.out.println("(10) " + list + "\n(11) ");
   }
 }
