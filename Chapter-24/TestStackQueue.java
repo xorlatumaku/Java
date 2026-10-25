@@ -9,5 +9,7 @@ public class TestStackQueue {
 
     stack.push("Tom Holland");  // Push Tom Holland to the stack
     System.out.println("(2) " + stack);
+
+    stack.push("Anne Hathaway");  // Push Anne Hathaway to the stack
   }
 }
