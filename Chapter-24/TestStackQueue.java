@@ -11,5 +11,6 @@ public class TestStackQueue {
     System.out.println("(2) " + stack);
 
     stack.push("Anne Hathaway");  // Push Anne Hathaway to the stack
+    stack.push("Zendaya");    // Push Zendaya to the stack
   }
 }
