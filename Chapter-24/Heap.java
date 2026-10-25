@@ -3,6 +3,7 @@ public class Heap<E> {
   private java.util.Comparator<? super E> c;
 
   /* Create a default heap */
+  @SuppressWarnings("unchecked")
   public Heap() {
     this.c = (e1, e2) -> ((Comparable<E>)e1).compareTo(e2);
   }
