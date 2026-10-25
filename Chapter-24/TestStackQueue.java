@@ -30,5 +30,7 @@ public class TestStackQueue {
     System.out.println("(8) " + queue);
 
     queue.enqueue("Jon Bentral");    // Add Jon Bentral to the queue
-      }
+    queue.enqueue("Lupita Nyong'o"); // Add Lupita Nyong'o to the queue
+    System.out.println("(9) " + queue);
+ }
 }
