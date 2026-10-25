@@ -35,5 +35,11 @@ public class TestMyLinkedList {
 
     list.remove(list.size() - 1);   // Remove the last element
     System.out.println("(10) " + list + "\n(11) ");
+
+    for (String s : list)
+      System.out.print(s.toUpperCase() + " ");
+
+    list.clear();
+    System.out.println("\nAfter clearing the list, the list size is " + list.size());
   }
 }
