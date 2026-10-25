@@ -12,4 +12,9 @@ public class GenericQueue<E> {
   public int getSize() {
     return list.size();
   }
+
+  @Override
+  public String toString() {
+    return "Queue: " + list.toString();
+  }
 }
