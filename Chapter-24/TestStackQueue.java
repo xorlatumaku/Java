@@ -28,5 +28,7 @@ public class TestStackQueue {
 
     queue.enqueue("Benny Safdie");    // Add Benny Safdie to the queue
     System.out.println("(8) " + queue);
-  }
+
+    queue.enqueue("Jon Bentral");    // Add Jon Bentral to the queue
+      }
 }
