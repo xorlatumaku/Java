@@ -18,5 +18,8 @@ public class TestStackQueue {
     System.out.println("(4) " + stack.pop());
     System.out.println("(5) " + stack.pop());
     System.out.println("(6) " + stack);
+
+    // Create a queue
+    GenericQueue<String> queue = new GenericQueue<>();
   }
 }
