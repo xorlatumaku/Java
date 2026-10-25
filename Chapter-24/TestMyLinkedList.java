@@ -22,5 +22,8 @@ public class TestMyLinkedList {
 
     list.add(5, "Austria");  // Add it to the list at index 5
     System.out.println("(6) " + list);
+
+    list.add(0, "Britain"); // Same as list.addFirst("Britain")
+    System.out.println("(7) " + list);
   }
 }
