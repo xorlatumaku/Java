@@ -13,5 +13,8 @@ public class TestMyLinkedList {
 
     list.add("Greenland");   // Add it to the end of the list
     System.out.println("(3) " + list);
+
+    list.addLast("Sweden");  // Add it to the end of the list
+    System.out.println("(4) " + list);
   }
 }
