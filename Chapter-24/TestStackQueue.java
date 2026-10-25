@@ -13,5 +13,10 @@ public class TestStackQueue {
     stack.push("Anne Hathaway");  // Push Anne Hathaway to the stack
     stack.push("Zendaya");    // Push Zendaya to the stack
     System.out.println("(3) " + stack);
+
+    // Remove elements from the stack
+    System.out.println("(4) " + stack.pop());
+    System.out.println("(5) " + stack.pop());
+    System.out.println("(6) " + stack);
   }
 }
