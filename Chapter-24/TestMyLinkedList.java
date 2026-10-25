@@ -28,6 +28,9 @@ public class TestMyLinkedList {
 
     // Remove elements from the list
     list.remove(0); // Same as list.remove("Britain")
-    System.out.println("(9) " + list);
+    System.out.println("(8) " + list);
+
+    list.remove(2);   // Remove the element at index 2
+    System.out.println("9 " + list);
   }
 }
