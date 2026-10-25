@@ -6,5 +6,9 @@ public class TestPriorityQueue {
     Patient patient4 = new Patient("Cindy", 7);
 
     MyPriorityQueue<Patient> priorityQueue = new MyPriorityQueue<>();
+    priorityQueue.enqueue(patient1);
+    priorityQueue.enqueue(patient2);
+    priorityQueue.enqueue(patient3);
+    priorityQueue.enqueue(patient4);
   }
 }
