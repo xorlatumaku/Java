@@ -25,5 +25,9 @@ public class TestMyLinkedList {
 
     list.add(0, "Britain"); // Same as list.addFirst("Britain")
     System.out.println("(7) " + list);
+
+    // Remove elements from the list
+    list.remove(0); // Same as list.remove("Britain")
+    System.out.println("(9) " + list);
   }
 }
