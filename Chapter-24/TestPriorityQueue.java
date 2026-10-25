@@ -14,4 +14,24 @@ public class TestPriorityQueue {
     while (priorityQueue.getSize() > 0)
       System.out.print(priorityQueue.dequeue() + " ");
   }
+
+  static class Patient implements Comparable<Patient> {
+    private String name;
+    private int priority;
+
+    public Patient(String name, int priority) {
+      this.name = name;
+      this.priority = priority;
+    }
+
+    @Override
+    public String toString() {
+      return name + "(priority:" + priority + ")";
+    }
+
+    @Override
+    public int compareTo(Patient patient) {
+      return this.priority - patient.priority;
+    }
+  }
 }
