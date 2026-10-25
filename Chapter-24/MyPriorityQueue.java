@@ -16,4 +16,8 @@ public class MyPriorityQueue<E> {
   public E dequeue() {
     return heap.remove();
   }
+  
+  public int getSize() {
+    return heap.getSize();
+  }
 }
