@@ -8,4 +8,8 @@ public class MyPriorityQueue<E> {
   public MyPriorityQueue(java.util.Comparator<E> c) {
     heap = new Heap<E>(c);
   }
+
+  public void enqueue(E newObject) {
+    heap.add(newObject);
+  }
 }
