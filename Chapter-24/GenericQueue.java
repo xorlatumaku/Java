@@ -4,4 +4,8 @@ public class GenericQueue<E> {
   public void enqueue(E e) {
     list.addLast(e);
   }
+
+  public E dequeue() {
+    return list.removeFirst();
+  }
 }
