@@ -106,4 +106,21 @@ public interface Tree<E> extends Collection<E> {
     }
     return array;
   }
+
+  @Override
+  public default <T> T[] toArray(T[] array) {
+    int size = size();
+    if (array.length < size) {
+      array = (T[]) java.lang.reflect.Array.newInstance(array.getClass().getComponentType(), size);
+    }
+    int i = 0;
+    Object[] result = array;
+    for (E e : this) {
+      result[i++] = e;
+    }
+    if (array.length > size) {
+      array[size] = null;
+    }
+    return array;
+  }
 }
