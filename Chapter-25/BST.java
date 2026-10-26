@@ -99,4 +99,9 @@ public class BST<E> implements Tree<E> {
     postorder(root.right);
     System.out.print(root.element + " ");
   }
+
+  @Override /* Preorder traversal from the root */
+  public void preorder() {
+    preorder(root);
+  }
 }
