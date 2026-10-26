@@ -72,4 +72,15 @@ public interface Tree<E> extends Collection<E> {
     }
     return modified;
   }
+
+  @Override
+  public default boolean removeAll(Collection<?> c) {
+    boolean modified = false;
+    for (Object e : c) {
+      if (remove(e)) {
+        modified = true;
+      }
+    }
+    return modified;
+  }
 }
