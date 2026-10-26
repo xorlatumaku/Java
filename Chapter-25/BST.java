@@ -58,6 +58,12 @@ public class BST<E> implements Tree<E> {
         }
         else
           return false;  // Duplicate node not inserted
+
+      // Create the new node and attach it to the parent node
+      if (c.compare(e, parent.element) < 0)
+        parent.left = createNewNode(e);
+      else
+        parent.right = createNewNode(e);
     } 
   }
 }
