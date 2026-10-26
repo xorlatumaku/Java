@@ -26,4 +26,9 @@ public interface Tree<E> extends Collection<E> {
   /* Preorder traversal from the root */
   public default void postorder() {
   }
+
+  @Override /* Return true if the tree is empty */
+  public default boolean isEmpty() {
+    return size() == 0;
+  }
 }
