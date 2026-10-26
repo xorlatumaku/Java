@@ -43,5 +43,21 @@ public class BST<E> implements Tree<E> {
   public boolean insert(E e) {
     if (root == null)
       root = createNewNode(e); // Create a new root
+    else {
+      // Locate the parent node
+      TreeNode<E> parent = null;
+      TreeNode<E> current = root;
+      while (current != null)
+        if (c.compare(e, current.element) < 0) {
+          parent = current;
+          current = current.left;
+        }
+        else if (c.compare(e, current.element) > 0) {
+          parent = current;
+          current = current.right;
+        }
+        else
+          return false;  // Duplicate node not inserted
+    } 
   }
 }
