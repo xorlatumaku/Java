@@ -83,4 +83,17 @@ public interface Tree<E> extends Collection<E> {
     }
     return modified;
   }
+
+  @Override
+  public default boolean retainAll(Collection<?> c) {
+    boolean modified = false;
+    Iterator<E> iterator = iterator();
+    while (iterator.hasNext()) {
+      if (!c.contains(iterator.next())) {
+        iterator.remove();
+        modified = true;
+      }
+    }
+    return modified;
+  }
 }
