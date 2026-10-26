@@ -22,4 +22,8 @@ public interface Tree<E> extends Collection<E> {
   /* Postorder traversal from the root */
   public default void postorder() {
   }
+
+  /* Preorder traversal from the root */
+  public default void postorder() {
+  }
 }
