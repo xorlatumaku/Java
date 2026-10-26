@@ -73,4 +73,9 @@ public class BST<E> implements Tree<E> {
   protected TreeNode<E> createNewNode(E e) {
     return new TreeNode<>(e);
   }
+
+  @Override /* Inorder traversal from the root */
+  public void inorder() {
+    inorder(root);
+  }
 }
