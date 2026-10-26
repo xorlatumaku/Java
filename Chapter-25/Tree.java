@@ -41,4 +41,9 @@ public interface Tree<E> extends Collection<E> {
   public default boolean add(E e) {
     return insert(e);
   }
+
+  @Override
+  public default boolean remove(Object e) {
+    return delete((E)e);
+  }
 }
