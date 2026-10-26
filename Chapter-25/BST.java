@@ -78,4 +78,12 @@ public class BST<E> implements Tree<E> {
   public void inorder() {
     inorder(root);
   }
+
+  /* Inorder traversal from a subtree */
+  protected void inorder(TreeNode<E> root) {
+    if (root == null) return;
+    inorder(root.left);
+    System.out.print(root.element + " ");
+    inorder(root.right);
+  }
 }
