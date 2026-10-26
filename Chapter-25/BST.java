@@ -129,4 +129,9 @@ public class BST<E> implements Tree<E> {
   public int getSize() {
     return size;
   }
+
+  /* Returns the root of the tree */
+  public TreeNode<E> getRoot() {
+    return root;
+  }
 }
