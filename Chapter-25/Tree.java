@@ -18,4 +18,8 @@ public interface Tree<E> extends Collection<E> {
   /* Inorder traversal from the root */
   public default void inorder() {
   }
+
+  /* Postorder traversal from the root */
+  public default void postorder() {
+  }
 }
