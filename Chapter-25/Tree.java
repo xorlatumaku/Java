@@ -61,4 +61,15 @@ public interface Tree<E> extends Collection<E> {
     }
     return true;
   }
+
+  @Override
+  public default boolean addAll(Collection<? extends E> c) {
+    boolean modified = false;
+    for (E  e : c) {
+      if (add(e)) {
+        modified = true;
+      }
+    }
+    return modified;
+  }
 }
