@@ -91,4 +91,12 @@ public class BST<E> implements Tree<E> {
   public void postorder() {
     postorder(root);
   }
+
+  /* Postorder traversal from a subtree */
+  protected void postorder(TreeNode<E> root) {
+    if (root == null) return;
+    postorder(root.left);
+    postorder(root.right);
+    System.out.print(root.element + " ");
+  }
 }
