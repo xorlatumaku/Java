@@ -36,4 +36,9 @@ public interface Tree<E> extends Collection<E> {
   public default boolean contains(Object e) {
     return search((E)e);
   }
+  
+  @Override
+  public default boolean add(E e) {
+    return insert(e);
+  }
 }
