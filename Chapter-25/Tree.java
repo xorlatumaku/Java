@@ -31,4 +31,9 @@ public interface Tree<E> extends Collection<E> {
   public default boolean isEmpty() {
     return size() == 0;
   }
+
+  @Override
+  public default boolean contains(Object e) {
+    return search((E)e);
+  }
 }
