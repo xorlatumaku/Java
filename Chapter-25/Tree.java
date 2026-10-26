@@ -1,4 +1,5 @@
 import java.util.Collection;
+import java.util.Iterator;
 
 public interface Tree<E> extends Collection<E> {
   /* Return true if the element is in the tree */
@@ -33,6 +34,7 @@ public interface Tree<E> extends Collection<E> {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
   public default boolean contains(Object e) {
     return search((E)e);
   }
@@ -43,6 +45,7 @@ public interface Tree<E> extends Collection<E> {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
   public default boolean remove(Object e) {
     return delete((E)e);
   }
@@ -108,6 +111,7 @@ public interface Tree<E> extends Collection<E> {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
   public default <T> T[] toArray(T[] array) {
     int size = size();
     if (array.length < size) {
