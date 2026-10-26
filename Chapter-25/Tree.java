@@ -11,4 +11,7 @@ public interface Tree<E> extends Collection<E> {
   /* Delete the specified element from the tree
    * Return true if the element is deleted successfully */
   public boolean delete(E e);
+
+  /* Get the number of elements in the tree */
+  public int getSize();
 }
