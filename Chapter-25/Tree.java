@@ -14,4 +14,8 @@ public interface Tree<E> extends Collection<E> {
 
   /* Get the number of elements in the tree */
   public int getSize();
+
+  /* Inorder traversal from the root */
+  public default void inorder() {
+  }
 }
