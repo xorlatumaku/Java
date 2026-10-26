@@ -134,4 +134,24 @@ public class BST<E> implements Tree<E> {
   public TreeNode<E> getRoot() {
     return root;
   }
+
+  /* Returns a path from the root leading to the specified element */
+  public java.util.ArrayList<TreeNode<E>> path(E e) {
+    java.util.ArrayList<TreeNode<E>> list = new java.util.ArrayList<>();
+    TreeNode<E> current = root; // Start from the root
+
+    while (current != null) {
+      list.add(current);  // Add the node to the list
+       if (c.compare(e, current.element) < ) {
+         current = current.left;
+       }
+       else if (c.compare(e, current.element) > 0) {
+         current = current.right;
+       }
+       else
+         break;
+    }
+
+    return list;  // Return an array list of nodes
+  }
 }
