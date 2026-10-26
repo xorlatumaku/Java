@@ -124,4 +124,9 @@ public class BST<E> implements Tree<E> {
       element = e;
     }
   }
+
+  @Override /* Get the number of nodes in the tree */
+  public int getSize() {
+    return size;
+  }
 }
