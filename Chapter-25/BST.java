@@ -31,6 +31,17 @@ public class BST<E> implements Tree<E> {
       else if (c.compare(e, current.element) > 0) {
         current = current.right;
       }
+      else  // element matches current.element
+        return true;  // Element is found
     }
+
+    return false;
+  }
+
+  @Override /* Insert element e into the binary tree
+  * Return true if the element is inserted successfully */
+  public boolean insert(E e) {
+    if (root == null)
+      root = createNewNode(e); // Create a new root
   }
 }
