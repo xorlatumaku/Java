@@ -64,6 +64,13 @@ public class BST<E> implements Tree<E> {
         parent.left = createNewNode(e);
       else
         parent.right = createNewNode(e);
-    } 
+    }
+
+    size++;
+    return true; // Element inserted successfully
+  }
+
+  protected TreeNode<E> createNewNode(E e) {
+    return new TreeNode<>(e);
   }
 }
