@@ -96,4 +96,14 @@ public interface Tree<E> extends Collection<E> {
     }
     return modified;
   }
+
+  @Override
+  public default Object[] toArray() {
+    Object[] array = new Object[size()];
+    int i = 0;
+    for (E  e : this) {
+      array[i++] = e;
+    }
+    return array;
+  }
 }
