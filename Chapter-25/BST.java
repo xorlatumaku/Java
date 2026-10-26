@@ -104,4 +104,12 @@ public class BST<E> implements Tree<E> {
   public void preorder() {
     preorder(root);
   }
+
+  /* Preorder traversal from a subtree */
+  protected void preorder(TreeNode<E> root) {
+    if (root == null) return;
+    System.out.print(root.element + " ");
+    preorder(root.left);
+    preorder(root.right);
+  }
 }
