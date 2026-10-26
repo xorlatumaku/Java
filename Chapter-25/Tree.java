@@ -7,4 +7,8 @@ public interface Tree<E> extends Collection<E> {
   /* Insert element e into the binary tree
    * Return true if the element is inserted successfully */
   public boolean insert(E e);
+
+  /* Delete the specified element from the tree
+   * Return true if the element is deleted successfully */
+  public boolean delete(E e);
 }
