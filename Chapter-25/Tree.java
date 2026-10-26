@@ -46,4 +46,9 @@ public interface Tree<E> extends Collection<E> {
   public default boolean remove(Object e) {
     return delete((E)e);
   }
+
+  @Override
+  public default int size() {
+    return getSize();
+  }
 }
