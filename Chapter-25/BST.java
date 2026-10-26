@@ -19,4 +19,18 @@ public class BST<E> implements Tree<E> {
     for (int i = 0; i < objects.length; i++)
       add(objects[i]);
   }
+
+  @Override /* Return true if the element is in the tree */
+  public boolean search(E e) {
+    TreeNode<E> current = root; // Start from the root
+    
+    while (current != null) {
+      if (c.compare(e, current.element) < 0) {
+        current = current.left;
+      }
+      else if (c.compare(e, current.element) > 0) {
+        current = current.right;
+      }
+    }
+  }
 }
