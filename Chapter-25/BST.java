@@ -253,5 +253,10 @@ public class BST<E> implements Tree<E> {
 
       return false;
     }
+
+    @Override /* Get the current element and move to the next */
+    public E next() {
+      return list.get(current++);
+    }
   }
 }
