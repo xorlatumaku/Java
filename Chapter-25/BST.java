@@ -213,5 +213,8 @@ public class BST<E> implements Tree<E> {
         // Special case: parentOfRightMost == current
         parentOfRightMost.left = rightMost.left;
     }
+
+    size--;
+    return true; // Element deleted successfully
   }
 }
