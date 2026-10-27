@@ -219,7 +219,7 @@ public class BST<E> implements Tree<E> {
   }
 
   @Override /* Obtain an iterator. Use inorder. */
-  public java.util.iterator<E> iterator() {
+  public java.util.Iterator<E> iterator() {
     return new InorderIterator();
   }
 
