@@ -4,6 +4,7 @@ public class BST<E> implements Tree<E> {
   protected java.util.Comparator<E> c;
 
   /* Create a default BST with a natural order Comparator */
+  @SuppressWarnings("unchecked")
   public BST() {
     this.c = (e1, e2) -> ((Comparable<E>)e1).compareTo(e2);
   }
@@ -14,6 +15,7 @@ public class BST<E> implements Tree<E> {
   }
 
   /* Create a binary tree from an array of objects */
+  @SuppressWarnings("unchecked")
   public BST(E[] objects) {
     this.c = (e1, e2) -> ((Comparable<E>)e1).compareTo(e2);
     for (int i = 0; i < objects.length; i++)
