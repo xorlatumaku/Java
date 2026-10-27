@@ -53,6 +53,8 @@ public class HuffmanCode {
 
     while (heap.getSize() > 1) {
       Tree t1 = heap.remove();  // Remove the smallest-weight tree
+      Tree t2 = heap.remove();  // Remove the next smallest
+      heap.add(new Tree(t1, t2)); // Combine two trees
     }
   }
 }
