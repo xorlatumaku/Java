@@ -191,5 +191,17 @@ public class BST<E> implements Tree<E> {
           parent.right = current.right;
       }
     }
+    else {
+      // Case 2: The current node has a left child
+      // Locate the rightmost node in the left subtree of
+      // the current node and also its parent
+      TreeNode<E> parentOfRightMost = current;
+      TreeNode<E> rightmost = current.left;
+
+      while (rightmost.right != null) {
+        parentOfRightMost = rightmost;
+        rightmost = rightMost.right;  // Keep going to the right
+      }
+    }
   }
 }
