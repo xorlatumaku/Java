@@ -202,6 +202,9 @@ public class BST<E> implements Tree<E> {
         parentOfRightMost = rightmost;
         rightmost = rightMost.right;  // Keep going to the right
       }
+
+      // Replace the element in current by the element in rightmost
+      current.element = rightMost.element;
     }
   }
 }
