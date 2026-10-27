@@ -154,4 +154,28 @@ public class BST<E> implements Tree<E> {
 
     return list;  // Return an array list of nodes
   }
+
+  @Override /* Delete an element from the binary tree.
+  * Return true if the element is deleted successfully
+  * Return false if the element is not in the tree */
+  public boolean delete(E e) {
+    // Locate the node to be deleted and also locate its parent node 
+    TreeNode<E> parent = null;
+    TreeNode<E> current = root;
+    while (current != null) {
+      if (c.compare(e, current.element) < 0) {
+        parent = current;
+        current = current.left;
+      }
+      else if (c.compare(e, current.element) > 0) {
+        parent = current; 
+        current = current.right;
+      }
+      else
+        break;  // Element is in the tree pointed at by current
+    }
+
+    if (current == null)
+      return false; // Element is not in the tree
+  }
 }
