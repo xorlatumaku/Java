@@ -269,4 +269,10 @@ public class BST<E> implements Tree<E> {
       inorder();    // Rebuild the list
     }
   }
+
+  @Override /* Remove all elements from the tree */
+  public void clear() {
+    root = null;
+    size = 0;
+  }
 }
