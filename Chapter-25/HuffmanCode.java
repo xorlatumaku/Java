@@ -99,6 +99,7 @@ public class HuffmanCode {
 
     public class Node {
       char element; // Stores the character for a leaf node
+      int weight;   // weight of the subtree rooted at this node
     }
   }
 }
