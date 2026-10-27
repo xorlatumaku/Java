@@ -74,6 +74,12 @@ public class HuffmanCode {
   public static class Tree implements Comparable<Tree> {
     Node root; // The root of the tree
     
-    
+    /* Create a tree with two subtrees */
+    public Tree(Tree t1, Tree t2) {
+      root = new Node();
+      root.left = t1.root;
+      root.right = t2.root;
+      root.weight = t1.root.weight + t2.root.weight;
+    }
   }
 }
