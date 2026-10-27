@@ -69,4 +69,9 @@ public class HuffmanCode {
 
     return counts;
   }
+
+  /* Define a Huffman coding tree */
+  public static class Tree implements Comparable<Tree> {
+    
+  }
 }
