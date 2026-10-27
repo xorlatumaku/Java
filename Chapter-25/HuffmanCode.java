@@ -50,5 +50,9 @@ public class HuffmanCode {
       if (counts[i] > 0)
         heap.add(new Tree(counts[i], (char)i)); // A leaf node tree
     }
+
+    while (heap.getSize() > 1) {
+      Tree t1 = heap.remove();  // Remove the smallest-weight tree
+    }
   }
 }
