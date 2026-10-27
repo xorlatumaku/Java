@@ -11,5 +11,6 @@ public class HuffmanCode {
     System.out.printf("%-15s%-15s%-15s%-15s\n", "ASCII Code", "Character", "Frequency", "Code");
 
     Tree tree = getHuffmanTree(counts); // Create a Huffman tree
+    String[] codes = getCode(tree.root); // Get codes
   }
 }
