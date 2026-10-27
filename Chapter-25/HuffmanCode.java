@@ -96,5 +96,9 @@ public class HuffmanCode {
       else
         return -1;
     }
+
+    public class Node {
+      char element; // Stores the character for a leaf node
+    }
   }
 }
