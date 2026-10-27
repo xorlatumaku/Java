@@ -258,5 +258,15 @@ public class BST<E> implements Tree<E> {
     public E next() {
       return list.get(current++);
     }
+
+    @Override // Remove the element returned by the last next()
+    public void remove() {
+      if (current == 0) // next() has not been called yet
+        throw new IllegalStateException();
+
+      delete(list.get(--current));
+      list.clear(); // Clear the list
+      inorder();    // Rebuild the list
+    }
   }
 }
