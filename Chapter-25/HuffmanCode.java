@@ -27,4 +27,18 @@ public class HuffmanCode {
     assignCode(root, codes);
     return codes;
   }
+
+  /* Recursively get codes to the leaf node */
+  private static void assignCode(Tree.Node root, String[] codes) {
+    if (root.left != null) {
+      root.left.code = root.code + "0";
+      assignCode(root.left, codes);
+
+      root.right.code = root.code + "1";
+      assignCode(root.right, codes);
+    }
+    else {
+      codes[(int)root.element] = root.code;
+    }
+  }
 }
