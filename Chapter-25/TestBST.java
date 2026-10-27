@@ -9,5 +9,9 @@ public class TestBST {
     tree.insert("Max Planck");
     tree.insert("Marie Curie");
     tree.insert("Jennifer Doudna");
+
+    // Traverse tree
+    System.out.print("Inorder (sorted): ");
+    tree.inorder();
   }
 }
