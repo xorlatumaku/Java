@@ -245,5 +245,13 @@ public class BST<E> implements Tree<E> {
       list.add(root.element);
       inorder(root.right);
     }
+
+    @Override /* More elements for traversing? */
+    public boolean hasNext() {
+      if (current < list.size())
+        return true;
+
+      return false;
+    }
   }
 }
