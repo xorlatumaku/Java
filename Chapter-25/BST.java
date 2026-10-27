@@ -217,4 +217,20 @@ public class BST<E> implements Tree<E> {
     size--;
     return true; // Element deleted successfully
   }
+
+  @Override /* Obtain an iterator. Use inorder. */
+  public java.util.iterator<E> iterator() {
+    return new InorderIterator();
+  }
+
+  // Inner class InorderIterator
+  private class InorderIterator implements java.util.iterator<E> {
+    // Store the elements in a list
+    private java.util.ArrayList<E> list = new java.util.ArrayList<>();
+    private int current = 0; // Point to the current element in list
+
+    public InorderIterator() {
+      inorder();  // Traverse binary tree and store elements in list
+    }
+  }
 }
