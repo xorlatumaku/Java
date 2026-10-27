@@ -63,5 +63,10 @@ public class HuffmanCode {
   /* Get the frequency of the characters */
   public static int[] getCharacterFrequency(String text) {
     int[] counts = new int[128];  // 128 ASCII characters
+
+    for (int i = 0; i < text.length(); i++)
+      counts[(int)text.charAt(i)]++;  // Count the characters in text
+
+    return counts;
   }
 }
