@@ -196,11 +196,11 @@ public class BST<E> implements Tree<E> {
       // Locate the rightmost node in the left subtree of
       // the current node and also its parent
       TreeNode<E> parentOfRightMost = current;
-      TreeNode<E> rightmost = current.left;
+      TreeNode<E> rightMost = current.left;
 
-      while (rightmost.right != null) {
-        parentOfRightMost = rightmost;
-        rightmost = rightMost.right;  // Keep going to the right
+      while (rightMost.right != null) {
+        parentOfRightMost = rightMost;
+        rightMost = rightMost.right;  // Keep going to the right
       }
 
       // Replace the element in current by the element in rightmost
