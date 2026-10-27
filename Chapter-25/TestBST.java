@@ -16,5 +16,8 @@ public class TestBST {
 
     System.out.print("\nPostorder: ");
     tree.postorder();
+
+    System.out.print("\nPreorder: ");
+    tree.preorder();
   }
 }
