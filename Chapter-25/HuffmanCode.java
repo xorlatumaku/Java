@@ -86,5 +86,15 @@ public class HuffmanCode {
     public Tree(int weight, char element) {
       root = new Node(weight, element);
     }
+
+    @Override /* Compare trees based on their weights */
+    public int compareTo(Tree t) {
+      if (root.weight < t.root.weight) // Purposely reverse the order
+        return 1;
+      else if (root.weight == t.root.weight)
+        return 0;
+      else
+        return -1;
+    }
   }
 }
