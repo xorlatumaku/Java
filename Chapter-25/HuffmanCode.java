@@ -56,5 +56,12 @@ public class HuffmanCode {
       Tree t2 = heap.remove();  // Remove the next smallest
       heap.add(new Tree(t1, t2)); // Combine two trees
     }
+
+    return heap.remove(); // The final tree
+  }
+
+  /* Get the frequency of the characters */
+  public static int[] getCharacterFrequency(String text) {
+    int[] counts = new int[128];  // 128 ASCII characters
   }
 }
