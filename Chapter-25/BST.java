@@ -142,7 +142,7 @@ public class BST<E> implements Tree<E> {
 
     while (current != null) {
       list.add(current);  // Add the node to the list
-       if (c.compare(e, current.element) < ) {
+       if (c.compare(e, current.element) < 0) {
          current = current.left;
        }
        else if (c.compare(e, current.element) > 0) {
