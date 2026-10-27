@@ -237,5 +237,13 @@ public class BST<E> implements Tree<E> {
     private void inorder() {
       inorder(root);
     }
+
+    /* Inorder traversal from a subtree */
+    private void inorder(TreeNode<E> root) {
+      if (root == null) return;
+      inorder(root.left);
+      list.add(root.element);
+      inorder(root.right);
+    }
   }
 }
