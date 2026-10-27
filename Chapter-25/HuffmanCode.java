@@ -5,5 +5,7 @@ public class HuffmanCode {
     Scanner input = new Scanner(System.in);
     System.out.print("Enter text: ");
     String text = input.nextLine();
+
+    int[] counts = getCharacterFrequency(text); // Count frequency
   }
 }
