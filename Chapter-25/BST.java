@@ -177,5 +177,19 @@ public class BST<E> implements Tree<E> {
 
     if (current == null)
       return false; // Element is not in the tree
+    
+    // Case 1: current has no left child
+    if (current.left == null) {
+      // Connect the parent with the right child of the current node
+      if (parent == null) {
+        root = current.right;
+      }
+      else {
+        if (c.compare(e, parent.element) < 0)
+          parent.left = current.right;
+        else
+          parent.right = current.right;
+      }
+    }
   }
 }
