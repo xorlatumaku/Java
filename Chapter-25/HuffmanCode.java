@@ -103,6 +103,10 @@ public class HuffmanCode {
       Node left;    // Reference to the left subtree
       Node right;   // Reference to the right subtree
       String code = ""; // The code of this node from the root
+
+      /* Create an empty node */
+      public Node() {
+      }
     }
   }
 }
