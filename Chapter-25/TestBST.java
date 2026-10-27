@@ -13,5 +13,8 @@ public class TestBST {
     // Traverse tree
     System.out.print("Inorder (sorted): ");
     tree.inorder();
+
+    System.out.print("\nPostorder: ");
+    tree.postorder();
   }
 }
