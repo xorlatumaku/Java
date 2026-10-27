@@ -224,7 +224,7 @@ public class BST<E> implements Tree<E> {
   }
 
   // Inner class InorderIterator
-  private class InorderIterator implements java.util.iterator<E> {
+  private class InorderIterator implements java.util.Iterator<E> {
     // Store the elements in a list
     private java.util.ArrayList<E> list = new java.util.ArrayList<>();
     private int current = 0; // Point to the current element in list
