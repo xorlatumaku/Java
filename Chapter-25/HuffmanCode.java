@@ -107,6 +107,12 @@ public class HuffmanCode {
       /* Create an empty node */
       public Node() {
       }
+
+      /* Create a node with the specified weight and character */
+      public Node(int weight, char element) {
+        this.weight = weight;
+        this.element = element;
+      }
     }
   }
 }
