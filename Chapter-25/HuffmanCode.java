@@ -81,5 +81,10 @@ public class HuffmanCode {
       root.right = t2.root;
       root.weight = t1.root.weight + t2.root.weight;
     }
+
+    /* Create a tree containing a leaf node */
+    public Tree(int weight, char element) {
+      root = new Node(weight, element);
+    }
   }
 }
