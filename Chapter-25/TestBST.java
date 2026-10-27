@@ -21,5 +21,8 @@ public class TestBST {
     tree.preorder();
 
     System.out.print("\nThe number of nodes is " + tree.getSize());
+
+    // Search for an element
+    System.out.print("\nIs Albert Einstein in the tree? " + tree.search("Albert Einstein"));
   }
 }
