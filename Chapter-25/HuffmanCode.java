@@ -41,4 +41,8 @@ public class HuffmanCode {
       codes[(int)root.element] = root.code;
     }
   }
+
+  /* Get a Huffman tree from the codes */
+  public static Tree getHuffmanTree(int[] counts) {
+  }
 }
