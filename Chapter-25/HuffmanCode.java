@@ -7,5 +7,9 @@ public class HuffmanCode {
     String text = input.nextLine();
 
     int[] counts = getCharacterFrequency(text); // Count frequency
+
+    System.out.printf("%-15s%-15s%-15s%-15s\n", "ASCII Code", "Character", "Frequency", "Code");
+
+    Tree tree = getHuffmanTree(counts); // Create a Huffman tree
   }
 }
