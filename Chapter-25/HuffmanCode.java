@@ -102,6 +102,7 @@ public class HuffmanCode {
       int weight;   // weight of the subtree rooted at this node
       Node left;    // Reference to the left subtree
       Node right;   // Reference to the right subtree
+      String code = ""; // The code of this node from the root
     }
   }
 }
