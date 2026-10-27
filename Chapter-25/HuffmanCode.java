@@ -72,6 +72,8 @@ public class HuffmanCode {
 
   /* Define a Huffman coding tree */
   public static class Tree implements Comparable<Tree> {
+    Node root; // The root of the tree
+    
     
   }
 }
