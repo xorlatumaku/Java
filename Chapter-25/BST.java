@@ -232,5 +232,10 @@ public class BST<E> implements Tree<E> {
     public InorderIterator() {
       inorder();  // Traverse binary tree and store elements in list
     }
+
+    /* Inorder traversal from the root */
+    private void inorder() {
+      inorder(root);
+    }
   }
 }
