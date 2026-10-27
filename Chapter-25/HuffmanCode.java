@@ -44,5 +44,11 @@ public class HuffmanCode {
 
   /* Get a Huffman tree from the codes */
   public static Tree getHuffmanTree(int[] counts) {
+    // Create a heap to hold trees
+    Heap<Tree> heap = new Heap<>();
+    for (int i = 0; i < counts.length; i++) {
+      if (counts[i] > 0)
+        heap.add(new Tree(counts[i], (char)i)); // A leaf node tree
+    }
   }
 }
