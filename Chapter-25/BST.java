@@ -205,6 +205,13 @@ public class BST<E> implements Tree<E> {
 
       // Replace the element in current by the element in rightmost
       current.element = rightMost.element;
+
+      // Eliminate rightmost node
+      if (parentOfRightMost.right == rightMost)
+        parentOfRightMost.right = rightMost.left;
+      else
+        // Special case: parentOfRightMost == current
+        parentOfRightMost.left = rightMost.left;
     }
   }
 }
