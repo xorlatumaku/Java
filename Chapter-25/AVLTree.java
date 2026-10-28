@@ -259,6 +259,15 @@ public class AVLTree<E> extends BST<E> {
         size--;
         return true; // Element inserted
         }
+
+        /* AVLTreeNode is TreeNode plus height */
+        protected static class AVLTreeNode<E> extends BST.TreeNode<E> {
+          protected int height = 0; // New data field
+
+          public AVLTreeNode(E o) {
+            super(o);
+          }
+        }
       }
     }
   }
