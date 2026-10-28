@@ -25,5 +25,9 @@ public class TestAVLTree {
     tree.delete(50);
     System.out.print("\nAfter removing 34, 30, 50:");
     printTree(tree);
+
+    tree.delete(5);
+    System.out.print("\nAfter removing 5:");
+    printTree(tree);
   }
 }
