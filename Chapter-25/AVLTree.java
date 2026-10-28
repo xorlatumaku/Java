@@ -177,6 +177,7 @@ public class AVLTree<E> extends BST<E> {
       }
 
       A.right = C.left; // Make T2 the right subtree of A
+      B.left = C.right; // Make T3 the left subtree of B
     }
   }
 }
