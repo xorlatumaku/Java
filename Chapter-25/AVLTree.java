@@ -51,6 +51,7 @@ public class AVLTree<E> extends BST<E> {
     for (int i = path.size() - 1; i >= 0; i--) {
       AVLTreeNode<E> A = (AVLTreeNode<E>)(path.get(i));
       updateHeight(A);
+      AVLTreeNode<E> parentOfA = (A == root) ? null : (AVLTreeNode<E>)(path.get(i - 1));
     }
   }
 }
