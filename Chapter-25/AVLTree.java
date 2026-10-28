@@ -209,6 +209,27 @@ public class AVLTree<E> extends BST<E> {
           else
             break;  // Element is in the tree pointed by current
         }
+
+        if (current == null) {
+          return false; // Element is not in the tree
+
+        // Case 1: current has no left children
+        if (current.left == null) {
+          // Connect the parent with the right child of the current node
+          if (parent == null) {
+            root = current.right;
+          }
+          else {
+            if (c.compare(element, parent.element) < 0)
+              parent.left = current.right;
+            else
+              parent.right = current.right;
+
+            // Balance the tree if necessary
+            balancePath(parent.element);
+          }
+        }
+        }
       }
     }
   }
