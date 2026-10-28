@@ -8,5 +8,8 @@ public class TestAVLTree {
 
     tree.insert(34);
     tree.insert(50);
+
+    System.out.print("\nAfter inserting 34, 50:");
+    printTree(tree);
   }
 }
