@@ -29,5 +29,10 @@ public class TestAVLTree {
     tree.delete(5);
     System.out.print("\nAfter removing 5:");
     printTree(tree);
+
+    System.out.print("\nTraverse the elements in the tree: ");
+    for (int e : tree) {
+      System.out.print(e + " ");
+    }
   }
 }
