@@ -11,5 +11,9 @@ public class TestAVLTree {
 
     System.out.print("\nAfter inserting 34, 50:");
     printTree(tree);
+
+    tree.insert(30);
+    System.out.print("\nAfter inserting 30");
+    printTree(tree);
   }
 }
