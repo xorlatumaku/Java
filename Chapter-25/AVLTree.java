@@ -186,5 +186,30 @@ public class AVLTree<E> extends BST<E> {
       updateHeight((AVLTreeNode<E>)B);
       updateHeight((AVLTreeNode<E>)C);
     }
+
+    @Override /* Delete an element from the binary tree.
+     * Return true if the element if deleted successfully
+     * Return false if the element is not in the tree */
+    public boolean delete(E element) {
+      if (root == null) {
+        return false; // Element is not in the tree
+
+        // Locate the node to be deleted and also locate its parent node
+        TreeNode<E> parent = null;
+        TreeNode<E> current = root;
+        while (current != null) {
+          if (c.compare(element, current.element) < 0) {
+            parent = current;
+            current = current.left;
+          }
+          else if (c.compare(element, current.element) > 0) {
+            parent = current;
+            current = current.right;
+          }
+          else
+            break;  // Element is in the tree pointed by current
+        }
+      }
+    }
   }
 }
