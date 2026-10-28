@@ -151,5 +151,7 @@ public class AVLTree<E> extends BST<E> {
 
     A.right = B.left; // Make T2 the right subtree of A
     B.left = A;
+    updateHeight((AVLTreeNode<E>)A);
+    updateHeight((AVLTreeNode<E>)B);
   }
 }
