@@ -35,4 +35,16 @@ public class TestAVLTree {
       System.out.print(e + " ");
     }
   }
+
+  public static void printTree(BST tree) {
+    // Traverse tree
+    System.out.print("\nInorder (sorted): ");
+    tree.inorder();
+    System.out.print("\nPostorder: ");
+    tree.postorder();
+    System.out.print("\nPreorder: ");
+    tree.preorder();
+    System.out.print("\nThe number of nodes is " + tree.getSize());
+    System.out.println();
+  }
 }
