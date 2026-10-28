@@ -229,6 +229,19 @@ public class AVLTree<E> extends BST<E> {
             balancePath(parent.element);
           }
         }
+
+        else {
+          // Case 2: The current node has a left child
+          // Locate the rightmost node in the left subtree of
+          // the current node and also its parent
+          TreeNode<E> parentOfRightMost = current;
+          TreeNode<E> rightMost = current.left;
+
+          while(rightMost.right != null) {
+            parentOfRightMost = rightMost;
+            rightMost = rightMost.right;  // Keep going to the right
+          }
+        }
         }
       }
     }
