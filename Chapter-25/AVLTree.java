@@ -12,4 +12,9 @@ public class AVLTree<E> extends BST<E> {
   public AVLTree(E[] objects) {
     super(objects);
   }
+
+  @Override /* Override createNewNode to create an AVLTreeNode */
+  protected AVLTreeNode<E> createNewNode(E e) {
+    return new AVLTreeNode<E>(e);
+  }
 }
