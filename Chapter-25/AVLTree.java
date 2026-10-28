@@ -241,6 +241,9 @@ public class AVLTree<E> extends BST<E> {
             parentOfRightMost = rightMost;
             rightMost = rightMost.right;  // Keep going to the right
           }
+
+          // Replace the element in current by the element in rightMost
+          current.element = rightMost.element;
         }
         }
       }
