@@ -58,7 +58,10 @@ public class AVLTree<E> extends BST<E> {
           if (balanceFactor((AVLTreeNode<E>)A.left) <= 0) {
             balanceLL(A, parentOfA);  // Perform LL rotation
           }
-          
+          else {
+            balanceLR(A, parentOfA);  // Perform LR rotation
+          }
+          break;
       }
     }
   }
