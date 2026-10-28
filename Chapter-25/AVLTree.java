@@ -132,4 +132,24 @@ public class AVLTree<E> extends BST<E> {
     updateHeight((AVLTreeNode<E>)B);
     updateHeight((AVLTreeNode<E>)C);
   }
+
+  /* Balance RR */
+  private void balanceRR(TreeNode<E> A, TreeNode<E> parentOfA) {
+    TreeNode<E> B = A.right;  // A is right-heavy and B is right-heavy
+      
+    if (A == root) {
+      root = B;
+    }
+    else {
+      if (parentOfA.left == A) {
+        parentOfA.left = B;
+      }
+      else {
+        parentOfA.right = B;
+      }
+    }
+
+    A.right = B.left; // Make T2 the right subtree of A
+    B.left = A;
+  }
 }
