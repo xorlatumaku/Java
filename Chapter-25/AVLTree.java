@@ -7,4 +7,9 @@ public class AVLTree<E> extends BST<E> {
   public AVLTree(java.util.Comparator<E> c) {
     super(c);
   }
+
+  /* Create an AVL tree from an array of objects */
+  public AVLTree(E[] objects) {
+    super(objects);
+  }
 }
