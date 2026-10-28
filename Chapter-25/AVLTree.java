@@ -17,4 +17,16 @@ public class AVLTree<E> extends BST<E> {
   protected AVLTreeNode<E> createNewNode(E e) {
     return new AVLTreeNode<E>(e);
   }
+
+  @Override /* Insert an element and rebalance if necessary */
+  public boolean insert(E e) {
+    boolean successful = super.insert(e);
+    if(!successful)
+      return false; // e is already in the tree
+    else {
+      balancePath(e); // Balance from e to the root if necessary
+    }
+
+    return true;  // e is inserted
+  }
 }
