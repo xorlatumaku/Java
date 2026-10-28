@@ -29,4 +29,17 @@ public class AVLTree<E> extends BST<E> {
 
     return true;  // e is inserted
   }
+
+  /* Update the height of a specified node */
+  private void updateHeight(AVLTreeNode<E> node) {
+    if (node.left == null && node.right == null)  // node is a leaf
+      node.height = 0;
+    else if (node.left == null) // node has no left subtree
+      node.height = 1 + ((AVLTreeNode<E>)(node.right)).height;
+    else if (node.right == null)  // node has no right subtree
+      node.height = 1 + ((AVLTreeNode<E>)(node.left)).height;
+    else
+      node.height = 1 + 
+        Math.max(((AVLTreeNode<E>)(node.right)).height, ((AVLTreeNode<E>)(node.left)).height);
+  }
 }
