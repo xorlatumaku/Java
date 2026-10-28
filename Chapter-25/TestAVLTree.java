@@ -7,5 +7,6 @@ public class TestAVLTree {
     printTree(tree);
 
     tree.insert(34);
+    tree.insert(50);
   }
 }
