@@ -42,4 +42,11 @@ public class AVLTree<E> extends BST<E> {
       node.height = 1 + 
         Math.max(((AVLTreeNode<E>)(node.right)).height, ((AVLTreeNode<E>)(node.left)).height);
   }
+
+  /* Balance the nodes in the path from the specified
+   * node to the root if necessary
+   */
+  private void balancePath(E e) {
+    java.util.ArrayList<TreeNode<E>> path = path(e);
+  }
 }
