@@ -244,7 +244,20 @@ public class AVLTree<E> extends BST<E> {
 
           // Replace the element in current by the element in rightMost
           current.element = rightMost.element;
+
+          // Eliminate rightMost node
+          if (parentOfRightMost.right == rightMost)
+            parentOfRightMost.right = rightMost.left;
+          else
+            // Special case: parentOfRightMost is current
+            parentOfRightMost.left = rightMost.left;
+
+          // Balance the tree if necessary
+          balancePath(parentOfRightMost.element);
         }
+
+        size--;
+        return true; // Element inserted
         }
       }
     }
