@@ -5,5 +5,7 @@ public class TestAVLTree {
     
     System.out.print("After inserting 25, 20, 5:");
     printTree(tree);
+
+    tree.insert(34);
   }
 }
