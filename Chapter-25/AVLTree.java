@@ -72,4 +72,14 @@ public class AVLTree<E> extends BST<E> {
       }
     }
   }
+
+  /* Return the balance factor of the node */
+  private int balanceFactor(AVLTreeNode<E> node) {
+    if (node.right == null) // node has no right subtree
+      return -node.height;
+    else if (node.left == null) // node has no left subtree
+      return +node.height;
+    else
+      return ((AVLTreeNode<E>)node.right).height - ((AVLTreeNode<E>)node.left).height;
+  }
 }
