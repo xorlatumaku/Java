@@ -100,5 +100,6 @@ public class AVLTree<E> extends BST<E> {
     }
 
     A.left = B.right;   // Make T2 the left subtree of A
+    B.right = A;        // Make A the left child of B
   }
 }
