@@ -168,12 +168,7 @@ public class AVLTree<E> extends BST<E> {
         parentOfA.left = C;
       }
       else {
-        if (parentOfA.left == A) {
-          parentOfA.left = C;
-        }
-        else {
-          parentOfA.right = C;
-        }
+        parentOfA.right = C;
       }
 
       A.right = C.left; // Make T2 the right subtree of A
@@ -186,89 +181,87 @@ public class AVLTree<E> extends BST<E> {
       updateHeight((AVLTreeNode<E>)B);
       updateHeight((AVLTreeNode<E>)C);
     }
+  }
 
-    @Override /* Delete an element from the binary tree.
+  @Override /* Delete an element from the binary tree.
      * Return true if the element if deleted successfully
      * Return false if the element is not in the tree */
-    public boolean delete(E element) {
-      if (root == null) {
-        return false; // Element is not in the tree
+  public boolean delete(E element) {
+    if (root == null)
+      return false; // Element is not in the tree
 
-        // Locate the node to be deleted and also locate its parent node
-        TreeNode<E> parent = null;
-        TreeNode<E> current = root;
-        while (current != null) {
-          if (c.compare(element, current.element) < 0) {
-            parent = current;
-            current = current.left;
-          }
-          else if (c.compare(element, current.element) > 0) {
-            parent = current;
-            current = current.right;
-          }
-          else
-            break;  // Element is in the tree pointed by current
-        }
+    // Locate the node to be deleted and also locate its parent node
+    TreeNode<E> parent = null;
+    TreeNode<E> current = root;
+    while (current != null) {
+      if (c.compare(element, current.element) < 0) {
+        parent = current;
+        current = current.left;
+      }
+      else if (c.compare(element, current.element) > 0) {
+        parent = current;
+        current = current.right;
+      }
+      else
+        break;  // Element is in the tree pointed by current
+    }
 
-        if (current == null) {
-          return false; // Element is not in the tree
-
-        // Case 1: current has no left children
-        if (current.left == null) {
-          // Connect the parent with the right child of the current node
-          if (parent == null) {
-            root = current.right;
-          }
-          else {
-            if (c.compare(element, parent.element) < 0)
-              parent.left = current.right;
-            else
-              parent.right = current.right;
-
-            // Balance the tree if necessary
-            balancePath(parent.element);
-          }
-        }
-
-        else {
-          // Case 2: The current node has a left child
-          // Locate the rightmost node in the left subtree of
-          // the current node and also its parent
-          TreeNode<E> parentOfRightMost = current;
-          TreeNode<E> rightMost = current.left;
-
-          while(rightMost.right != null) {
-            parentOfRightMost = rightMost;
-            rightMost = rightMost.right;  // Keep going to the right
-          }
-
-          // Replace the element in current by the element in rightMost
-          current.element = rightMost.element;
-
-          // Eliminate rightMost node
-          if (parentOfRightMost.right == rightMost)
-            parentOfRightMost.right = rightMost.left;
-          else
-            // Special case: parentOfRightMost is current
-            parentOfRightMost.left = rightMost.left;
+    if (current == null)
+      return false; // Element is not in the tree
+        
+    // Case 1: current has no left children
+    if (current.left == null) {
+      // Connect the parent with the right child of the current node
+      if (parent == null) {
+        root = current.right;
+      }
+      else {
+        if (c.compare(element, parent.element) < 0)
+          parent.left = current.right;
+        else
+          parent.right = current.right;
 
           // Balance the tree if necessary
-          balancePath(parentOfRightMost.element);
-        }
-
-        size--;
-        return true; // Element inserted
-        }
-
-        /* AVLTreeNode is TreeNode plus height */
-        protected static class AVLTreeNode<E> extends BST.TreeNode<E> {
-          protected int height = 0; // New data field
-
-          public AVLTreeNode(E o) {
-            super(o);
-          }
-        }
+          balancePath(parent.element);
       }
+    }
+
+    else {
+      // Case 2: The current node has a left child
+      // Locate the rightmost node in the left subtree of
+      // the current node and also its parent
+      TreeNode<E> parentOfRightMost = current;
+      TreeNode<E> rightMost = current.left;
+
+      while(rightMost.right != null) {
+        parentOfRightMost = rightMost;
+        rightMost = rightMost.right;  // Keep going to the right
+      }
+
+      // Replace the element in current by the element in rightMost
+      current.element = rightMost.element;
+
+      // Eliminate rightMost node
+      if (parentOfRightMost.right == rightMost)
+        parentOfRightMost.right = rightMost.left;
+      else
+        // Special case: parentOfRightMost is current
+        parentOfRightMost.left = rightMost.left;
+
+      // Balance the tree if necessary
+      balancePath(parentOfRightMost.element);
+      }
+
+      size--;
+      return true; // Element inserted
+  }
+
+  /* AVLTreeNode is TreeNode plus height */
+  protected static class AVLTreeNode<E> extends BST.TreeNode<E> {
+    protected int height = 0; // New data field
+
+    public AVLTreeNode(E o) {
+      super(o);
     }
   }
 }
