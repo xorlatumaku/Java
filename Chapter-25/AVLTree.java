@@ -52,6 +52,14 @@ public class AVLTree<E> extends BST<E> {
       AVLTreeNode<E> A = (AVLTreeNode<E>)(path.get(i));
       updateHeight(A);
       AVLTreeNode<E> parentOfA = (A == root) ? null : (AVLTreeNode<E>)(path.get(i - 1));
+
+      switch (balanceFactor(A)) {
+        case -2:
+          if (balanceFactor((AVLTreeNode<E>)A.left) <= 0) {
+            balanceLL(A, parentOfA);  // Perform LL rotation
+          }
+          
+      }
     }
   }
 }
