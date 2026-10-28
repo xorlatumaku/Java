@@ -175,6 +175,8 @@ public class AVLTree<E> extends BST<E> {
           parentOfA.right = C;
         }
       }
+
+      A.right = C.left; // Make T2 the right subtree of A
     }
   }
 }
