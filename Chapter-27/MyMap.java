@@ -10,4 +10,7 @@ public interface MyMap<K, V> {
 
   /* Return a set of entries in the map */
   public java.util.Set<Entry<K, V>> entrySet();
+
+  /* Return the value that matches the specified key */
+  public V get(K key);
 }
