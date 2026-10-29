@@ -213,5 +213,11 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     }
   }
 
-
+  /* Rehash the map */
+  private void rehash() {
+    java.util.Set<Entry<K, V>> set = entrySet(); // Get entries
+    capacity <<= 1; // Same as capacity *= 2. <= is more efficient
+    table = new LinkedList[capacity];   // Create a new hash table
+    size = 0;  // Reset size to 0
+  }
 }
