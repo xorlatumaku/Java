@@ -86,4 +86,12 @@ public class MyHashSet<E> implements Collection<E> {
 
     return true;
   }
+
+  @Override /* Remove the element from the set */
+  public boolean remove(E e) {
+    if (!contains(e))
+      return false;
+
+    int bucketIndex = hash(e.hashCode());
+  }
 }
