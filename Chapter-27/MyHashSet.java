@@ -12,4 +12,7 @@ public class MyHashSet<E> implements Collection<E> {
 
   // Define default load factor
   private static float DEFAULT_MAX_LOAD_FACTOR = 0.75f;
+
+  // Specify a load-factor threshold used in the hash table
+  private float loadFactorThreshold;
 }
