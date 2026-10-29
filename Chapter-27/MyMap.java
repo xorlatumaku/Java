@@ -25,4 +25,7 @@ public interface MyMap<K, V> {
 
   /* Remove an entry for the specified key */
   public void remove(K key);
+
+  /* Return the number of mappings in this map */
+  public int size();
 }
