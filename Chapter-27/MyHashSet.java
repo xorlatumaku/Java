@@ -18,4 +18,7 @@ public class MyHashSet<E> implements Collection<E> {
 
   // The number of elements in the set
   private int size = 0;
+
+  // Hash table is an array with each cell being a linked list
+  private LinkedList<E>[] table;
 }
