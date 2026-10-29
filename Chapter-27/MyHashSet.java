@@ -48,4 +48,15 @@ public class MyHashSet<E> implements Collection<E> {
     size = 0;
     removeElements();
   }
+
+  @Override /* Return true if the element is in the set */
+  public boolean contains(E e) {
+    int bucketIndex = hash(e.hashCode());
+    if (table[bucketIndex] != null) {
+      LinkedList<E> bucket = table[bucketIndex];
+      return bucket.contains(e);
+    }
+
+    return false;
+  }
 }
