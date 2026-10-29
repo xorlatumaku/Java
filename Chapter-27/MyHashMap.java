@@ -167,4 +167,19 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
   public int size() {
     return size;
   }
+
+  @Override /* Return a set consisting of the values in this map */
+  public java.util.Set<V> values() {
+    java.util.Set<V> set = new java.util.HashSet<>();
+
+    for (int i = 0; i < capacity; i++) {
+      if (table[i] != null) {
+        LinkedList<Entry<K, V>> bucket = table[i];
+        for (Entry<K, V> entry : bucket)
+          set.add(entry.getValue());
+      }
+    }
+
+    return set;
+  }
 }
