@@ -93,4 +93,19 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
     return null;
   }
+
+  @Override /* Return true if this map contains no entries */
+  public java.util.Set<K> keySet() {
+    java.util.Set<K> set = new java.util.HashSet<>();
+
+    for (int i = 0; i < capacity; i++) {
+      if (table[i] != null) {
+        LinkedList<Entry<K, V>> bucket = table[i];
+        for (Entry<K, V> entry : bucket)
+          set.add(entry.getKey());
+      }
+    }
+
+    return set;
+  }
 }
