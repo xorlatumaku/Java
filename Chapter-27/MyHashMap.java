@@ -123,5 +123,13 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
           return oldValue;
         }
     }
+
+    // Check load factor
+    if (size >= capacity * loadFactorThreshold) {
+      if (capacity == MAXIMUM_CAPACITY)
+        throw new RuntimeException("Exceeding maximum capacity");
+
+      rehash();
+    }
   }
 }
