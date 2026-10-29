@@ -78,5 +78,12 @@ public class MyHashSet<E> implements Collection<E> {
     if (table[bucketIndex] == null) {
       table[bucketIndex] = new LinkedList<E>();
     }
+
+    // Add e to hashTable[index]
+    table[bucketIndex].add(e);
+
+    size++; // Increase size
+
+    return true;
   }
 }
