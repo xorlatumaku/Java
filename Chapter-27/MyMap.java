@@ -28,4 +28,7 @@ public interface MyMap<K, V> {
 
   /* Return the number of mappings in this map */
   public int size();
+
+  /* Return a set consisting of the values in this map */
+  public java.util.Set<V> values();
 }
