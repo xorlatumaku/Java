@@ -169,6 +169,11 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     return size;
   }
 
+  @Override /* Return true if this map contains no entries */
+  public boolean isEmpty() {
+    return size == 0;
+  }
+
   @Override /* Return a set consisting of the values in this map */
   public java.util.Set<V> values() {
     java.util.Set<V> set = new java.util.HashSet<>();
