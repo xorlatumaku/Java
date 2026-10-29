@@ -13,4 +13,7 @@ public interface MyMap<K, V> {
 
   /* Return the value that matches the specified key */
   public V get(K key);
+
+  /* Return true if this map doesn't contain any entries */
+  public boolean isEmpty();
 }
