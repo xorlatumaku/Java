@@ -93,5 +93,15 @@ public class MyHashSet<E> implements Collection<E> {
       return false;
 
     int bucketIndex = hash(e.hashCode());
+
+    // Create a linked list for the bucket if not already created
+    if (table[bucketIndex] != null) {
+      LinkedList<E> bucket = table[bucketIndex];
+      bucket.removed(e);
+    }
+
+    size--; // Decrease size
+
+    return true;
   }
 }
