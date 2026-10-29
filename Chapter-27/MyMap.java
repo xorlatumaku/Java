@@ -4,4 +4,7 @@ public interface MyMap<K, V> {
 
   /* Return true if the specified key is in the map */
   public boolean containsKey(K key);
+
+  /* Return true if this map contains the specified value */
+  public boolean containsValue(V value);
 }
