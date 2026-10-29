@@ -21,4 +21,9 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
   // Hash table is an array with each cell being a linked list
   LinkedList<MyMap.Entry<K,V>>[] table;
+
+  /* Construct a map with the default capacity and load factor */
+  public MyHashMap() {
+    this(DEFAULT_INITIAL_CAPACITY, DEFAULT_MAX_LOAD_FACTOR);
+  }
 }
