@@ -15,4 +15,7 @@ public class MyHashSet<E> implements Collection<E> {
 
   // Specify a load-factor threshold used in the hash table
   private float loadFactorThreshold;
+
+  // The number of elements in the set
+  private int size = 0;
 }
