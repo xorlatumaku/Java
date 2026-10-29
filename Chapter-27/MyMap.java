@@ -7,4 +7,7 @@ public interface MyMap<K, V> {
 
   /* Return true if this map contains the specified value */
   public boolean containsValue(V value);
+
+  /* Return a set of entries in the map */
+  public java.util.Set<Entry<K, V>> entrySet();
 }
