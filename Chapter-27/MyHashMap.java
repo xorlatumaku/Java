@@ -37,4 +37,10 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     this.loadFactorThreshold = loadFactorThreshold;
     table = new LinkedList[capacity];
   }
+
+  @Override /* Remove all of the entries from this map */
+  public void clear() {
+    size = 0;
+    removeEntries();
+  }
 }
