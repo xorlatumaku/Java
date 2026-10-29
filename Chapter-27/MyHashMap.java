@@ -215,6 +215,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
   }
 
   /* Rehash the map */
+  @SuppressWarnings("unchecked")
   private void rehash() {
     java.util.Set<Entry<K, V>> set = entrySet(); // Get entries
     capacity <<= 1; // Same as capacity *= 2. <= is more efficient
