@@ -43,4 +43,12 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     size = 0;
     removeEntries();
   }
+
+  @Override /* Return true if the specified key is in the map */
+  public boolean containsKey(K key) {
+    if (get(key) != null)
+      return true;
+    else
+      return false;
+  }
 }
