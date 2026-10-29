@@ -6,4 +6,7 @@ public class MyHashSet<E> implements Collection<E> {
 
   // Define the maximum hash-table size. 1 << 30 is same as 2^30
   private static int MAXIMUM_CAPACITY = 1 << 30;
+
+  // Current hash-table capacity. capacity is a power of 2
+  private int capacity;
 }
