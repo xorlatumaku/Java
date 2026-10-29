@@ -59,4 +59,19 @@ public class MyHashSet<E> implements Collection<E> {
 
     return false;
   }
+
+  @Override /* Add an element to the set */
+  public boolean add(E e) {
+    if (contains(e))  // Duplicate element not stored
+      return false;
+
+    if (size + 1 > capacity * loadFactorThreshold) {
+      if (capacity == MAXIMUM_CAPACITY)
+        throw new RuntimeException("Exceeding maximum capacity");
+
+      rehash();
+    }
+
+    int bucketIndex = has(e.hashCode());
+  }
 }
