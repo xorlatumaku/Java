@@ -9,5 +9,7 @@ public class TestMyHashMap {
     map.put("Smith", 65);
 
     System.out.println("Entries in map: " + map);
+
+    System.out.println("The age for Lewis is " + map.get("Lewis"));
   }
 }
