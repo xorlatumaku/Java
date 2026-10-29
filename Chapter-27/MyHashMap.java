@@ -28,6 +28,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
   }
 
   /* Construct a map with the specified initial capacity and load factor */
+  @SuppressWarnings("unchecked")
   public MyHashMap(int initialCapacity, float loadFactorThreshold) {
     if (initialCapacity > MAXIMUM_CAPACITY)
       this.capacity = MAXIMUM_CAPACITY;
@@ -132,7 +133,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
       rehash();
     }
 
-    int bucketIndex = has(key.hashCode());
+    int bucketIndex = hash(key.hashCode());
 
     // Create a linked list for the bucket if not already created
     if (table[bucketIndex] == null) {
@@ -154,7 +155,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     // Remove the first entry that matches the key from a bucket
     if (table[bucketIndex] != null) {
       LinkedList<Entry<K, V>> bucket = table[bucketIndex];
-      for (Entry<K, V>> entry : bucket)
+      for (Entry<K, V> entry : bucket)
         if (entry.getKey().equals(key)) {
           bucket.remove(entry);
           size--; // Decrease size
