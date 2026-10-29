@@ -15,4 +15,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
   // Specify a load factor used in the hash table
   private float loadFactorThreshold;
+
+  // The number of entries in the map
+  private int size = 0;
 }
