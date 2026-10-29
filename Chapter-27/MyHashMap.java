@@ -146,4 +146,20 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     
     return value;
   }
+
+  @Override /* Remove the entries for the specified key */
+  public void remove(K key) {
+    int bucketIndex = hash(key.hashCode());
+
+    // Remove the first entry that matches the key from a bucket
+    if (table[bucketIndex] != null) {
+      LinkedList<Entry<K, V>> bucket = table[bucketIndex];
+      for (Entry<K, V>> entry : bucket)
+        if (entry.getKey().equals(key)) {
+          bucket.remove(entry);
+          size--; // Decrease size
+          break;  // Remove just one entry that matches the key
+        }
+    }
+  }
 }
