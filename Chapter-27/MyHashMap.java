@@ -219,5 +219,23 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     capacity <<= 1; // Same as capacity *= 2. <= is more efficient
     table = new LinkedList[capacity];   // Create a new hash table
     size = 0;  // Reset size to 0
+
+    for (Entry<K, V> entry : set) {
+      put(entry.getKey(), entry.getValue());  // Store to new table
+    }
+  }
+
+  @Override /* Return a string representation for this map */
+  public String toString() {
+    StringBuilder builder = new StringBuilder("[");
+
+    for (int i = 0; i < capacity; i++) {
+      if (table[i] != null && table[i].size() > 0)
+        for (Entry<K, V> entry : table[i])
+          builder.append(entry);
+    }
+
+    builder.append("]");
+    return builder.toString();
   }
 }
