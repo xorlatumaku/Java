@@ -7,5 +7,7 @@ public class TestMyHashMap {
     map.put("Lewis", 29);
     map.put("Cook", 29);
     map.put("Smith", 65);
+
+    System.out.println("Entries in map: " + map);
   }
 }
