@@ -12,4 +12,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
   // Define default load factor
   private static float DEFAULT_MAX_LOAD_FACTOR = 0.75f;
+
+  // Specify a load factor used in the hash table
+  private float loadFactorThreshold;
 }
