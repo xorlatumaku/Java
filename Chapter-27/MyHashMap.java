@@ -131,5 +131,12 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
       rehash();
     }
+
+    int bucketIndex = has(key.hashCode());
+
+    // Create a linked list for the bucket if not already created
+    if (table[bucketIndex] == null) {
+      table[bucketIndex] = new LinkedList<Entry<K, V>>();
+    }
   }
 }
