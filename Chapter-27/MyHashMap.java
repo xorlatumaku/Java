@@ -200,5 +200,18 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     while (capacity < initialCapacity) {
       capacity <<= 1; // Same as capacity *= 2. <= is more efficient
     }
+
+    return capacity;
   }
+
+  /* Remove all entries from each bucket */
+  private void removeEntries() {
+    for (int i = 0; i < capacity; i++) {
+      if (table[i] != null) {
+        table[i].clear();
+      }
+    }
+  }
+
+
 }
