@@ -22,4 +22,7 @@ public interface MyMap<K, V> {
 
   /* Add an entry (key, value) into the map */
   public V put(K key, V value);
+
+  /* Remove an entry for the specified key */
+  public void remove(K key);
 }
