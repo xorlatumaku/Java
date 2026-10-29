@@ -16,4 +16,7 @@ public interface MyMap<K, V> {
 
   /* Return true if this map doesn't contain any entries */
   public boolean isEmpty();
+
+  /* Return a set consisting of the keys in this map */
+  public java.util.Set<K> keySet();
 }
