@@ -42,4 +42,10 @@ public class MyHashSet<E> implements Collection<E> {
     this.loadFactorThreshold = loadFactorThreshold;
     table = new LinkedList[capacity];
   }
+
+  @Override /* Remove all elements from this set */
+  public void clear() {
+    size = 0;
+    removeElements();
+  }
 }
