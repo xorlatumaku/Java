@@ -162,4 +162,9 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
         }
     }
   }
+
+  @Override /* Return the number of entries in this map */
+  public int size() {
+    return size;
+  }
 }
