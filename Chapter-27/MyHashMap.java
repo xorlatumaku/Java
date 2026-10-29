@@ -182,4 +182,9 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
     return set;
   }
+
+  /* Hash function */
+  private int hash(int hashCode) {
+    return supplementalHash(hashCode) & (capacity - 1);
+  }
 }
