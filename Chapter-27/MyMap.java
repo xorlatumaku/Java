@@ -19,4 +19,7 @@ public interface MyMap<K, V> {
 
   /* Return a set consisting of the keys in this map */
   public java.util.Set<K> keySet();
+
+  /* Add an entry (key, value) into the map */
+  public V put(K key, V value);
 }
