@@ -73,5 +73,10 @@ public class MyHashSet<E> implements Collection<E> {
     }
 
     int bucketIndex = has(e.hashCode());
+
+    // Create a linked list for the bucket if not already created
+    if (table[bucketIndex] == null) {
+      table[bucketIndex] = new LinkedList<E>();
+    }
   }
 }
