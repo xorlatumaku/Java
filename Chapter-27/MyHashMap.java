@@ -108,4 +108,20 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
     return set;
   }
+
+  @Override /* Add an entry (key, value) into the map */
+  public V put(K key, V value) {
+    if (get(key) != null) { // The key is already in the map
+      int bucketIndex = hash(key.hashCode());
+      LinkedList<Entry<K, V>> bucket = table[bucketIndex];
+      for (Entry<K, V> entry : bucket)
+        if (entry.getKey().equals(key)) {
+          V oldValue = entry.getValue();
+          // Replace old value with new value
+          entry.value = value;
+          // Return the old value for the key
+          return oldValue;
+        }
+    }
+  }
 }
