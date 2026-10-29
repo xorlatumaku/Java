@@ -18,4 +18,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
   // The number of entries in the map
   private int size = 0;
+
+  // Hash table is an array with each cell being a linked list
+  LinkedList<MyMap.Entry<K,V>>[] table;
 }
