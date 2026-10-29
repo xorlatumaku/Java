@@ -9,4 +9,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
   // Current hash-table capacity. Capacity is a power of 2
   private int capacity;
+
+  // Define default load factor
+  private static float DEFAULT_MAX_LOAD_FACTOR = 0.75f;
 }
