@@ -138,5 +138,12 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     if (table[bucketIndex] == null) {
       table[bucketIndex] = new LinkedList<Entry<K, V>>();
     }
+
+    // Add a new entry (key, value) to hashTable[index]
+    table[bucketIndex].add(new MyMap.Entry<K, V>(key, value));
+
+    size++; // Increase size
+    
+    return value;
   }
 }
