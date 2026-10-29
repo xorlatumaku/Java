@@ -26,4 +26,9 @@ public class MyHashSet<E> implements Collection<E> {
   public MyHashSet() {
     this(DEFAULT_INITIAL_CAPACITY, DEFAULT_MAX_LOAD_FACTOR);
   }
+
+  /* Construct a set with the specified initial capacity and default load factor */
+  public MyHashSet(int initialCapacity) {
+    this(initialCapacity, DEFAULT_MAX_LOAD_FACTOR);
+  }
 }
