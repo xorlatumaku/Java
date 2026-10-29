@@ -31,4 +31,15 @@ public class MyHashSet<E> implements Collection<E> {
   public MyHashSet(int initialCapacity) {
     this(initialCapacity, DEFAULT_MAX_LOAD_FACTOR);
   }
+
+  /* Construct a set with the specified initial capacity and load factor */
+  public MyHashSet(int initialCapacity, float loadFactorThreshold) {
+    if (initialCapacity > MAXIMUM_CAPACITY)
+      this.capacity = MAXIMUM_CAPACITY;
+    else
+      this.capacity = trimToPowerOf2(initialCapacity);
+
+    this.loadFactorThreshold = loadFactorThreshold;
+    table = new LinkedList[capacity];
+  }
 }
