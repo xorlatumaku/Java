@@ -21,4 +21,9 @@ public class MyHashSet<E> implements Collection<E> {
 
   // Hash table is an array with each cell being a linked list
   private LinkedList<E>[] table;
+
+  /* Construct a set with the default capacity and load factor */
+  public MyHashSet() {
+    this(DEFAULT_INITIAL_CAPACITY, DEFAULT_MAX_LOAD_FACTOR);
+  }
 }
