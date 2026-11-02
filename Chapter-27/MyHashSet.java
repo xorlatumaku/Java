@@ -132,5 +132,10 @@ public class MyHashSet<E> implements Collection<E> {
       this.set = set;
       list = setToList();
     }
+
+    @Override /* Next element for traversing? */
+    public boolean hasNext() {
+      return current < list.size();
+    }
   }
 }
