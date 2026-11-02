@@ -119,4 +119,9 @@ public class MyHashSet<E> implements Collection<E> {
   public java.util.iterator<E> iterator() {
     return new MyHashSetIterator(this);
   }
+
+  /* Inner class for iterator */
+  private class MyHashSetIterator implements java.util.iterator<E> {
+
+  }
 }
