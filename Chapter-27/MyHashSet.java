@@ -33,6 +33,7 @@ public class MyHashSet<E> implements Collection<E> {
   }
 
   /* Construct a set with the specified initial capacity and load factor */
+  @SuppressWarnings("unchecked")
   public MyHashSet(int initialCapacity, float loadFactorThreshold) {
     if (initialCapacity > MAXIMUM_CAPACITY)
       this.capacity = MAXIMUM_CAPACITY;
@@ -50,7 +51,7 @@ public class MyHashSet<E> implements Collection<E> {
   }
 
   @Override /* Return true if the element is in the set */
-  public boolean contains(E e) {
+  public boolean contains(Object e) {
     int bucketIndex = hash(e.hashCode());
     if (table[bucketIndex] != null) {
       LinkedList<E> bucket = table[bucketIndex];
