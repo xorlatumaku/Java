@@ -72,7 +72,7 @@ public class MyHashSet<E> implements Collection<E> {
       rehash();
     }
 
-    int bucketIndex = has(e.hashCode());
+    int bucketIndex = hash(e.hashCode());
 
     // Create a linked list for the bucket if not already created
     if (table[bucketIndex] == null) {
@@ -97,7 +97,7 @@ public class MyHashSet<E> implements Collection<E> {
     // Create a linked list for the bucket if not already created
     if (table[bucketIndex] != null) {
       LinkedList<E> bucket = table[bucketIndex];
-      bucket.removed(e);
+      bucket.remove(e);
     }
 
     size--; // Decrease size
@@ -116,12 +116,12 @@ public class MyHashSet<E> implements Collection<E> {
   }
 
   @Override /* Return an iterator for the elements in this set */
-  public java.util.iterator<E> iterator() {
+  public java.util.Iterator<E> iterator() {
     return new MyHashSetIterator(this);
   }
 
   /* Inner class for iterator */
-  private class MyHashSetIterator implements java.util.iterator<E> {
+  private class MyHashSetIterator implements java.util.Iterator<E> {
     // Store the elements in a list
     private java.util.ArrayList<E> list;
     private int current = 0;  // Point to the current element in list
@@ -143,13 +143,11 @@ public class MyHashSet<E> implements Collection<E> {
       return list.get(current++);
     }
 
-    /* Remove the current element returned by the last next() */
-    public void remove() {
-    }
+    
   }
 
   /* Hash function */
-  private int has(int hashCode) {
+  private int hash(int hashCode) {
     return supplementalHash(hashCode) & (capacity - 1);
   }
 
@@ -181,7 +179,7 @@ public class MyHashSet<E> implements Collection<E> {
   /* Rehash the set */
   private void rehash() {
     java.util.ArrayList<E> list = setToList();  // Copy to a list
-    capacity <<= 1; // Same as capacity *= 2. <= is more efficient
+    capacity <<= 1; // Same as capacity *= 2. <<= is more efficient
     table = new LinkedList[capacity]; // Create a new hash table
     size = 0;
 
@@ -223,4 +221,5 @@ public class MyHashSet<E> implements Collection<E> {
 
     return builder.toString();
   }
+
 }
