@@ -11,5 +11,13 @@ public class TestMyHashSet {
     System.out.println("Elements in set: " + set);
     System.out.println("Number of elements in set: " + set.size());
     System.out.println("Is Smith in set? " + set.contains("Smith"));
+
+    set.remove("Smith");
+    System.out.print("Names in set in upppercase are ");
+    for (String s : set)
+      System.out.print(s.toUpperCase() + " ");
+
+      set.clear();
+      System.out.println("\nElements in set: " + set);
   }
 }
