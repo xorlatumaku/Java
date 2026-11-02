@@ -209,5 +209,10 @@ public class MyHashSet<E> implements Collection<E> {
   public String toString() {
     java.util.ArrayList<E> list = setToList();
     StringBuilder builder = new StringBuilder("[");
+
+    // Add the elements except the last one to the string builder
+    for (int i = 0; i < list.size() - 1; i++) {
+      builder.append(list.get(i) + ", ");
+    }
   }
 }
