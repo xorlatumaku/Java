@@ -147,7 +147,7 @@ public class MyHashSet<E> implements Collection<E> {
     @Override
     public void remove() {
       if (current == 0) {
-        throw new IllegalStateException("next() has not been called yet"")
+        throw new IllegalStateException("next() has not been called yet");
       }
       // Get the element that was just returned by next()
       E elementToRemove = list.get(current - 1);
