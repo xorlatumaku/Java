@@ -168,4 +168,15 @@ public class MyHashSet<E> implements Collection<E> {
 
     return capacity;
   }
+
+  /* Remove all e from each bucket */
+  private void removeElements() {
+    for (int i = 0; i < capacity; i++) {
+      if (table[i] != null) {
+        table[i].clear();
+      }
+    }
+  }
+
+
 }
