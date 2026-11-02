@@ -9,5 +9,7 @@ public class TestMyHashSet {
     set.add("Smith");
 
     System.out.println("Elements in set: " + set);
+    System.out.println("Number of elements in set: " + set.size());
+    System.out.println("Is Smith in set? " + set.contains("Smith"));
   }
 }
