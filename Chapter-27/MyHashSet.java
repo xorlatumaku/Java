@@ -109,4 +109,9 @@ public class MyHashSet<E> implements Collection<E> {
   public boolean isEmpty() {
     return size == 0;
   }
+
+  @Override /* Return the number of elements in the set */
+  public int size() {
+    return size;
+  }
 }
