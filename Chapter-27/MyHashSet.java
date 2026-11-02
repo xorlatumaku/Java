@@ -142,5 +142,9 @@ public class MyHashSet<E> implements Collection<E> {
     public E next() {
       return list.get(current++);
     }
+
+    /* Remove the current element returned by the last next() */
+    public void remove() {
+    }
   }
 }
