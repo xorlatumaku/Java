@@ -114,4 +114,9 @@ public class MyHashSet<E> implements Collection<E> {
   public int size() {
     return size;
   }
+
+  @Override /* Return an iterator for the elements in this set */
+  public java.util.iterator<E> iterator() {
+    return new MyHashSetIterator(this);
+  }
 }
