@@ -126,5 +126,11 @@ public class MyHashSet<E> implements Collection<E> {
     private java.util.ArrayList<E> list;
     private int current = 0;  // Point to the current element in list
     private MyHashSet<E> set;
+
+    /* Create a list from the set */
+    public MyHashSetIterator(MyHashSet<E> set) {
+      this.set = set;
+      list = setToList();
+    }
   }
 }
