@@ -178,5 +178,17 @@ public class MyHashSet<E> implements Collection<E> {
     }
   }
 
+  /* Rehash the set */
+  private void rehash() {
+    java.util.ArrayList<E> list = setToList();  // Copy to a list
+    capacity <<= 1; // Same as capacity *= 2. <= is more efficient
+    table = new LinkedList[capacity]; // Create a new hash table
+    size = 0;
+
+    for (E element : list) {
+      add(element); // Add from the old table to the new table
+    }
+  }
+
 
 }
