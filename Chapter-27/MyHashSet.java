@@ -137,5 +137,10 @@ public class MyHashSet<E> implements Collection<E> {
     public boolean hasNext() {
       return current < list.size();
     }
+
+    @Override /* Get current element and move cursor to the next */
+    public E next() {
+      return list.get(current++);
+    }
   }
 }
