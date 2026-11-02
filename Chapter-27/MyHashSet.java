@@ -147,4 +147,9 @@ public class MyHashSet<E> implements Collection<E> {
     public void remove() {
     }
   }
+
+  /* Hash function */
+  private int has(int hashCode) {
+    return supplementalHash(hashCode) & (capacity - 1);
+  }
 }
