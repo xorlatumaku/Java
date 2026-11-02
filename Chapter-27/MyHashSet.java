@@ -152,4 +152,10 @@ public class MyHashSet<E> implements Collection<E> {
   private int has(int hashCode) {
     return supplementalHash(hashCode) & (capacity - 1);
   }
+
+  /* Ensure the hashing is evenly distributed */
+  private static int supplementalHash(int h) {
+    h ^= (h >>> 20) ^ (h >>> 12);
+    return h ^  (h >>> 7) ^ (h >>> 4);
+  }
 }
