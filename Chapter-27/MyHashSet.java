@@ -190,5 +190,18 @@ public class MyHashSet<E> implements Collection<E> {
     }
   }
 
+  /* Copy elements in the hash set to an array list */
+  private java.util.ArrayList<E> setToList() {
+    java.util.ArrayList<E> list = new java.util.ArrayList<>();
 
+    for (int i = 0; i < capacity; i++) {
+      if (table[i] != null) {
+        for (E e : table[i]) {
+          list.add(e);
+        }
+      }
+    }
+
+    return list;
+  }
 }
