@@ -214,5 +214,13 @@ public class MyHashSet<E> implements Collection<E> {
     for (int i = 0; i < list.size() - 1; i++) {
       builder.append(list.get(i) + ", ");
     }
+
+    // Add the last element in the last to the string builder
+    if (list.size() == 0)
+      builder.append("]");
+    else
+      builder.append(list.get(list.size() - 1) + "]");
+
+    return builder.toString();
   }
 }
