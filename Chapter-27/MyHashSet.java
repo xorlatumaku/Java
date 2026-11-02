@@ -51,11 +51,12 @@ public class MyHashSet<E> implements Collection<E> {
   }
 
   @Override /* Return true if the element is in the set */
-  public boolean contains(Object e) {
-    int bucketIndex = hash(e.hashCode());
+  public boolean contains(Object o) {
+    if (o == null) return false;  // Prevent NullPointerException
+    int bucketIndex = hash(o.hashCode());
     if (table[bucketIndex] != null) {
       LinkedList<E> bucket = table[bucketIndex];
-      return bucket.contains(e);
+      return bucket.contains(o);
     }
 
     return false;
@@ -63,6 +64,7 @@ public class MyHashSet<E> implements Collection<E> {
 
   @Override /* Add an element to the set */
   public boolean add(E e) {
+    if (e == null) return false;  // Guard against null elements if unsupported
     if (contains(e))  // Duplicate element not stored
       return false;
 
@@ -89,21 +91,21 @@ public class MyHashSet<E> implements Collection<E> {
   }
 
   @Override /* Remove the element from the set */
-  public boolean remove(E e) {
-    if (!contains(e))
-      return false;
+  public boolean remove(Object o) {
+   if (o == null || !contains(o))
+     return false;
 
-    int bucketIndex = hash(e.hashCode());
+   int bucketIndex = hash(o.hashCode());
 
-    // Create a linked list for the bucket if not already created
-    if (table[bucketIndex] != null) {
-      LinkedList<E> bucket = table[bucketIndex];
-      bucket.remove(e);
-    }
+   // Create a linked list for the bucket if not already created
+   if (table[bucketIndex] != null) {
+     LinkedList<E> bucket = table[bucketIndex];
+     bucket.remove(o);
+   }
 
-    size--; // Decrease size
-
-    return true;
+   size--;  // Decrease size
+    
+   return true;
   }
 
   @Override /* Return true if the set contain no elements */
@@ -141,6 +143,9 @@ public class MyHashSet<E> implements Collection<E> {
 
     @Override /* Get current element and move cursor to the next */
     public E next() {
+      if (!hasNext()) {
+        throw new java.util.NoSuchElementException();
+      }
       return list.get(current++);
     }
 
@@ -193,10 +198,11 @@ public class MyHashSet<E> implements Collection<E> {
   }
 
   /* Rehash the set */
+  @SuppressWarnings("unchecked")
   private void rehash() {
     java.util.ArrayList<E> list = setToList();  // Copy to a list
     capacity <<= 1; // Same as capacity *= 2. <<= is more efficient
-    table = new LinkedList[capacity]; // Create a new hash table
+    table = (LinkedList<E>[]) new LinkedList[capacity]; // Create a new hash table
     size = 0;
 
     for (E element : list) {
@@ -279,6 +285,7 @@ public class MyHashSet<E> implements Collection<E> {
       E element = iterator.next();
       if (!c.contains(element)) {
         iterator.remove();
+        changed = true; 
       }
     }
     return changed;
