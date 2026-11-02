@@ -122,6 +122,7 @@ public class MyHashSet<E> implements Collection<E> {
 
   /* Inner class for iterator */
   private class MyHashSetIterator implements java.util.iterator<E> {
-
+    // Store the elements in a list
+    private java.util.ArrayList<E> list;
   }
 }
