@@ -204,4 +204,10 @@ public class MyHashSet<E> implements Collection<E> {
 
     return list;
   }
+
+  @Override /* Return a string representation for this set */
+  public String toString() {
+    java.util.ArrayList<E> list = setToList();
+    StringBuilder builder = new StringBuilder("[");
+  }
 }
