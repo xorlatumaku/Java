@@ -104,4 +104,9 @@ public class MyHashSet<E> implements Collection<E> {
 
     return true;
   }
+
+  @Override /* Return true if the set contain no elements */
+  public boolean isEmpty() {
+    return size == 0;
+  }
 }
