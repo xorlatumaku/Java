@@ -124,5 +124,7 @@ public class MyHashSet<E> implements Collection<E> {
   private class MyHashSetIterator implements java.util.iterator<E> {
     // Store the elements in a list
     private java.util.ArrayList<E> list;
+    private int current = 0;  // Point to the current element in list
+    private MyHashSet<E> set;
   }
 }
