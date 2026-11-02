@@ -143,7 +143,22 @@ public class MyHashSet<E> implements Collection<E> {
       return list.get(current++);
     }
 
-    
+    /* Remove the current element returned by the last next() */
+    @Override
+    public void remove() {
+      if (current == 0) {
+        throw new IllegalStateException("next() has not been called yet"")
+      }
+      // Get the element that was just returned by next()
+      E elementToRemove = list.get(current - 1);
+
+      // Remove it from the outer set
+      set.remove(elementToRemove);
+
+      // Remove it from the iterator's copy and adjust the cursor
+      list.remove(current - 1);
+      current--;
+    }
   }
 
   /* Hash function */
