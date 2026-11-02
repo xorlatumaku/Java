@@ -236,5 +236,52 @@ public class MyHashSet<E> implements Collection<E> {
 
     return builder.toString();
   }
+  
+  @Override
+  public boolean addAll(Collection<? extends E> c) {
+    boolean changed = false;
+    for (E element : c) {
+      if (add(element)) {
+        changed = true;
+      }
+    }
+    return changed;
+  }
 
+  @Override
+  public boolean containsAll(Collection<?> c) {
+    for (Object element : c) {
+      if (!contains(element)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  @Override
+  public boolean removeAll(Collection<?> c) {
+    boolean changed = false;
+    for (Object element : c) {
+      if (remove(element)) {
+        changed = true;
+      }
+    }
+    return changed;
+  }
+
+  @Override
+  public boolean retainAll(Collection<?> c) {
+    boolean changed = false;
+    // Use an iterator to avoid ConcurrentModificationException during element deletion
+    java.util.Iterator<E> iterator = iterator();
+    while (iterator.hasNext()) {
+      E element = iterator.next();
+      if (!c.contains(element)) {
+        iterator.remove();
+      }
+    }
+    return changed;
+  }
+
+  
 }
