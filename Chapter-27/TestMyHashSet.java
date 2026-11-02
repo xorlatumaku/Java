@@ -7,5 +7,7 @@ public class TestMyHashSet {
     set.add("Lewis");
     set.add("Cook");
     set.add("Smith");
+
+    System.out.println("Elements in set: " + set);
   }
 }
