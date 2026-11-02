@@ -283,5 +283,33 @@ public class MyHashSet<E> implements Collection<E> {
     return changed;
   }
 
-  
+  @Override
+  public Object[] toArray() {
+    java.util.ArrayList<E> list = setToList();
+    Object[] result = new Object[list.size()];
+    for (int i = 0; i < list.size(); i++) {
+      result[i] = list.get(i);
+    }
+    return result;
+  }
+
+  @SuppressWarnings("unchecked")
+  @Override
+  public<T> T[] toArray(T[] a) {
+    java.util.ArrayList<E> list = setToList();
+    if (a.length < list.size()) {
+      // If the passed array is too small, allocate a new one of the same runtime type
+      return (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), list.size());
+    }
+
+    for (int i = 0; i < list.size(); i++) {
+      a[i] = (T) list.get(i);
+    }
+
+    if (a.length > list.size()) {
+      a[list.size()] = null; // Standard Java spec requirement
+    }
+
+    return a;
+  }  
 }
