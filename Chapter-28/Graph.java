@@ -19,4 +19,7 @@ public interface Graph<V> {
 
   /* Print the edges */
   public void printEdges();
+
+  /* Clear the graph */
+  public void clear();
 }
