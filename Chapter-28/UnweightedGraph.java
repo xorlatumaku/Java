@@ -216,6 +216,11 @@ public class UnweightedGraph<V> implements Graph<V> {
     public int getRoot() {
       return root;
     }
+
+    /* Return the parent of vertex v */
+    public int getParent(int v) {
+      return parent[v];
+    }
   }
 
 }
