@@ -160,5 +160,6 @@ public class UnweightedGraph<V> implements Graph<V> {
   private void dfs(int v, int[] parent, List<Integer> searchOrder, boolean[] isVisited) {
     // Store the visited vertex
     searchOrder.add(v);
+    isVisited[v] = true;  // Vertex v visited
   }
   }
