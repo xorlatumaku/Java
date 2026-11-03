@@ -226,6 +226,11 @@ public class UnweightedGraph<V> implements Graph<V> {
     public List<Integer> getSearchOrder() {
       return searchOrder;
     }
+
+    /* Return number of vertices found */
+    public int getNumberOfVerticesFound() {
+      return searchOrder.size();
+    }
   }
 
 }
