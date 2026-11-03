@@ -16,4 +16,7 @@ public interface Graph<V> {
 
   /* Return the degree for a specified vertex */
   public int getDegree(int v);
+
+  /* Print the edges */
+  public void printEdges();
 }
