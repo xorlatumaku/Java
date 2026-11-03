@@ -14,5 +14,12 @@ public class UnweightedGraph<V> implements Graph<V> {
       addVertex(vertices[i]);
     createAdjacencyLists(edges, vertices.length);
   }
+  
+  /* Construct a graph from vertices and edges stored in List */
+  protected UnweightedGraph(List<V> vertices, List<Edge> edges) {
+    for (int i = 0; i < vertices.size(); i++)
+      addVertex(vertices.get(i));
+    createAdjacencyLists(edges, vertices.size());
+  }
 
   }
