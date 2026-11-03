@@ -74,4 +74,12 @@ public class UnweightedGraph<V> implements Graph<V> {
     return vertices.indexOf(v);
   }
   
+  @Override /* Return the neighbors of the specified vertex */
+  public List<Integer> getNeighbors(int index) {
+    List<Integer> result = new ArrayList<>();
+    for (Edge e : neighbors.get(index))
+      result.add(e.v);
+
+    return result;
+  }
   }
