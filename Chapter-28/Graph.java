@@ -37,4 +37,7 @@ public interface Graph<V> {
 
   /* Remove an edge(u, v) from the graph, return true if successful */
   public boolean remove(int u, int v);
+
+  /* Obtain a depth-first search tree */
+  public UnweightedGraph<V>.SearchTree dfs(int v);
 }
