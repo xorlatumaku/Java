@@ -133,4 +133,9 @@ public class UnweightedGraph<V> implements Graph<V> {
       return false;
     }
   }
+
+  @Override /* Add an edge to the graph */
+  public boolean addEdge(int u, int v) {
+    return addEdge(new Edge(u, v));
+  }
   }
