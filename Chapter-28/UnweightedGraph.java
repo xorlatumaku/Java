@@ -158,6 +158,7 @@ public class UnweightedGraph<V> implements Graph<V> {
 
   /* Recursive method for DFS search */
   private void dfs(int v, int[] parent, List<Integer> searchOrder, boolean[] isVisited) {
-
+    // Store the visited vertex
+    searchOrder.add(v);
   }
   }
