@@ -88,5 +88,16 @@ public class UnweightedGraph<V> implements Graph<V> {
     return neighbors.get(v).size();
   }
 
+  @Override /* Print the edges */
+  public void printEdges() {
+    for (int u = 0; u < neighbors.size(); u++) {
+      System.out.print(getVertex(u) + " (" + u + "): ");
+      for (Edge e: neighbors.get(u)) {
+        System.out.print("(" + getVertex(e.u) + ", " + getVertex(e.v) + ") ");
+      }
+      System.out.println();
+    }
+  }
+
 
   }
