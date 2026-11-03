@@ -148,5 +148,8 @@ public class UnweightedGraph<V> implements Graph<V> {
 
     // Mark visited vertices
     boolean[] isVisited = new boolean[vertices.size()];
+
+    // Recursively search
+    dfs(v, parent, searchOrder, isVisited);
   }
   }
