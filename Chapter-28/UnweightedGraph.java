@@ -46,5 +46,12 @@ public class UnweightedGraph<V> implements Graph<V> {
       addEdge(edges[i][0], edges[i][1]);
     }
   }
+  
+  /* Create adjacency lists for each vertex */
+  private void createAdjacencyLists(List<Edge> edges, int numberOfVertices) {
+    for (Edge edge : edges) {
+      addEdge(edge.u, edge.v);
+    }
+  }
 
   }
