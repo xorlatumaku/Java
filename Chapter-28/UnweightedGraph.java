@@ -198,4 +198,12 @@ public class UnweightedGraph<V> implements Graph<V> {
 
     return new SearchTree(v, parent, searchOrder);
   }
+  
+  /*Tree inner class inside the UnweightedGraph class */
+  public class SearchTree {
+    private int root; // The root of the tree
+    private int[] parent; // Store the parent of each vertex
+    private List<Integer> searchOrder;  // Store the search order
   }
+
+}
