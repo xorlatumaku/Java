@@ -53,5 +53,10 @@ public class UnweightedGraph<V> implements Graph<V> {
       addEdge(edge.u, edge.v);
     }
   }
+  
+  @Override /* Return the number of vertices in the graph */
+  public int getSize() {
+    return vertices.size();
+  }
 
   }
