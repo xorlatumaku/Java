@@ -104,4 +104,18 @@ public class UnweightedGraph<V> implements Graph<V> {
     vertices.clear();
     neighbors.clear();
   }
+
+  @Override /* Add a vertex to the graph */
+  public boolean addVertex(V vertex) {
+    if (!vertices.contains(vertex)) {
+      vertices.add(vertex);
+      neighbors.add(new ArrayList<Edge>());
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
   }
