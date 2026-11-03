@@ -244,6 +244,15 @@ public class UnweightedGraph<V> implements Graph<V> {
 
       return path;
     }
+
+    /* Print a path from the root to vertex v */
+    public void printPath(int index) {
+      List<V> path = getPath(index);
+      System.out.print("A path from " + vertices.get(root) + " to " + vertices.get(index) + ": ");
+
+      for (int i = path.size() - 1; i >= 0; i--)
+        System.out.print(path.get(i) + " ");
+    }
   }
 
 }
