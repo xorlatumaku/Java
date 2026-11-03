@@ -63,5 +63,10 @@ public class UnweightedGraph<V> implements Graph<V> {
   public List<V> getVertices() {
     return vertices;
   }
+  
+  @Override /* Return the object for the specified vertex */
+  public V getVertex(int index) {
+    return vertices.get(index);
+  }
 
   }
