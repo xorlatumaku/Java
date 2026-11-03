@@ -25,4 +25,7 @@ public interface Graph<V> {
 
   /* Add a vertex to the graph */
   public boolean addVertex(V vertex);
+
+  /* Add an edge to the graph */
+  public boolean addEdge(int u, int v);
 }
