@@ -117,5 +117,20 @@ public class UnweightedGraph<V> implements Graph<V> {
     }
   }
 
+  @Override /* Add an edge to the graph */
+  public boolean addEdge(Edge e) {
+    if (e.u < 0 || e.u > getSize() -1)
+      throw new IllegalArgumentException("No such index: " + e.u);
 
+    if (e.v < 0 || e.v > getSize() - 1)
+      throw new IllegalArgumentException("No such index: " + e.v);
+
+    if (!neighbors.get(e.u).contains(e)) {
+      neighbors.get(e.u).add(e);
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
   }
