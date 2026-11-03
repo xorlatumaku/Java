@@ -211,6 +211,11 @@ public class UnweightedGraph<V> implements Graph<V> {
       this.parent = parent;
       this.searchOrder = searchOrder;
     }
+
+    /* Return the root of the tree */
+    public int getRoot() {
+      return root;
+    }
   }
 
 }
