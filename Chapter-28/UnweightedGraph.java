@@ -7,4 +7,12 @@ public class UnweightedGraph<V> implements Graph<V> {
   /* Construct an empty graph */
   protected UnweightedGraph() {
   }
+
+  /* Construct a graph from vertices and edges stored in arrays */
+  protected UnweightedGraph(V[] vertices, int[][] edges) {
+    for (int i = 0; i < vertices.length; i++)
+      addVertex(vertices[i]);
+    createAdjacencyLists(edges, vertices.length);
+  }
+
   }
