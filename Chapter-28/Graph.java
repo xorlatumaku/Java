@@ -31,4 +31,7 @@ public interface Graph<V> {
 
   /* Add an edge to the graph */
   public boolean addEdge(Edge e);
+
+  /* Remove a vertex v from the graph, return true if successful */
+  public boolean remove(V v);
 }
