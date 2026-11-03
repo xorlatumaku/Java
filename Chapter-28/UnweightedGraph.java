@@ -253,6 +253,20 @@ public class UnweightedGraph<V> implements Graph<V> {
       for (int i = path.size() - 1; i >= 0; i--)
         System.out.print(path.get(i) + " ");
     }
+
+    /* Print the whole tree */
+    public void printTree() {
+      System.out.println("Root is: " + vertices.get(root));
+      System.out.print("Edges: ");
+      for (int i = 0; i < parent.length; i++) {
+        if (parent[i] != -1) {
+          // Display an edge
+          System.out.print("(" + vertices.get(parent[i]) + ", " +
+              vertices.get(i) + ") ");
+        }
+      }
+      System.out.println();
+    }
   }
 
 }
