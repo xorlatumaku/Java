@@ -161,5 +161,14 @@ public class UnweightedGraph<V> implements Graph<V> {
     // Store the visited vertex
     searchOrder.add(v);
     isVisited[v] = true;  // Vertex v visited
+
+    for (Edge e : neighbors.get(v)) {// e.u is v
+      int w = e.v;
+      if (!isVisited[w]) {
+        parent[w] = v;  // The parent of vertex w is v
+        dfs(w, parent, searchOrder, isVisited); // Recursive search
+      }
+    }
   }
+
   }
