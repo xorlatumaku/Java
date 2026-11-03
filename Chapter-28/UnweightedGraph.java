@@ -99,5 +99,9 @@ public class UnweightedGraph<V> implements Graph<V> {
     }
   }
 
-
+  @Override /* Clear the graph */
+  public void clear() {
+    vertices.clear();
+    neighbors.clear();
+  }
   }
