@@ -7,4 +7,7 @@ public interface Graph<V> {
 
   /* Return the object for the specified vertex index */
   public V getVertex(int index);
+
+  /* Return the index for the specified vertex object */
+  public int getIndex(V v);
 }
