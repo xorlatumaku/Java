@@ -22,4 +22,7 @@ public interface Graph<V> {
 
   /* Clear the graph */
   public void clear();
+
+  /* Add a vertex to the graph */
+  public boolean addVertex(V vertex);
 }
