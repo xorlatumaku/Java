@@ -138,4 +138,12 @@ public class UnweightedGraph<V> implements Graph<V> {
   public boolean addEdge(int u, int v) {
     return addEdge(new Edge(u, v));
   }
+
+  @Override /* Obtain a DFS tree starting from vertex v */
+  public SearchTree dfs(int v) {
+    List<Integer> searchOrder = new ArrayList<>();
+    int[] parent = new int[vertices.size()];
+    for (int i = 0; i < parent.length; i++)
+      parent[i] = -1; // Initialize parent[i] to -1
+  }
   }
