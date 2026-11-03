@@ -58,5 +58,10 @@ public class UnweightedGraph<V> implements Graph<V> {
   public int getSize() {
     return vertices.size();
   }
+  
+  @Override /* Return the vertices in the graph */
+  public List<V> getVertices() {
+    return vertices;
+  }
 
   }
