@@ -40,4 +40,7 @@ public interface Graph<V> {
 
   /* Obtain a depth-first search tree */
   public UnweightedGraph<V>.SearchTree dfs(int v);
+
+  /* Obtain a breath-first search tree */
+  public UnweightedGraph<V>.SearchTree bfs(int v);
 }
