@@ -204,6 +204,13 @@ public class UnweightedGraph<V> implements Graph<V> {
     private int root; // The root of the tree
     private int[] parent; // Store the parent of each vertex
     private List<Integer> searchOrder;  // Store the search order
+
+    /* Construct a tree with root, parent, and searchOrder */
+    public SearchTree(int root, int[] parent, List<Integer> searchOrder) {
+      this.root = root;
+      this.parent = parent;
+      this.searchOrder = searchOrder;
+    }
   }
 
 }
