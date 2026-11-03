@@ -10,4 +10,7 @@ public interface Graph<V> {
 
   /* Return the index for the specified vertex object */
   public int getIndex(V v);
+
+  /* Return the neighbors of vertex with the specified index */
+  public java.util.List<Integer> getNeighbors(int index);
 }
