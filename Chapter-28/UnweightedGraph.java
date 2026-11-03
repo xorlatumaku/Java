@@ -82,4 +82,11 @@ public class UnweightedGraph<V> implements Graph<V> {
 
     return result;
   }
+
+  @Override /* Return the degree for a specified vertex */
+  public int getDegree(int v) {
+    return neighbors.get(v).size();
+  }
+
+
   }
