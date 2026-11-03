@@ -231,6 +231,19 @@ public class UnweightedGraph<V> implements Graph<V> {
     public int getNumberOfVerticesFound() {
       return searchOrder.size();
     }
+
+    /* Return the path of vertices from a vertex to the root */
+    public List<V> getPath(int index) {
+      ArrayList<V> path = new ArrayList<>();
+
+      do {
+        path.add(vertices.get(index));
+        index = parent[index];
+      }
+      while (index != -1);
+
+      return path;
+    }
   }
 
 }
