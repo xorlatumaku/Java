@@ -13,4 +13,7 @@ public interface Graph<V> {
 
   /* Return the neighbors of vertex with the specified index */
   public java.util.List<Integer> getNeighbors(int index);
+
+  /* Return the degree for a specified vertex */
+  public int getDegree(int v);
 }
