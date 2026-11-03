@@ -151,5 +151,8 @@ public class UnweightedGraph<V> implements Graph<V> {
 
     // Recursively search
     dfs(v, parent, searchOrder, isVisited);
+
+    // Return a search tree
+    return new SearchTree(v, parent, searchOrder);
   }
   }
