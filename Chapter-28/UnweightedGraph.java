@@ -12,6 +12,7 @@ public class UnweightedGraph<V> implements Graph<V> {
   protected UnweightedGraph(V[] vertices, int[][] edges) {
     for (int i = 0; i < vertices.length; i++)
       addVertex(vertices[i]);
+    
     createAdjacencyLists(edges, vertices.length);
   }
   
@@ -19,7 +20,15 @@ public class UnweightedGraph<V> implements Graph<V> {
   protected UnweightedGraph(List<V> vertices, List<Edge> edges) {
     for (int i = 0; i < vertices.size(); i++)
       addVertex(vertices.get(i));
+    
     createAdjacencyLists(edges, vertices.size());
   }
-
+  
+  /* Construct a graph for integer vertices 0, 1, 2 and edge list */
+  protected UnweightedGraph(List<Edge> edges, int numberOfVertices) {
+    for (int i = 0; i < numberOfVertices; i++)
+      addVertex((V)(Integer.valueOf(i))); // vertices is {0, 1, . . .}
+    
+    createAdjacencyLists(edges, numberOfVertices);
+  }
   }
