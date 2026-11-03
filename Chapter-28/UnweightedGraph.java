@@ -170,5 +170,32 @@ public class UnweightedGraph<V> implements Graph<V> {
       }
     }
   }
+  
+  @Override /* Starting bfs search from vertex v */
+  public SearchTree bfs(int v) {
+    List<Integer> searchOrder = new ArrayList<>();
+    int[] parent = new int[vertices.size()];
+    for (int i = 0; i < parent.length; i++)
+      parent[i] = -1; // Initialize parent[i] to -1
 
+    java.util.LinkedList<Integer> queue = new java.util.LinkedList<>(); // List used as a queue
+    boolean[] isVisited = new boolean[vertices.size()];
+    queue.offer(v); // Enqueue v
+    isVisited[v] = true;  // Mark it visited
+
+    while (!queue.isEmpty()) {
+      int u = queue.poll(); // Dequeue to u
+      searchOrder.add(u);   // u searched
+      for (Edge e : neighbors.get(u)) {
+        int w = e.v;
+        if (!isVisited[w]) {
+          queue.offer(w); // Enqueue w
+          parent[w] = u; // The parent of w is u
+          isVisited[w] = true;  // Mark it visited
+        }
+      }
+    }
+
+    return new SearchTree(v, parent, searchOrder);
+  }
   }
