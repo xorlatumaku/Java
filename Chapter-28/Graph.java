@@ -34,4 +34,7 @@ public interface Graph<V> {
 
   /* Remove a vertex v from the graph, return true if successful */
   public boolean remove(V v);
+
+  /* Remove an edge(u, v) from the graph, return true if successful */
+  public boolean remove(int u, int v);
 }
