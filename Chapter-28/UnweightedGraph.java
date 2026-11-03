@@ -221,6 +221,11 @@ public class UnweightedGraph<V> implements Graph<V> {
     public int getParent(int v) {
       return parent[v];
     }
+
+    /* Return an array representing search order */
+    public List<Integer> getSearchOrder() {
+      return searchOrder;
+    }
   }
 
 }
