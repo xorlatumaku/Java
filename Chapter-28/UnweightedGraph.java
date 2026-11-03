@@ -31,4 +31,12 @@ public class UnweightedGraph<V> implements Graph<V> {
     
     createAdjacencyLists(edges, numberOfVertices);
   }
+
+  /* Construct a graph from integer vertices 0, 1, and edge array */
+  protected UnweightedGraph(int[][] edges, int numberOfVertices) {
+    for (int i = 0; i < numberOfVertices; i++) 
+      addVertex((V)(Integer.valueOf(i))); // vertices is {0, 1, . . .}
+    
+    createAdjacencyLists(edges, numberOfVertices);
+  }
   }
