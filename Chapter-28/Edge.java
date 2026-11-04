@@ -7,4 +7,13 @@ public class Edge {
     this.u = u;
     this.v = v;
   }
+
+  @Override
+  public boolean equals(Object o) {
+    if (o instanceof Edge) {
+      Edge e = (Edge) o;
+      return u == e.u && v == e.v;
+    }
+    return false;
+  }
 }
