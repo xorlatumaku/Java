@@ -25,5 +25,13 @@ public class TestGraph {
      System.out.println("The index for Miami is " + graph1.getIndex("Miami"));
      System.out.println("The edges for graph1:");
      graph1.printEdges();
+
+     // List of Edge objects for graph
+     String[] names = {"Peter", "Jane", "Mark", "Cindy", "Wendy"};
+     java.util.ArrayList<Edge> edgeList = new java.util.ArrayList<>();
+     edgeList.add(new Edge(0, 2));
+     edgeList.add(new Edge(1, 2));
+     edgeList.add(new Edge(2, 4));
+     edgeList.add(new Edge(3, 4));
   }
 }
