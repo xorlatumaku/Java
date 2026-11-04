@@ -36,5 +36,8 @@ public class TestGraph {
 
      // Create a graph with 5 vertices
      Graph<String> graph2 = new UnweightedGraph<>(java.util.Arrays.asList(names), edgeList);
+     System.out.println("\nThe number of vertices in graph2: " + graph2.getSize());
+     System.out.println("The edges for graph2:");
+     graph2.printEdges();
   }
 }
