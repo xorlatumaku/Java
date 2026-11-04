@@ -19,5 +19,6 @@ public class TestGraph {
       {11, 8}, {11, 9}, {11, 10}
     };
 
-      }
+     Graph<String> graph1 = new UnweightedGraph<>(vertices, edges);
+  }
 }
