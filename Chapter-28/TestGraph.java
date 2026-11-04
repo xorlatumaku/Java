@@ -21,5 +21,6 @@ public class TestGraph {
 
      Graph<String> graph1 = new UnweightedGraph<>(vertices, edges);
      System.out.println("The number of vertices in graph1: " + graph1.getSize());
+     System.out.println("The vertex with index 1 is " + graph1.getVertex(1));
   }
 }
