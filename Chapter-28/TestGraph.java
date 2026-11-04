@@ -20,5 +20,6 @@ public class TestGraph {
     };
 
      Graph<String> graph1 = new UnweightedGraph<>(vertices, edges);
+     System.out.println("The number of vertices in graph1: " + graph1.getSize());
   }
 }
