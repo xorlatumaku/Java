@@ -304,7 +304,18 @@ public class UnweightedGraph<V> implements Graph<V> {
 
   @Override /* Remove edge (u, v) and return true if successful */
   public boolean remove(int u, int v) {
-    return true;
-  }
+    if (u < 0 || u >= getSize() || v < 0 || v >= getSize()) {
+      return false; // Invalid vertex indices
+    }
 
+    List<Edge> edgeList = neighbors.get(u);
+    for (int i = 0; i < edgeList.size(); i++) {
+      Edge edge = edgeList.get(i);
+      if (edge.v == v) {
+        edgeList.remove(i);
+        return true;
+      }
+    }
+    return false; // Edge not found
+  }
 }
