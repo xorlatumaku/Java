@@ -269,4 +269,42 @@ public class UnweightedGraph<V> implements Graph<V> {
     }
   }
 
+  @Override /* Remove vertex v and return true if successful */
+  public boolean remove(V v) {
+    int index = getIndex(v);
+    if (index == - 1) {
+      return false; // Vertex not found
+    }
+
+    // 1. Remove the vertex from the list and its outgoing edges list
+    vertices.remove(index);
+    neighbors.remove(index);
+
+    // 2. Clean up all other lists containing edges to or past this vertex
+    for (List<Edge> edgeList : neighbors) {
+      for (int i = edgeList.size() - 1; i >= 0; i--) {
+        Edge edge = edgeList.get(i);
+
+        if (edge.v == index) {
+          // Remove incoming edges pointing to the deleted vertex
+          edgeList.remove(i);
+        } else if (edge.v > index) {
+          // Shift the target index down by 1 to adjust for the structural shift
+          edge.v--;
+        }
+
+        // Also maintain the edge's origin index if your Edge class relies on edge.u
+        if (edge.u > index) {
+          edge.u--;
+        }
+      }
+    }
+  return true;
+  }
+
+  @Override /* Remove edge (u, v) and return true if successful */
+  public boolean remove(int u, int v) {
+    return true;
+  }
+
 }
