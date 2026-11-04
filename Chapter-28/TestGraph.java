@@ -33,5 +33,8 @@ public class TestGraph {
      edgeList.add(new Edge(1, 2));
      edgeList.add(new Edge(2, 4));
      edgeList.add(new Edge(3, 4));
+
+     // Create a graph with 5 vertices
+     Graph<String> graph2 = new UnweightedGraph<>(java.util.Arrays.asList(names), edgeList);
   }
 }
