@@ -33,5 +33,6 @@ public class DisplayUSMap extends Application {
     Scene scene = new Scene(new GraphView(graph), 750, 450);
     primaryStage.setTitle("DisplayUSMap");  // set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
+    primaryStage.show();  // Display the stage
   }
 }
