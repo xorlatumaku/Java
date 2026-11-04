@@ -33,6 +33,7 @@ public class UnweightedGraph<V> implements Graph<V> {
   }
 
   /* Construct a graph from integer vertices 0, 1, and edge array */
+  @SuppressWarnings("unchecked")
   protected UnweightedGraph(int[][] edges, int numberOfVertices) {
     for (int i = 0; i < numberOfVertices; i++) 
       addVertex((V)(Integer.valueOf(i))); // vertices is {0, 1, . . .}
