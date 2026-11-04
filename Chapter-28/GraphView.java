@@ -36,6 +36,9 @@ public class GraphView extends BorderPane {
       for (int  v : neighbors) {
         double x2 = graph.getVertex(v).getX();
         double y2 = graph.getVertex(v).getY();
+
+        // Draw an edge for (i, v)
+        group.getChildren().add(new Line(x1, y1, x2, y2));
       }
     }
   }
