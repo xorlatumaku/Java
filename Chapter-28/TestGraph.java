@@ -23,5 +23,7 @@ public class TestGraph {
      System.out.println("The number of vertices in graph1: " + graph1.getSize());
      System.out.println("The vertex with index 1 is " + graph1.getVertex(1));
      System.out.println("The index for Miami is " + graph1.getIndex("Miami"));
+     System.out.println("The edges for graph1:");
+     graph1.printEdges();
   }
 }
