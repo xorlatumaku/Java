@@ -28,5 +28,8 @@ public class DisplayUSMap extends Application {
     };
 
     Graph<City> graph = new UnweightedGraph<>(vertices, edges);
+
+    // Create a scene and place it in the stage
+    Scene scene = new Scene(new GraphView(graph), 750, 450);
   }
 }
