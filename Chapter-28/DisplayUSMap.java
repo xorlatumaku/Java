@@ -26,5 +26,7 @@ public class DisplayUSMap extends Application {
       {9, 8}, {9, 11}, {10, 2}, {10, 4}, {10, 8}, {10, 11},
       {11, 8}, {11, 9}, {11, 10}
     };
+
+    Graph<City> graph = new UnweightedGraph<>(vertices, edges);
   }
 }
