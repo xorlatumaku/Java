@@ -20,5 +20,6 @@ public class TestBFS {
     };
 
     Graph<String> graph = new UnweightedGraph<>(vertices, edges);
+    UnweightedGraph<String>.SearchTree bfs = graph.bfs(graph.getIndex("Chicago"));
   }
 }
