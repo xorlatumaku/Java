@@ -7,5 +7,14 @@ public class NineTail {
     Scanner input = new Scanner(System.in);
     String s = input.nextLine();
     char[] initialNode = s.toCharArray();
+
+    NineTailNode model = new NineTailModel();
+    java.util.List<Integer> path = 
+      model.getShortestPath(NineTailModel.getIndex(initialNode));
+
+    System.out.println("The steps to flip the coins are ");
+    for (int i = 0; i < path.size(); i++)
+      NineTailModel.printNode(
+          NineTailModel.getNode(path.get(i).intValue()));
   }
 }
