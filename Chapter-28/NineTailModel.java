@@ -11,5 +11,8 @@ public class NineTailModel {
 
     // Create a graph
     UnweightedGraph<Integer> graph = new UnweightedGraph<>(edges, NUMBER_OF_NODES);
+
+    // Obtain a BSF tree rooted at the target node
+    tree = graph.bfs(511);
   }
 }
