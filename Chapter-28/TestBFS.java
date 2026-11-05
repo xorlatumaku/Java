@@ -21,5 +21,19 @@ public class TestBFS {
 
     Graph<String> graph = new UnweightedGraph<>(vertices, edges);
     UnweightedGraph<String>.SearchTree bfs = graph.bfs(graph.getIndex("Chicago"));
+    
+    java.util.List<Integer> searchOrders = bfs.getSearchOrder();
+    System.out.println(bfs.getNumberOfVerticesFound() + " vertices are searched in this order:");
+
+    for (int i = 0; i < searchOrders.size(); i++)
+      System.out.println(graph.getVertex(searchOrders.get(i)));
+
+    for (int i = 0; i < searchOrders.size(); i++)
+      System.out.println(graph.getVertex(searchOrders.get(i)));
+
+    for (int i = 0; i < searchOrders.size(); i++)
+      if (bfs.getParent(i) != -1)
+        System.out.println("parent of " + graph.getVertex(i) +
+            " is " + graph.getVertex(bfs.getParent(i)));
   }
 }
