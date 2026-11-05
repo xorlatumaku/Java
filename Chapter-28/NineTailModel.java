@@ -83,4 +83,8 @@ public class NineTailModel {
     
     return result;
   }
+
+  public List<Integer> getShortestPath(int nodeIndex) {
+    return tree.getPath(nodeIndex);
+  }
 }
