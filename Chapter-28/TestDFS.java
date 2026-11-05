@@ -20,5 +20,7 @@ public class TestDFS {
     };
 
     Graph<String> graph = new UnweightedGraph<>(vertices, edges);
+
+    UnweightedGraph<String>.SearchTree dfs = graph.dfs(graph.getIndex("Chicago"));
   }
 }
