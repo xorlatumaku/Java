@@ -8,5 +8,8 @@ public class NineTailModel {
   public NineTailModel() {
     // Create edges
     List<Edge> edges = getEdges();
+
+    // Create a graph
+    UnweightedGraph<Integer> graph = new UnweightedGraph<>(edges, NUMBER_OF_NODES);
   }
 }
