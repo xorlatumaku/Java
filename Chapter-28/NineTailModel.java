@@ -6,6 +6,7 @@ public class NineTailModel {
 
   /* Construct a model */
   public NineTailModel() {
-
+    // Create edges
+    List<Edge> edges = getEdges();
   }
 }
