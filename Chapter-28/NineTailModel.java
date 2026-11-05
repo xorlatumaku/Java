@@ -87,4 +87,14 @@ public class NineTailModel {
   public List<Integer> getShortestPath(int nodeIndex) {
     return tree.getPath(nodeIndex);
   }
+
+  public static void printNode(char[] node) {
+    for (int i = 0; i < 9; i++)
+      if (i % 3 != 2)
+        System.out.print(node[i]);
+      else
+        System.out.println(node[i]);
+
+    System.out.println();
+  }
 }
