@@ -29,5 +29,9 @@ public class TestDFS {
     for (int i = 0; i < searchOrders.size(); i++)
       System.out.print(graph.getVertex(searchOrders.get(i)) + " ");
     System.out.println();
+
+    for (int i = 0; i < searchOrders.size(); i++)
+      if (dfs.getParent(i) != -1)
+        System.out.println("parent of " + graph.getVertex(i) + " is " + graph.getVertex(dfs.getParent(i)));
   }
 }
