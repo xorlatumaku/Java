@@ -53,5 +53,11 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
     for (int i = 0; i < vertices.size(); i++) {
       neighbors.add(new ArrayList<Edge>()); // Create a list for vertices
     }
+
+    for (WeightedEdge edge : edges) {
+      neighbors.get(edge.u).add(edge);  // Add an edge into the list
+    }
   }
+
+
 }
