@@ -162,5 +162,18 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
     
     // T stores the vertices whose path found so far
     List<Integer> T = new ArrayList<>();
+
+    // Expand T
+    while (T.size() < getSize()) {
+      // Find smallest cost u in V - T
+      int u = -1; // Vertex to be determined
+      double currentMinCost = Double.POSITIVE_INFINITY;
+      for (int i = 0; i < getSize(); i++) {
+        if (!T.contains(i) && cost[i] < currentMinCost) {
+          currentMinCost = cost[i];
+          u = i;
+        }
+      }
+    }
   }
 }
