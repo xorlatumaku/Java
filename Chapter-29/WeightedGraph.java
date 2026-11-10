@@ -203,5 +203,14 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
     public double getCost(int v) {
       return cost[v];
     }
+
+    /* Print paths from all vertices to the soruces */
+    public void printAllPaths() {
+      System.out.println("All shortest paths from " + vertices.get(getRoot()) + " are:");
+      for (int i = 0; i < cost.length; i++) {
+        printPath(i); // Print a path from i to the source
+        System.out.println("(cost: " + cost[i] + ")");  // Path cost
+      }
+    }
   }
 }
