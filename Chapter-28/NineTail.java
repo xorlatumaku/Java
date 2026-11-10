@@ -8,7 +8,7 @@ public class NineTail {
     String s = input.nextLine();
     char[] initialNode = s.toCharArray();
 
-    NineTailNode model = new NineTailModel();
+    NineTailMode model = new NineTailModel();
     java.util.List<Integer> path = 
       model.getShortestPath(NineTailModel.getIndex(initialNode));
 
