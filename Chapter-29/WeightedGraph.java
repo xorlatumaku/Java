@@ -32,4 +32,11 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
 
     createWeightedGraph(vertices, edges);
   }
+
+  /* Create adjacency lists from edge arrays */
+  private void createWeightedGraph(List<V> vertices, int[][] edges) {
+    this.vertices = vertices;
+
+    
+  }
 }
