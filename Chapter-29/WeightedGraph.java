@@ -99,5 +99,7 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
       cost[i] = double.POSITIVE_INFINITY; // Initial cost
     }
     cost[startingVertex] = 0; // Cost of source is 0
+
+    int[] parent = new int[getSize()];  // Parent of a vertex
   }
 }
