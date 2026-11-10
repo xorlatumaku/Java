@@ -146,4 +146,14 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
       return totalWeight;
     }
   }
+
+  /* Find single-source shortest paths */
+  public ShortestPathTree getShortestPath(int sourceVertex) {
+    // cost[v] stores the cost of the path from v to the source
+    double[] cost = new double[getSize()];
+    for (int i = 0; i < cost.length; i++) {
+      cost[i] = Double.POSITIVE_INFINITY; // Initial cost set to inifinty
+    }
+    cost[sourceVertex] = 0; // Cost of source is 0
+  }
 }
