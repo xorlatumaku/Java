@@ -189,4 +189,9 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
     // Create a ShortestPathTree
     return new ShortestPathTree(sourceVertex, parent, T, cost);
   }
+
+  /* ShortestPathTree is an inner class in WeightedGraph */
+  public class ShortestPathTree extends SearchTree {
+    private double[] cost;  // cost[v] is the cost from v to source
+  }
 }
