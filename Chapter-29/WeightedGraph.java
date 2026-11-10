@@ -155,5 +155,12 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
       cost[i] = Double.POSITIVE_INFINITY; // Initial cost set to inifinty
     }
     cost[sourceVertex] = 0; // Cost of source is 0
+
+    // parent[v] stores the previous vertex of v in the path
+    int[] parent = new int[getSize()];
+    parent[sourceVertex] = -1;  // The parent of source is set to -1
+    
+    // T stores the vertices whose path found so far
+    List<Integer> T = new ArrayList<>();
   }
 }
