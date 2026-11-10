@@ -90,4 +90,14 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
   public MST getMinimumSpanningTree() {
     return getMinimumSpanningTree(0);
   }
+
+  /* Get a minimum spanning tree rooted at a specified vertex */
+  public MST getMinimumSpanningTree(int startingVertex) {
+    // cost[v] stores the cost by adding v to the tree
+    double[] cost = new double[getSize()];
+    for (int i = 0; i < cost.length; i++) {
+      cost[i] = double.POSITIVE_INFINITY; // Initial cost
+    }
+    cost[startingVertex] = 0; // Cost of source is 0
+  }
 }
