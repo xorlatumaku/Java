@@ -103,5 +103,7 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
     int[] parent = new int[getSize()];  // Parent of a vertex
     parent[startingVertex] = -1;        // startingVertex is the root
     double totalWeight = 0;             // Total weight of the tree thus far
+
+    List<Integer> T = new ArrayList<>();
   }
 }
