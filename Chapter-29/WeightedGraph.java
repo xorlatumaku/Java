@@ -193,5 +193,10 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
   /* ShortestPathTree is an inner class in WeightedGraph */
   public class ShortestPathTree extends SearchTree {
     private double[] cost;  // cost[v] is the cost from v to source
+    /* Construct a path */
+    public ShortestPathTree(int source, int[] parent, List<Integer> searchOrder, double[] cost) {
+      super(source, parent, searchOrder);
+      this.cost = cost;
+    }
   }
 }
