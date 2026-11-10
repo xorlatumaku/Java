@@ -17,6 +17,11 @@ public class TestWeightedGraph {
       {10, 8, 781}, {10, 11, 239}, {11, 8, 810}, {11, 9, 1187}, {11, 10, 239}
     };
 
-    
+    WeightedGraph<String> graph1 = new WeightedGraph<>(vertices, edges);
+    System.out.println("The number of vertices in graph1: " + graph1.getSize());
+    System.out.println("The vertex with index 1 is " + graph1.getVertex(1));
+    System.out.println("The index for Miami is " + graph1.getIndex("Miami"));
+    System.out.println("The edges for graph1:");
+    graph1.printWeightedEdges();
   }
 }
