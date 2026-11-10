@@ -59,5 +59,14 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
     }
   }
 
+  /* Return the weight on the edge (u, v) */
+  public double getWeight(int u, int v) throws Exception {
+    for (Edge edge : neighbors.get(u)) {
+      if (edge.v == v) {
+        return ((WeightedEdge)edge).weight;
+      }
+    }
 
+    throw new Exception("Edge does not exit");
+  }
 }
