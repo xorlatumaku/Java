@@ -80,4 +80,9 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
       System.out.println();
     }
   }
+
+  /* Add edges to the weighted graph */
+  public boolean addEdge(int u, int v, double weight) {
+    return addEdge(new WeightedEdge(u, v, weight));
+  }
 }
