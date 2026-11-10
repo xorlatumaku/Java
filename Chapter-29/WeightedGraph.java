@@ -18,4 +18,9 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
 
     createWeightedGraph(vertices, edges);
   }
+
+  /* Construct a WeightedGraph for vertices 0, 1, 2 and edge list */
+  public WeightedGraph(List<V> vertices, List<WeightedEdge> edges) {
+    createWeightedGraph(vertices, edges);
+  }
 }
