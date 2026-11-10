@@ -117,6 +117,8 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
           u = i;
         }
       }
+
+      if (u == -1) break; else T.add(u);  // Add a new vertex to T
     }
   }
 }
