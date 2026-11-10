@@ -85,4 +85,9 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
   public boolean addEdge(int u, int v, double weight) {
     return addEdge(new WeightedEdge(u, v, weight));
   }
+
+  /* Get a minimum spanning tree rooted at vertex 0 */
+  public MST getMinimumSpanningTree() {
+    return getMinimumSpanningTree(0);
+  }
 }
