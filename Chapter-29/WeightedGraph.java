@@ -37,6 +37,8 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
   private void createWeightedGraph(List<V> vertices, int[][] edges) {
     this.vertices = vertices;
 
-    
+    for (int i = 0; i < vertices.size; i++) {
+      neighbors.add(new ArrayList<edge>()); // Create a list for vertices
+    }
   }
 }
