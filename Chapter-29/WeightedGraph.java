@@ -105,5 +105,18 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
     double totalWeight = 0;             // Total weight of the tree thus far
 
     List<Integer> T = new ArrayList<>();
+
+    // Expand T
+    while (T.size() < getSize()) {
+      // Find smallest cost u in V - T
+      int u = -1;   // vertex to be determined
+      double currentMinCost = Double.POSITIVE_INFINITY;
+      for (int i = 0; i < getSize(); i++) {
+        if (!T.contains(i) && cost[i] < currentMinCost) {
+          currentMinCost = cost[i];
+          u = i;
+        }
+      }
+    }
   }
 }
