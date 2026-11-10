@@ -119,6 +119,7 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
       }
 
       if (u == -1) break; else T.add(u);  // Add a new vertex to T
+      totalWeight += cost[u];             // Add cost[u] to the tree
     }
   }
 }
