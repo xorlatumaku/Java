@@ -198,5 +198,10 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
       super(source, parent, searchOrder);
       this.cost = cost;
     }
+
+    /* Return the cost for a path from the root to vertex v */
+    public double getCost(int v) {
+      return cost[v];
+    }
   }
 }
