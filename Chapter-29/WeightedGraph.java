@@ -69,4 +69,15 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
 
     throw new Exception("Edge does not exit");
   }
+
+  /* Display edges with  weights */
+  public void printWeightedEdges() {
+    for (int i = 0; i < getSize(); i++) {
+      System.out.print(getVertex(i) + " (" + i + "): ");
+      for (Edge edge : neighbors.get(i)) {
+        System.out.print("(" + edge.u + ", " + edge.v + ", " + ((WeightedEdge)edge).weight + ") ");
+      }
+      System.out.println();
+    }
+  }
 }
