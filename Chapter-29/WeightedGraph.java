@@ -23,4 +23,13 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
   public WeightedGraph(List<V> vertices, List<WeightedEdge> edges) {
     createWeightedGraph(vertices, edges);
   }
+
+  /* Construct a WeightedGraph from vertices 0, 1, and edge array */
+  public WeightedGraph(List<WeightedEdge> edges, int numberOfVertices) {
+    List<V> vertices = new ArrayList<>();
+    for (int i = 0; i < numberOfVertices; i++)
+      vertices.add((V)(Integer.valueOf(i)));
+
+    createWeightedGraph(vertices, edges);
+  }
 }
