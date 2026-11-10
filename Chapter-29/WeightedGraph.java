@@ -176,6 +176,14 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
       }
 
       if (u == -1) break; else T.add(u);  // Add a new vertex to T
-    }
+      
+      // Adjust cost[v] for v that is adjacenct to u and v in V - T
+      for (Edge e : neighbors.get(u)) {
+        if (!T.contains(e.v) && cost[e.v] > cost[u] + ((WeightedEdge)e).weight) {
+          cost[e.v] = cost[u] + ((WeightedEdge)e).weight;
+          parent[e.v] = u;
+        }
+      }
+    } // End of while
   }
 }
