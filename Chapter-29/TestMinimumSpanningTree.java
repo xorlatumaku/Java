@@ -37,5 +37,6 @@ public class TestMinimumSpanningTree {
     };
 
     WeightedGraph<Integer> graph2 = new WeightedGraph<>(edges, 5);
+    WeightedGraph<Integer>.MST tree2 = graph2.getMinimumSpanningTree(1);
   }
 }
