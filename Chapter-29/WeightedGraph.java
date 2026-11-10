@@ -120,6 +120,14 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
 
       if (u == -1) break; else T.add(u);  // Add a new vertex to T
       totalWeight += cost[u];             // Add cost[u] to the tree
-    }
+
+      // Adjust cost[v] for v that is adjacent to u and v in V - T 
+      for (Edge e : neighbors.get(u)) {
+        if (!T.contains(e.v) && cost[e.v] > ((WeightedEdge)e).weight) {
+          cost[e.v] = ((WeightedEdge)e).weight;
+          parent[e.v] = u;
+        }
+      }
+    } // End of while
   }
 }
