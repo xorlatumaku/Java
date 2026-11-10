@@ -35,5 +35,7 @@ public class TestMinimumSpanningTree {
       {3, 0, 8}, {3, 1, 3}, {3, 2, 4}, {3, 4, 6},
       {4, 2, 5}, {4, 3, 6}
     };
+
+    WeightedGraph<Integer> graph2 = new WeightedGraph<>(edges, 5);
   }
 }
