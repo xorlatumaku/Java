@@ -38,5 +38,7 @@ public class TestMinimumSpanningTree {
 
     WeightedGraph<Integer> graph2 = new WeightedGraph<>(edges, 5);
     WeightedGraph<Integer>.MST tree2 = graph2.getMinimumSpanningTree(1);
+    System.out.println("\ntree2: Total weight is " + tree2.getTotalWeight());
+    tree2.printTree();
   }
 }
