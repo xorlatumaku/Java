@@ -49,5 +49,9 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
   /* Create adjacency lists from edge lists */
   private void createWeightedGraph(List<V> vertices, List<WeightedEdge> edges) {
     this.vertices = vertices;
+
+    for (int i = 0; i < vertices.size(); i++) {
+      neighbors.add(new ArrayList<Edge>()); // Create a list for vertices
+    }
   }
 }
