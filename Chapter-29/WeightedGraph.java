@@ -129,5 +129,7 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
         }
       }
     } // End of while
+
+    return new MST(startingVertex, parent, T, totalWeight);
   }
 }
