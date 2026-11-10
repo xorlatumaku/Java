@@ -185,5 +185,8 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
         }
       }
     } // End of while
+
+    // Create a ShortestPathTree
+    return new ShortestPathTree(sourceVertex, parent, T, cost);
   }
 }
