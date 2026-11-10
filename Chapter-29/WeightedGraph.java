@@ -132,4 +132,18 @@ public class WeightedGraph<V>extends UnweightedGraph<V> {
 
     return new MST(startingVertex, parent, T, totalWeight);
   }
+
+  /* MST is an inner class in WeightedGraph */
+  public class MST extends SearchTree {
+    private double totalWeight; // Total weight of all edges in the tree
+
+    public MST(int root, int[] parent, List<Integer> searchOrder, double totalWeight) {
+      super(root, parent, searchOrder);
+      this.totalWeight = totalWeight;
+    }
+
+    public double getTotalWeight() {
+      return totalWeight;
+    }
+  }
 }
