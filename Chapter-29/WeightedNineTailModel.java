@@ -33,4 +33,15 @@ public class WeightedNineTailModel extends NineTailModel {
 
     return edges;
   }
+
+  private static int getNumberOfFlips(int u, int v) {
+    char[] node1 = getNode(u);
+    char[] node2 = getNode(v);
+
+    int count = 0;  // Count the number of different cells
+    for (int i = 0; i < node1.length; i++)
+      if (node1[i] != node2[i]) count++;
+
+    return count;
+  }
 }
