@@ -7,5 +7,7 @@ public class WeightedNineTail {
     Scanner input = new Scanner(System.in);
     String s = input.nextLine();
     char[] initialNode = s.toCharArray();
+    
+    WeightedNineTailModel model = new WeightedNineTailModel();
   }
 }
