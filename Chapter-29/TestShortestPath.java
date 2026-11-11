@@ -24,5 +24,8 @@ public class TestShortestPath {
     };
 
     WeightedGraph<String> graph1 = new WeightedGraph<>(vertices, edges);
+
+    WeightedGraph<String>.ShortestPathTree tree1 = graph1.getShortestPath(graph1.getIndex("Chicago"));
+    tree1.printAllPaths();
   }
 }
