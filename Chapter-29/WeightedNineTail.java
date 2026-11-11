@@ -12,8 +12,10 @@ public class WeightedNineTail {
     java.util.List<Integer> path = model.getShortestPath(NineTailModel.getIndex(initialNode));
 
     System.out.println("The steps to flip the coins are ");
-    for (int i = 0; i < path.size(); i++) {
+    for (int i = 0; i < path.size(); i++)
       NineTailModel.printNode(NineTailModel.getNode(path.get(i)));
-    }
+
+    System.out.println("The number of flips is " +
+        model.getNumberOfFlips(NineTailModel.getIndex(initialNode)));
   }
 }
