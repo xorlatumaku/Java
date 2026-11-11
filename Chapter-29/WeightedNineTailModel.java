@@ -44,4 +44,8 @@ public class WeightedNineTailModel extends NineTailModel {
 
     return count;
   }
+
+  public int getNumberOfFlips(int u) {
+    return (int)((WeightedGraph<Integer>.ShortestPathTree)tree).getCost(u);
+  }
 }
