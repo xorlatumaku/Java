@@ -27,5 +27,12 @@ public class TestShortestPath {
 
     WeightedGraph<String>.ShortestPathTree tree1 = graph1.getShortestPath(graph1.getIndex("Chicago"));
     tree1.printAllPaths();
+
+    // Display shortest paths from Houston to Chicago
+    System.out.print("Shortest path from Houston to Chicago: ");
+    java.util.List<String> path = tree1.getPath(graph1.getIndex("Houston"));
+    for (String s : path) {
+      System.out.print(s + " ");
+    }
   }
 }
