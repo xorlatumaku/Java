@@ -22,5 +22,7 @@ public class TestShortestPath {
       {10, 2, 1435}, {10, 4, 496}, {10, 8, 781}, {10, 11, 239},
       {11, 8, 810}, {11, 9, 1187}, {11, 10, 239}
     };
+
+    WeightedGraph<String> graph1 = new WeightedGraph<>(vertices, edges);
   }
 }
