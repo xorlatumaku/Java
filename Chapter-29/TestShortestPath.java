@@ -45,5 +45,7 @@ public class TestShortestPath {
 
     WeightedGraph<Integer> graph2 = new WeightedGraph<>(edges, 5);
     WeightedGraph<Integer>.ShortestPathTree tree2 = graph2.getShortestPath(3);
+    System.out.println("\n");
+    tree2.printAllPaths();
   }
 }
