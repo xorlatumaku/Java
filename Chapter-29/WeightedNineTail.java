@@ -9,5 +9,6 @@ public class WeightedNineTail {
     char[] initialNode = s.toCharArray();
     
     WeightedNineTailModel model = new WeightedNineTailModel();
+    java.util.List<Integer> path = model.getShortestPath(NineTailModel.getIndex(initialNode));
   }
 }
