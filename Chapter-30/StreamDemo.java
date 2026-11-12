@@ -19,5 +19,13 @@ public class StreamDemo {
     Stream.of(names).skip(4)
       .sorted(String::compareToIgnoreCase)
       .forEach(e -> System.out.print(e + " "));
+
+    System.out.println("\nLargest string with length > 4: " + Stream.of(names)
+        .filter(e -> e.length(() > 4)
+        .max(String::compareTo).get());
+
+    System.out.println("Smallest string alphabetically: "
+      + Stream.of(names).min(String::compareTo).get());
+
   }
 }
