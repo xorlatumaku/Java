@@ -43,5 +43,8 @@ public class StreamDemo {
 
     System.out.println("First element in this stream in lowercase: "
         + Stream.of(names).map(String::toLowerCase).findFirst().get());
+
+    System.out.println("Skip 4 and get any element in this stream:"
+        + Stream.of(names).skip(4).sorted().findAny().get());
   }
 }
