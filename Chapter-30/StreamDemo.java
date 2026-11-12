@@ -33,5 +33,8 @@ public class StreamDemo {
     System.out.println("All names start with a capital letter? "
       + Stream.of(names)
         .allMatch(e -> Character.isUpperCase(e.charAt(0))));
+
+    System.out.println("No name begins with Ko? "
+      + Stream.of(names).noneMatch(e -> e.startsWith("Ko")));
   }
 }
