@@ -36,5 +36,9 @@ public class StreamDemo {
 
     System.out.println("No name begins with Ko? "
       + Stream.of(names).noneMatch(e -> e.startsWith("Ko")));
+
+    System.out.println("Number of distinct case-insensitive strings: "
+      + Stream.of(names).map(e -> e.toUpperCase())
+        .distinct().count());
   }
 }
