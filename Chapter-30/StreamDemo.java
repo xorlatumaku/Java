@@ -46,5 +46,9 @@ public class StreamDemo {
 
     System.out.println("Skip 4 and get any element in this stream:"
         + Stream.of(names).skip(4).sorted().findAny().get());
+
+    Object[] namesInLowerCase =
+      Stream.of(names).map(String::toLowerCase).toArray();
+    System.out.println(java.util.Arrays.toString(namesInLowerCase));
   }
 }
