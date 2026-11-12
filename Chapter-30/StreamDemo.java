@@ -26,6 +26,8 @@ public class StreamDemo {
 
     System.out.println("Smallest string alphabetically: "
       + Stream.of(names).min(String::compareTo).get());
-
+    
+    System.out.println("Stacy is in names? "
+      + Stream.of(names).anyMatch(e -> e.equals("Stacy")));
   }
 }
