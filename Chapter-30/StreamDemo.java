@@ -29,5 +29,9 @@ public class StreamDemo {
     
     System.out.println("Stacy is in names? "
       + Stream.of(names).anyMatch(e -> e.equals("Stacy")));
+
+    System.out.println("All names start with a capital letter? "
+      + Stream.of(names)
+        .allMatch(e -> Character.isUpperCase(e.charAt(0))));
   }
 }
