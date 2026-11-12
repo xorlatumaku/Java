@@ -40,5 +40,8 @@ public class StreamDemo {
     System.out.println("Number of distinct case-insensitive strings: "
       + Stream.of(names).map(e -> e.toUpperCase())
         .distinct().count());
+
+    System.out.println("First element in this stream in lowercase: "
+        + Stream.of(names).map(String::toLowerCase).findFirst().get());
   }
 }
