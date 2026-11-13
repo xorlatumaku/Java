@@ -18,5 +18,11 @@ public class ParallelStreamDemo {
     System.out.println("Sequential execution time is " +
         (endTime - startTime) + " milliseconds");
 
+    startTime = System.currentTimeMillis();
+    int[] list2 = IntStream.of(list).parallel().filter(e -> e > 0)
+      .sorted().limit(5).toArray();
+    System.out.println(Arrays.toString(list2));
+    endTime = System.currentTimeMillis();
+    System.out.println("Parallel execution time is " + (endTime - startTime) + " milliseconds");
   }
 }
