@@ -17,5 +17,8 @@ public class CollectDemo {
     List<String> list = Stream.of(names).collect(ArrayList::new,
         ArrayList::add, ArrayList::addAll);
     System.out.println(list);
+
+    list = Stream.of(names).collect(Collectors.toList());
+    System.out.println(list);
   }
 }
