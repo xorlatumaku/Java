@@ -9,5 +9,9 @@ public class CollectDemo {
   public static void main(String[] args) {
     String[] names = {"John", "Peter", "Susan", "Kim", "Jen",
       "George", "Alan", "Stacy", "Michelle", "john"};
+
+    System.out.println("The number of characters for all names: " +
+        Stream.of(names).collect(StringBuilder::new,
+          StringBuilder::append, StringBuilder::append).length());
   }
 }
