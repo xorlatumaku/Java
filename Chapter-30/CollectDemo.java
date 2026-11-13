@@ -20,5 +20,8 @@ public class CollectDemo {
 
     list = Stream.of(names).collect(Collectors.toList());
     System.out.println(list);
+
+    Set<String> set = Stream.of(names).map(e -> e.toUpperCase()).collect(Collectors.toSet());
+    System.out.println(set);
   }
 }
