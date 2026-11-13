@@ -13,5 +13,9 @@ public class CollectDemo {
     System.out.println("The number of characters for all names: " +
         Stream.of(names).collect(StringBuilder::new,
           StringBuilder::append, StringBuilder::append).length());
+
+    List<String> list = Stream.of(names).collect(ArrayList::new,
+        ArrayList::add, ArrayList::addAll);
+    System.out.println(list);
   }
 }
