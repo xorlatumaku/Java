@@ -10,5 +10,9 @@ public class StreamReductionDemo {
 
     System.out.println("\nThe result of multiplying all values is " +
         IntStream.of(values).parallel(). reduce(1, (e1, e2) -> e1 * e2));
+
+    System.out.print("The values are " +
+        IntStream.of(values).mapToObj(e -> e + "")
+          .reduce((e1, e2) -> e1 + ", " + e2).get());
   }
 }
