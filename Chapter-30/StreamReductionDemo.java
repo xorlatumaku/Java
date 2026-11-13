@@ -19,5 +19,8 @@ public class StreamReductionDemo {
       "George", "Alan", "Stacy", "Michelle", "john"};
     System.out.print("\nThe names are: ");
     System.out.println(Stream.of(names).reduce((x,y) -> x + ", " + y).get());
+
+    System.out.print("Concat names: ");
+    System.out.println(Stream.of(names).reduce((x, y) -> x + y).get());
   }
 }
