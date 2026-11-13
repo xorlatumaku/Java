@@ -23,5 +23,9 @@ public class CollectDemo {
 
     Set<String> set = Stream.of(names).map(e -> e.toUpperCase()).collect(Collectors.toSet());
     System.out.println(set);
+
+    Map<String, Integer> map = Stream.of(names).collect(
+        Collectors.toMap(e -> e, e -> e.length()));
+    System.out.println(map);
   }
 }
