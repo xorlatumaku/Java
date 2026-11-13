@@ -7,5 +7,8 @@ public class ParallelStreamDemo {
     Random random = new Random();
     int[] list = random.ints(200_000_000).toArray();
 
+    System.out.println("Number of processors: " +
+        Runtime.getRuntime().availableProcessors());
+
   }
 }
