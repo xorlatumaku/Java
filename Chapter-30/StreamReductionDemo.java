@@ -22,5 +22,8 @@ public class StreamReductionDemo {
 
     System.out.print("Concat names: ");
     System.out.println(Stream.of(names).reduce((x, y) -> x + y).get());
+
+    System.out.print("Total number of characters: ");
+    System.out.println(Stream.of(names).reduce((x, y) -> x + y).get().length());
   }
 }
