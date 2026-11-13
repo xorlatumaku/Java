@@ -27,5 +27,8 @@ public class CollectDemo {
     Map<String, Integer> map = Stream.of(names).collect(
         Collectors.toMap(e -> e, e -> e.length()));
     System.out.println(map);
+
+    System.out.println("The total number of characters is " + Stream.of(names)
+        .collect(Collectors.summingInt(e -> e.length())));
   }
 }
