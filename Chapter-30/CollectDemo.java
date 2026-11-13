@@ -30,5 +30,11 @@ public class CollectDemo {
 
     System.out.println("The total number of characters is " + Stream.of(names)
         .collect(Collectors.summingInt(e -> e.length())));
+
+    java.util.IntSummaryStatistics stats = Stream.of(names).
+      collect(Collectors.summarizingInt(e -> e.length()));
+    System.out.println("Max is " + stats.getMax());
+    System.out.println("Min is " + stats.getMin());
+    System.out.println("Average is " + stats.getAverage());
   }
 }
