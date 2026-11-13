@@ -14,5 +14,10 @@ public class StreamReductionDemo {
     System.out.print("The values are " +
         IntStream.of(values).mapToObj(e -> e + "")
           .reduce((e1, e2) -> e1 + ", " + e2).get());
+
+    String[] names = {"John", "Peter", "Susan", "Kim", "Jen",
+      "George", "Alan", "Stacy", "Michelle", "john"};
+    System.out.print("\nThe names are: ");
+    System.out.println(Stream.of(names).reduce((x,y) -> x + ", " + y).get());
   }
 }
