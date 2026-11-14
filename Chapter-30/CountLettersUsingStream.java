@@ -22,5 +22,6 @@ public class CountLettersUsingStream {
         TreeMap::new, Collectors.counting())).forEach((k, v) -> {
           System.out.print(v + " " + k + (++count % 10 == 0 ? "\n" : " "));
     });
+    System.out.println();
   }
 }
