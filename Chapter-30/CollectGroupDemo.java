@@ -17,5 +17,11 @@ public class CollectGroupDemo {
     Map<Character, Long> map2 = Stream.of(names).collect(
         Collectors.groupingBy(e -> e.charAt(0), TreeMap::new, Collectors.counting()));
     System.out.println(map2);
+
+    int[] values = {2, 3, 4, 1, 2, 3, 2, 3, 4, 5, 1, 421};
+    IntStream.of(values).mapToObj(e -> e).collect(
+      Collectors.groupingBy(e -> e, TreeMap::new, Collectors.counting())).
+      forEach((k, v) -> System.out.println(k + " occurs " + v +
+        (v > 1 ? " times " : " time ")));
   }
 }
