@@ -15,5 +15,10 @@ public class TwoDimensionalArrayStream {
     System.out.println("Min: " +  stats.getMin());
     System.out.println("Sum: " + stats.getSum());
     System.out.println("Average: " + stats.getAverage());
+
+    System.out.println("Sum of row ");
+    Stream.of(m).mapToInt(e -> IntStream.of(e).sum())
+      .forEach(e ->
+          System.out.println("Sum of row " + i++ + ": " + e));
   }
 }
