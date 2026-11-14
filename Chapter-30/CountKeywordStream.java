@@ -35,7 +35,7 @@ public class CountKeywordStream {
 
     Set<String> keywordSet = new HashSet<>(Arrays.asList(keywordString));
 
-    return Files.lines(file.toPath().parallel().mapToLong(line -> 
+    return Files.lines(file.toPath()).parallel().mapToLong(line -> 
           Stream.of(line.split("[\\s++]")).
           filter(word -> keywordSet.contains(word)).count()).sum();
   }
