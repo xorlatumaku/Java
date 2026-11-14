@@ -15,6 +15,8 @@ public class CountOccurrenceOfLettersInAString {
     Stream.of(toCharacterArray(s.toCharArray()))
       .filter(ch -> Character.isLetter(ch))
       .map(ch -> Character.toUpperCase(ch))
-           });
+      .collect(Collectors.groupingBy(e -> e, TreeMap::new, Collectors.counting()))
+      .forEach((k, v) -> { System.out.print(v + " " + k + (++count % 10 == 0? "\n" : " "));
+     });
  }
 }
