@@ -13,5 +13,8 @@ public class AnalyzeNumbersUsingStream {
     for (int i = 0; i < n; i++) {
       numbers[i] = input.nextDouble();
     }
+
+    double average = DoubleStream.of(numbers).average().getAsDouble();
+    System.out.println("Average is " + average);
   }
 }
