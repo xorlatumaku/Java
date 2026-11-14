@@ -14,5 +14,7 @@ public class CountOccurrenceOfLettersInAString {
     System.out.println("The occurrences of each letter are:");
     Stream.of(toCharacterArray(s.toCharArray()))
       .filter(ch -> Character.isLetter(ch))
-        }
+      .map(ch -> Character.toUpperCase(ch))
+           });
+ }
 }
