@@ -16,5 +16,7 @@ public class AnalyzeNumbersUsingStream {
 
     double average = DoubleStream.of(numbers).average().getAsDouble();
     System.out.println("Average is " + average);
+    System.out.println("Number of elements above the average is "
+        + DoubleStream.of(numbers).filter(e -> e > average).count());
   }
 }
