@@ -10,5 +10,10 @@ public class CountLettersUsingStream {
     Random random = new Random();
     Object[] chars = random.ints(100, (int)'a', (int)'z' + 1).
       mapToObj(e -> (char)e).toArray();
+
+    System.out.println("The lowercase letters are:");
+    Stream.of(chars).forEach(e -> {
+      System.out.print(e + (++count % 20 == 0 ? "\n" : " "));
+    });
   }
 }
