@@ -12,4 +12,19 @@ public class DirectorySizeStream {
     // Display the size
     System.out.println(getSize(new File(directory)) + " bytes");
   }
+
+  public static long getSize(File file) {
+    if (file.isFile()) {
+      return file.length();
+    }
+    else {
+      try {
+        return Files.list(file.toPath()).parallel().
+          mapToLong(e -> getSize(e.toFile())).sum();
+      } catch (Exception ex) {
+        //TODO: handle exception
+        return 0;
+      }
+    }
+  }
 }
