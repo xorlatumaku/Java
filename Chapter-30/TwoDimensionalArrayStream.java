@@ -9,5 +9,11 @@ public class TwoDimensionalArrayStream {
 
     int[] list = Stream.of(m).map(e -> IntStream.of(e)).
       reduce((e1, e2) -> IntStream.concat(e1, e2)).get().toArray();
+
+    IntSummaryStatistics stats = IntStream.of(list).summaryStatistics();
+    System.out.println("Max: " + stats.getMax());
+    System.out.println("Min: " +  stats.getMin());
+    System.out.println("Sum: " + stats.getSum());
+    System.out.println("Average: " + stats.getAverage());
   }
 }
