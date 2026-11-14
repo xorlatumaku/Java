@@ -9,7 +9,7 @@ public class CountOccurrenceOfWordsStream {
       + "Have a good visit. Have fun! ";
 
     Stream.of(text.split("[\\s+\\p{P}]")).parallel()
-      .filter(e -> e.lenght() > 0).collect(
+      .filter(e -> e.length() > 0).collect(
         Collectors.groupingBy(String::toLowerCase, TreeMap::new, Collectors.counting()))
       .forEach((k, v) -> System.out.println(k + " " + v));
   }
