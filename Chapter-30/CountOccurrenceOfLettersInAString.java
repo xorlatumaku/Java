@@ -19,4 +19,12 @@ public class CountOccurrenceOfLettersInAString {
       .forEach((k, v) -> { System.out.print(v + " " + k + (++count % 10 == 0? "\n" : " "));
      });
  }
+
+ public static Character[] toCharacterArray(char[] list) {
+   Character[] result = new Character[list.length];
+   for (int i = 0; i < result.length; i++) {
+     result[i] = list[i];
+   }
+   return result;
+ }
 }
