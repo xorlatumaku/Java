@@ -9,5 +9,10 @@ public class CountOccurrenceOfLettersInAString {
     Scanner input = new Scanner(System.in);
     System.out.print("Enter a string: ");
     String s = input.nextLine();
-  }
+
+    count = 0;  // Reset the count for columns
+    System.out.println("The occurrences of each letter are:");
+    Stream.of(toCharacterArray(s.toCharArray()))
+      .filter(ch -> Character.isLetter(ch))
+        }
 }
